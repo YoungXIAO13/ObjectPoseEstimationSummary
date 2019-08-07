@@ -14,9 +14,14 @@ In the following tables, 3D CAD model is noted as **model** and
 
 ## Rendering methods
 
+### Differentiable Renderer
+[Neural 3D Mesh Renderer](http://hiroharu-kato.com/projects_en/neural_renderer.html): Kato el al. CVPR 2018
+ 
+[RenderNet](https://github.com/thunguyenphuoc/RenderNet): Thu et al. NIPS 2018
+
 ### Blender Render
 In this repo, we provide python code to generate rendering images from 3D models using
-blender as a python module that is easy to install : )
+blender as a python module that is easy to install and generate photo-realistic images : )
 
 **TODO**: scripts about how to use it.
 
