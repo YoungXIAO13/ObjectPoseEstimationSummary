@@ -8,9 +8,9 @@ import random
 import json
 import ipdb
 
-# cur_dir = os.path.dirname(os.path.abspath(__file__))
-# sys.path.insert(1, cur_dir)
-from .create_annotation import obtain_obj_region, obtain_obj_center
+cur_dir = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(cur_dir)
+from create_annotation import obtain_obj_region, obtain_obj_center, create_dir
 
 
 # Add constraint to the camera
@@ -191,7 +191,7 @@ def import_models(model_files, use_defalut_texture=False):
     models = {}
     textures = {}
     repeat_count = {}
-    for i in range(model_files):
+    for i in range(len(model_files)):
         models[i] = {}
         model_file = model_files[i]
         bpy.ops.import_scene.obj(filepath=model_file)
@@ -244,33 +244,40 @@ def rand_rotation():
 
 
 class RenderMachine:
-    """
-        Creates a python blender render machine.
+    """Creates a python blender render machine.
 
-        model_files: a list containing all the obj files
-        out_dir: where to save the render results
-        table_file: 3D model of the table on which all objects could be placed
-        texture_dir: directory containing the texture map images
-        bg_dir: directory containing the background images
+    model_files: a list containing all the obj files
+    out_dir: where to save the render results
+    table_file: 3D model of the table on which all objects could be placed
+    hide_table: use the table model only when this arg is False
+    texture_dir: directory containing the texture map images
+    bg_dir: directory containing the background images
+    dim_min: the minimum model dimension in mm
+    dim_max: the maximum model dimension in mm
+    grid: the distance between object models on the table
+    rad: lamp radiance to adjust the lightness
+    clip_end: rendering range in mm
     """
     def __init__(self,
-                 model_files, out_dir, table_file='Platte.obj', texture_dir=None, bg_dir=None,
-                 dim_min=100, dim_max=200, grid=150, rad=3000, clip_end=2000,
+                 model_files, out_dir, table_file='Platte.obj', hide_table=False, texture_dir=None, bg_dir=None,
+                 dim_min=50, dim_max=150, grid=150, rad=3000, clip_end=2000,
                  fx=572, fy=574, cx=325, cy=242, height=480, width=640):
         # Setting up the environment
+        remove_obj_lamp_and_mesh(bpy.context)
         self.scene = bpy.context.scene
         self.objs = bpy.data.objects
-        remove_obj_lamp_and_mesh(bpy.context)
         self.depthFileOutput = setup_env(self.scene, height, width, clip_end)
         self.camera = setup_camera(self.scene, fx, fy, cx, cy)
         self.lamp = make_lamp(rad)
         self.rad = rad
+        self.height, self.width = height, width
         self.fx, self.fy, self.cx, self.cy = fx, fy, cx, cy
 
         # Import table model and align it with camera frame
         bpy.ops.import_scene.obj(filepath=table_file)
         self.table = bpy.data.objects[table_file.split('.')[0]]
         self.offset = [0, -grid, grid, -2 * grid, 2 * grid, -3 * grid, 3 * grid]
+        self.hide_table = hide_table
 
         # Import 3D models and register dimension range
         model_files = random.choices(model_files, k=30) if len(model_files) > 30 else model_files
@@ -289,7 +296,7 @@ class RenderMachine:
         self.depthFileOutput.base_path = out_dir
         self.depthFileOutput.format.file_format = 'OPEN_EXR'
 
-    # TODO: to modify in order to be complied with T-LESS
+    # TODO: to modify in order to be complied with T-LESS where multiple objects are present
     def render_pose_from_annotation(self, idx, R, T):
         self.table.hide_render = True
 
@@ -319,9 +326,10 @@ class RenderMachine:
 
     def render_random_pose(self, annot, start_idx, scene_id, image_id, R, T, ele):
         self.table.matrix_world = convert_pose_array_to_matrix(
-            R, T + np.array([0, 150 * sin(radians(ele)), 150 * cos(radians(ele))])
+            R, T + np.array([0, 200 * sin(radians(ele)), 200 * cos(radians(ele))])
         )
         self.table.scale = 6, 6, 6
+        self.table.hide_render = self.hide_table
 
         # Randomize the lamp energy
         self.lamp.data.energy = np.random.uniform(self.rad * 0.5, self.rad * 1.5) / 30
@@ -340,7 +348,7 @@ class RenderMachine:
             self.objs[model].scale = scale, scale, scale
             Rotations[i], Translations[i], Scales[i] = R_model, T_model, scale
 
-        self.table.hide_render = True
+        add_color(self.table, color=(0, 0, 0), shadeless=True)
         self.scene.render.filepath = os.path.join(self.out_dir, '{:04d}_mask'.format(image_id))
         self.depthFileOutput.file_slots[0].path = '{:04d}_depth_'.format(image_id)
         render_without_output(use_antialiasing=False)
@@ -363,14 +371,15 @@ class RenderMachine:
             sample_frame["scale"] = Scales[i]
             sample_frame["cam_R_m2c"] = list(Rotations[i].reshape(-1))
             sample_frame["cam_t_m2c"] = list(Translations[i])
-            sample_frame["obj_center"] = obtain_obj_center(Translations[i], self.fx, self.fy, self.cx, self.cy)
-            bbox, px_visib, occupy_fract = obtain_obj_region(os.path.join(self.out_dir, '{:04d}_mask'.format(image_id)), i)
+            cx, cy, outside = obtain_obj_center(Translations[i], self.fx, self.fy, self.cx, self.cy, self.height, self.width)
+            sample_frame["obj_center"] = [cx, cy]
+            sample_frame["obj_outside"] = outside
+            bbox, px_visib, occupy_fract = obtain_obj_region(os.path.join(self.out_dir, '{:04d}_mask.png'.format(image_id)), i)
             sample_frame["bbox"] = bbox
             sample_frame["px_visib"] = px_visib
             sample_frame["occupy_fract"] = occupy_fract
             annot['{}'.format(start_idx + i)] = sample_frame
 
-        self.table.hide_render = False
         add_texture_map(self.table, os.path.join(self.bg_dir, random.choice(self.bg_imgs)))
         self.scene.render.filepath = os.path.join(self.out_dir, '{:04d}_image'.format(image_id))
         render_without_output(use_antialiasing=True)
@@ -382,14 +391,16 @@ if __name__ == '__main__':
     out_dir = '/media/xiao/newhd/XiaoDatasets/ABC/synthetic_data'
     scene_id = len(os.listdir(out_dir))
     out_dir = os.path.join(out_dir, '{:06d}'.format(scene_id))
-    images_per_scene = 1000
+    create_dir(out_dir)
+    images_per_scene = 100
 
     # textures and backgrounds directory
     texture_dir = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'textures')
     bg_dir = '/media/xiao/newhd/XiaoDatasets/PascalVOC/VOC2012/JPEGImages'
 
     # TODO: consider mutilple instances of the same shape
-    model_files = random.choices(os.listdir(model_dir), k=np.random.randint(5, 25))
+    model_number = np.random.randint(5, 25)
+    model_files = random.choices(os.listdir(model_dir), k=model_number)
     model_files = [os.path.join(model_dir, name) for name in model_files]
 
     render_machine = RenderMachine(model_files, out_dir, texture_dir=texture_dir, bg_dir=bg_dir, rad=3000)
@@ -402,9 +413,9 @@ if __name__ == '__main__':
     idx = np.random.randint(0, R.shape[0], size=(images_per_scene,))
 
     # Read in annotation json file
-    annotation_file = 'annotation.json'
+    annotation_file = '/media/xiao/newhd/XiaoDatasets/ABC/annotation.json'
     if os.path.isfile(annotation_file):
-        annot = json.load(annotation_file)
+        annot = json.load(open(annotation_file))
         start_idx = len(annot)
     else:
         annot = {}
@@ -412,12 +423,12 @@ if __name__ == '__main__':
 
     for i in range(len(idx)):
         render_machine.render_random_pose(
-            annot, start_idx, scene_id, i, R[idx[i], :], T[idx[i], :], Ele[idx[i]])
+            annot, start_idx + i * model_number, scene_id, i, R[idx[i], :], T[idx[i], :], Ele[idx[i]])
 
     with open(annotation_file, 'w') as f:
         json.dump(annot, f, indent=4, separators=(',', ': '))
 
-
+    os.system('rm blender_render.log')
 
     # model_dir = '/media/xiao/newhd/XiaoDatasets/LineMod/models_obj'
     # model_files = [os.path.join(model_dir, name) for name in os.listdir(model_dir) if name.endswith(".obj")]

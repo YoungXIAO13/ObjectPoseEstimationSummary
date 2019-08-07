@@ -2,27 +2,30 @@ import json
 import numpy as np
 from PIL import Image
 import cv2
+import os
+import ipdb
 
-value_list = [25,  39,  48,  56,  63,  75,  80,  85,  89,  93,
-              97, 101, 105, 108, 111, 115, 118, 121, 124, 126,
-              129, 132, 134, 137, 139, 142, 144, 147, 149]
+value_list = [25,  39,  48,  56,  63,  69,  75,  80,  85,  89,
+              93,  97,  101, 105, 108, 111, 115, 118, 121, 124,
+              126, 129, 132, 134, 137, 139, 142, 144, 147, 149]
 
 
 # Obtain the bounding box from the mask
 def obtain_obj_region(mask_path, idx):
     mask = cv2.imread(mask_path, -1)
-    obj_mask = (mask == value_list[idx]).astype('uint8')
+    obj_mask = np.array(mask == value_list[idx]).astype('uint8')
     bbox = cv2.boundingRect(obj_mask)
-    px_visible = np.sum(bbox)
-    occupy_fract = px_visible / (bbox[2] * bbox[3])
+    px_visible = int(np.sum(obj_mask))
+    occupy_fract = px_visible / (bbox[2] * bbox[3]) if px_visible != 0 else 0
     return bbox, px_visible, occupy_fract
 
 
 # Obtain the object center from the translation vector
-def obtain_obj_center(T, fx, fy, px, py):
+def obtain_obj_center(T, fx, fy, px, py, height, width):
     cx = int(fx * T[0] / T[2] + px)
     cy = int(fy * T[1] / T[2] + py)
-    return cx, cy
+    outside = True if cx <= 0 or cy <= 0 or cx >= width or cy >= height else False
+    return cx, cy, outside
 
 
 # Crop and Resize the image without changing the aspect ratio
@@ -39,6 +42,11 @@ def resize_padding(im, desired_size):
     new_im.paste(im, ((desired_size - new_size[0]) // 2, (desired_size - new_size[1]) // 2))
     return new_im
 
+
+# Create directory if not existed
+def create_dir(dir):
+    if not os.path.isdir(dir):
+        os.makedirs(dir)
 
 
 if __name__ == '__main__':
