@@ -18,21 +18,25 @@ In the following tables, 3D CAD model is noted as **model** and
 In this repo, we provide python code to generate rendering images from 3D models using
 blender as a python module that is easy to install : )
 
-Other works using blender can be found [here](https://github.com/weiaicunzai/blender_shapenet_render)
+**TODO**: scripts about how to use it.
+
+Other works using blender can be found 
+[here](https://github.com/weiaicunzai/blender_shapenet_render) that generates one model at a time.
 
 ### Physical Simulator
 
-[PyBullet](https://github.com/bulletphysics/bullet3/tree/master/examples/pybullet)
+[PyBullet](https://github.com/bulletphysics/bullet3/tree/master/examples/pybullet): 
+a very popular one in the Robotics community.
 
 
 ### Others
-[Glumpy](https://github.com/glumpy/glumpy)
+[Glumpy](https://github.com/glumpy/glumpy): does not support headless rendering (failed on ssh mode)
 
-[UnrealCV](https://github.com/unrealcv/unrealcv)
+[UnrealCV](https://github.com/unrealcv/unrealcv): extension of Unreal Engine 4, 
+helps interact with virtual world and communicate with external program.
 
-[UETorch](https://github.com/facebook/UETorch)
-
-[SyntheticComputerVision](https://github.com/unrealcv/synthetic-computer-vision)
+[SyntheticComputerVision](https://github.com/unrealcv/synthetic-computer-vision): 
+resuming a lot of techniques used to generate synthetic image 
 
 **Attention**: 3D models should be aligned in the same way through **meshlab** to 
 ensure the consistent orientation while wandering across the different datasets.
@@ -42,6 +46,9 @@ ensure the consistent orientation while wandering across the different datasets.
 In order to testify the network **generalization** ability 
 (tested on images containing **unseen** 3D models from the training set),
 the following dataset could be used to generate synthetic training data.
+
+Notice that **ABC** contains generic and arbitrary industrial CAD models 
+while **ShapeNetCore** and **ModelNet** contain common category objects such as cars and chairs.   
 
 | Dataset | Number of categories | Number of models | Reference |
 | :-----: | :-----: | :-----: | :-----: |
