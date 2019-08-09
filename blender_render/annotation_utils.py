@@ -34,7 +34,7 @@ def resize_padding(im, desired_size):
     ratio = float(desired_size) / max(old_size)
     new_size = tuple([int(x * ratio) for x in old_size])
 
-    im = im.resize(new_size, Image.ANTIALIAS)
+    im = im.resize(new_size, Image.BILINEAR)
 
     # create a new image and paste the resized on it
     new_im = Image.new("RGBA", (desired_size, desired_size))
@@ -56,9 +56,23 @@ def resize_padding_v2(im, desired_size_in, desired_size_out):
     return new_im
 
 
-
-
-
+# Crop and resize the rendering images
+def clean_rendering_results(img_path, depth_path, normal_path, target_size=128):
+    img = Image.open(img_path)
+    depth = Image.open(depth_path)
+    normal = Image.open(normal_path)
+    bbox = img.getbbox()
+    img, depth, normal = img.crop(bbox), depth.crop(bbox), normal.crop(bbox)
+    img = resize_padding(img, target_size).convert('RGB')
+    depth = resize_padding(depth, target_size).convert('L')
+    normal = resize_padding(normal, target_size).convert('RGB')
+    normal_array = np.array(normal)
+    mask = np.array(depth) == 0
+    normal_array[mask, :] = 0
+    normal = Image.fromarray(normal_array)
+    img.save(img_path)
+    depth.save(depth_path)
+    normal.save(normal_path)
 
 
 if __name__ == '__main__':

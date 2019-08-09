@@ -145,7 +145,7 @@ def setup_env(scene, depth=False, normal=False, height=480, width=640, clip_end=
         # Size is chosen kind of arbitrarily, try out until you're satisfied with
         # resulting depth map.
         map.offset = [0]
-        map.size = [0.3]
+        map.size = [0.4]
         map.use_min = True
         map.min = [0]
         map.use_max = True

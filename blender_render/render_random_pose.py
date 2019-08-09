@@ -267,7 +267,6 @@ if __name__ == '__main__':
     out_dir = '/media/xiao/newhd/XiaoDatasets/ABC/synthetic_data'
     scene_id = len(os.listdir(out_dir))
     out_dir = os.path.join(out_dir, '{:06d}'.format(scene_id))
-    create_dir(out_dir)
     images_per_scene = 100
 
     # textures and backgrounds directory
@@ -275,7 +274,7 @@ if __name__ == '__main__':
     bg_dir = '/media/xiao/newhd/XiaoDatasets/PascalVOC/VOC2012/JPEGImages'
 
     # TODO: consider mutilple instances of the same shape
-    model_files = [name for name in os.listdir(model_dir) if os.path.getsize(os.path.join(model_dir, name)) / (2 ** 20) < 50]
+    model_files = [name for name in os.listdir(model_dir) if os.path.getsize(os.path.join(model_dir, name)) / (2 ** 20) < 10]
     model_number = np.random.randint(5, 25)
     model_files = random.choices(model_files, k=model_number)
     model_files = [os.path.join(model_dir, name) for name in model_files]
@@ -290,7 +289,7 @@ if __name__ == '__main__':
     idx = np.random.randint(0, R.shape[0], size=(images_per_scene,))
 
     # Read in annotation json file
-    annotation_file = '/media/xiao/newhd/XiaoDatasets/ABC/annotation.json'
+    annotation_file = '/media/xiao/newhd/XiaoDatasets/ABC/annotation_1.json'
     if os.path.isfile(annotation_file):
         annot = json.load(open(annotation_file))
         start_idx = len(annot)
@@ -303,7 +302,7 @@ if __name__ == '__main__':
             annot, start_idx + i * model_number, scene_id, i, R[idx[i], :], T[idx[i], :], Ele[idx[i]])
 
     with open(annotation_file, 'w') as f:
-        json.dump(annot, f, indent=4, separators=(',', ': '))
+        json.dump(annot, f, indent=4)
 
     os.system('rm blender_render.log')
 

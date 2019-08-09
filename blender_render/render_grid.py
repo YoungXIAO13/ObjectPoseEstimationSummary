@@ -9,6 +9,7 @@ import ipdb
 cur_dir = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(cur_dir)
 from render_utils import *
+from annotation_utils import *
 
 
 # Define pose grid for 20 vertex on the regular dodecahedron
@@ -87,9 +88,9 @@ def create_coord_map(obj):
         for idx in poly.loop_indices:
             loop = mesh.loops[idx]
             v = vert_list[loop.vertex_index]
-            r = (v.co.x - min_x) / size_x
-            g = (v.co.y - min_y) / size_y
-            b = (v.co.z - min_z) / size_z
+            r = (v.co.x - min_x) / size_x if size_x != 0 else 1
+            g = (v.co.y - min_y) / size_y if size_y != 0 else 1
+            b = (v.co.z - min_z) / size_z if size_z != 0 else 1
             color_map.data[i].color = (r, g, b)
             i += 1
 
@@ -142,20 +143,30 @@ class RenderMachine:
             self.normalFileOutput.file_slots[0].path = '{:04d}_'.format(i)
             render_without_output(use_antialiasing=True)
 
+            # Crop and resize the rendering results
+            img_path = '{}.png'.format(self.scene.render.filepath)
+            depth_path = os.path.join(self.depthFileOutput.base_path, '{:04d}_0001.png'.format(i))
+            normal_path = os.path.join(self.normalFileOutput.base_path, '{:04d}_0001.png'.format(i))
+            clean_rendering_results(img_path, depth_path, normal_path)
+
 
 if __name__ == '__main__':
     # input and output directory
     model_dir = '/media/xiao/newhd/XiaoDatasets/ABC/abc_0000_obj_v00'
     out_dir = '/media/xiao/newhd/XiaoDatasets/ABC/multiviews'
-
     model_files = [name for name in os.listdir(model_dir) if
-                   os.path.getsize(os.path.join(model_dir, name)) / (2 ** 20) < 50]
-    # model_file = random.choice(model_files)
-    model_file = '00007166_d4693ea90f7942debb07491f_trimesh_006.obj'
-    model_file = os.path.join(model_dir, model_file)
+                   os.path.getsize(os.path.join(model_dir, name)) / (2 ** 20) < 10]
+    model_files.sort()
+    # model_files = model_files[:100]
 
-    render_machine = RenderMachine(model_file, out_dir, rad=30, height=224, width=224)
+    for model_file in model_files:
+        model_path = os.path.join(model_dir, model_file)
+        model_name = model_file.split(".")[0]
 
-    render_machine.render_grid_pose(dodecahedron_vertex_coord)
+        if os.path.isdir(os.path.join(out_dir, model_name)):
+            continue
+
+        render_machine = RenderMachine(model_path, out_dir, rad=30, height=224, width=224)
+        render_machine.render_grid_pose(dodecahedron_vertex_coord)
 
     os.system('rm blender_render.log')
