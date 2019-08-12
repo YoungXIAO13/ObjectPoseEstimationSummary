@@ -5,7 +5,8 @@ from tqdm import tqdm
 ply_dir = "models"
 
 # where to save the converted obj files
-obj_dir = "models"
+obj_dir = "models_obj"
+os.mkdir(obj_dir)
 
 plys = [name for name in os.listdir(ply_dir) if name.endswith(".ply")]
 
