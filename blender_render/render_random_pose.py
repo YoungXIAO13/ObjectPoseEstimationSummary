@@ -263,8 +263,8 @@ class RenderMachine:
 
 if __name__ == '__main__':
     # input and output directory
-    model_dir = '/media/xiao/newhd/XiaoDatasets/ABC/abc_0000_obj_v00'
-    out_dir = '/media/xiao/newhd/XiaoDatasets/ABC/synthetic_data'
+    model_dir = '/media/xiao/newhd/XiaoDatasets/ABC/abc_0000'
+    out_dir = '/media/xiao/newhd/XiaoDatasets/ABC/synthetic_data_0000'
     scene_id = len(os.listdir(out_dir))
     out_dir = os.path.join(out_dir, '{:06d}'.format(scene_id))
     images_per_scene = 100
@@ -289,7 +289,7 @@ if __name__ == '__main__':
     idx = np.random.randint(0, R.shape[0], size=(images_per_scene,))
 
     # Read in annotation json file
-    annotation_file = '/media/xiao/newhd/XiaoDatasets/ABC/annotation_1.json'
+    annotation_file = '/media/xiao/newhd/XiaoDatasets/ABC/annotation_0000.json'
     if os.path.isfile(annotation_file):
         annot = json.load(open(annotation_file))
         start_idx = len(annot)

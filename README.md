@@ -27,6 +27,9 @@ use the [toolkit](https://github.com/thodan/bop_toolkit) provided by the authors
 You can use our code ```ply2obj.py``` to convert original **.ply** files to **.obj** files,
 and run ```create_annotation.py``` to create a single annotation file for all the scenes in a dataset.
 
+Datasets format can be found [here](https://github.com/thodan/bop_toolkit/blob/master/docs/bop_datasets_format.md),
+we use **instance id** in our annotation to indicate different instances pictured in the same image.
+
 | Dataset | Sample image | Annotation | Statistics | Reference |
 | :-----: | :-----: | :-----: | :-----: | :-----: |
 | [HomebrewedDB](https://bop.felk.cvut.cz/datasets/) | ![](https://github.com/YoungXIAO13/6DPoseEstimationDatasets/blob/master/img/HomebrewedDB.png) | 6D pose + Depth + BoundingBox| **33** models in **13** videos with **17,420** frames| [Preprint 2019](https://arxiv.org/abs/1904.03167)| 

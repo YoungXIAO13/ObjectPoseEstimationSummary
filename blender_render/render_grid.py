@@ -151,16 +151,16 @@ class RenderMachine:
 
 
 if __name__ == '__main__':
-    dataset_dir = '/media/xiao/newhd/XiaoDatasets/ABC'
-    model_dir = os.path.join(dataset_dir, 'abc_0000_obj_v00')
-    out_dir = os.path.join(dataset_dir, 'multiviews')
-    model_files = [name for name in os.listdir(model_dir) if
-                   os.path.getsize(os.path.join(model_dir, name)) / (2 ** 20) < 10]
-
-    # dataset_dir = '/media/xiao/newhd/XiaoDatasets/LINEMOD-Occlusion'
-    # model_dir = os.path.join(dataset_dir, 'models_obj')
+    # dataset_dir = '/media/xiao/newhd/XiaoDatasets/ABC'
+    # model_dir = os.path.join(dataset_dir, 'abc_0000_obj_v00')
     # out_dir = os.path.join(dataset_dir, 'multiviews')
-    # model_files = os.listdir(model_dir)
+    # model_files = [name for name in os.listdir(model_dir) if
+    #                os.path.getsize(os.path.join(model_dir, name)) / (2 ** 20) < 10]
+
+    dataset_dir = '/media/xiao/newhd/XiaoDatasets/T-LESS'
+    model_dir = os.path.join(dataset_dir, 'models_obj')
+    out_dir = os.path.join(dataset_dir, 'multiviews')
+    model_files = os.listdir(model_dir)
 
     model_files.sort()
 
@@ -171,7 +171,7 @@ if __name__ == '__main__':
         if os.path.isdir(os.path.join(out_dir, model_name)):
             continue
 
-        render_machine = RenderMachine(model_path, out_dir, rad=30, height=224, width=224)
+        render_machine = RenderMachine(model_path, out_dir, rad=30, height=256, width=256)
         render_machine.render_grid_pose(dodecahedron_vertex_coord)
 
-    os.system('rm blender_render.log')
+    # os.system('rm blender_render.log')
