@@ -151,20 +151,22 @@ class RenderMachine:
 
 
 if __name__ == '__main__':
-    # dataset_dir = '/media/xiao/newhd/XiaoDatasets/ABC'
-    # model_dir = os.path.join(dataset_dir, 'abc_0000_obj_v00')
-    # out_dir = os.path.join(dataset_dir, 'multiviews')
-    # model_files = [name for name in os.listdir(model_dir) if
-    #                os.path.getsize(os.path.join(model_dir, name)) / (2 ** 20) < 10]
-
-    dataset_dir = '/media/xiao/newhd/XiaoDatasets/T-LESS'
-    model_dir = os.path.join(dataset_dir, 'models_obj')
+    dataset_dir = '/media/xiao/newhd/XiaoDatasets/ABC'
+    model_dir = os.path.join(dataset_dir, 'abc_0001')
     out_dir = os.path.join(dataset_dir, 'multiviews')
-    model_files = os.listdir(model_dir)
+    model_files = [name for name in os.listdir(model_dir) if
+                   os.path.getsize(os.path.join(model_dir, name)) / (2 ** 20) < 10]
+
+    # dataset_dir = '/media/xiao/newhd/XiaoDatasets/T-LESS'
+    # model_dir = os.path.join(dataset_dir, 'models_obj')
+    # out_dir = os.path.join(dataset_dir, 'multiviews')
+    # model_files = os.listdir(model_dir)
 
     model_files.sort()
 
-    for model_file in model_files:
+    from tqdm import tqdm
+
+    for model_file in tqdm(model_files):
         model_path = os.path.join(model_dir, model_file)
         model_name = model_file.split(".")[0]
 

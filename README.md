@@ -77,17 +77,31 @@ while **ShapeNetCore** and **ModelNet** contain common category objects such as 
 ## Rendering methods
 
 ### Differentiable Renderer
-[Neural 3D Mesh Renderer](http://hiroharu-kato.com/projects_en/neural_renderer.html): Kato el al. CVPR 2018
+* [Neural 3D Mesh Renderer](http://hiroharu-kato.com/projects_en/neural_renderer.html): Kato el al. CVPR 2018
  
-[RenderNet](https://github.com/thunguyenphuoc/RenderNet): Thu et al. NIPS 2018
+* [RenderNet](https://github.com/thunguyenphuoc/RenderNet): Thu et al. NIPS 2018
 
 ### Blender Render
 In this repo, we provide python code to generate rendering images from 3D models using
 blender as a python module that is easy to install and generate photo-realistic images : )
 
-**TODO**: scripts about how to use it.
+In order to generate synthetic data, we first need to simulate a set of poses where the
+camera is uniformly distributed on the upper semi-sphere around the table plane.
 
-Other works using blender can be found 
+```./blender_render/table_poses.npz``` contains the poses obtained in LINEMOD-Occlusion dataset
+with the distribution listed below:
+    
+    * Range of object distances: 346 - 1500 mm (only 3 instances below 400 mm)
+    * Azimuth range: 0 - 360 deg
+    * Elevation range: -14 - 89 deg (only a few instances below 0 deg)
+    
+You can download CAD models of the [ABC](https://deep-geometry.github.io/abc-dataset/) dataset 
+and retrieve .obj files into the target directory using ```retrieve_files.py```. 
+
+Then generate synthetic images of different models with various lightness and textures 
+under random poses by running ```./blender_render/render_random_pose.py```
+
+* Other works using blender can be found 
 [here](https://github.com/weiaicunzai/blender_shapenet_render) that generates one model at a time.
 
 ### Physical Simulator
@@ -97,12 +111,12 @@ a very popular one in the Robotics community.
 
 
 ### Others
-[Glumpy](https://github.com/glumpy/glumpy): does not support headless rendering (failed on ssh mode)
+* [Glumpy](https://github.com/glumpy/glumpy): does not support headless rendering (failed on ssh mode)
 
-[UnrealCV](https://github.com/unrealcv/unrealcv): extension of Unreal Engine 4, 
+* [UnrealCV](https://github.com/unrealcv/unrealcv): extension of Unreal Engine 4, 
 helps interact with virtual world and communicate with external program.
 
-[SyntheticComputerVision](https://github.com/unrealcv/synthetic-computer-vision): 
+* [SyntheticComputerVision](https://github.com/unrealcv/synthetic-computer-vision): 
 resuming a lot of techniques used to generate synthetic image 
 
 **Attention**: 3D models should be aligned in the same way through **meshlab** to 
