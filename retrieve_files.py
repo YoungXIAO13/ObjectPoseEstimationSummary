@@ -1,3 +1,7 @@
+"""
+A simple script used to retrieve .obj files from the ABC dataset
+"""
+
 import os
 import shutil
 from tqdm import tqdm

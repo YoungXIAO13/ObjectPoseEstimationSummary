@@ -1,6 +1,7 @@
 import os, sys
 import bpy
 from mathutils import Matrix, Vector
+from math import radians, sin, cos
 import numpy as np
 import random
 import json
@@ -9,7 +10,7 @@ import ipdb
 cur_dir = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(cur_dir)
 from render_utils import *
-from annotation_utils import *
+from image_utils import *
 
 
 # Define pose grid for 20 vertex on the regular dodecahedron
@@ -21,6 +22,23 @@ dodecahedron_vertex_coord = np.array(
      [-1/phi, 0, -phi], [-1/phi, 0, phi], [1/phi, 0, -phi], [1/phi, 0, phi],
      [-phi, -1/phi, 0], [-phi, 1/phi, 0], [phi, -1/phi, 0], [phi, 1/phi, 0]]
 )
+
+
+# Define pose grid for vertex on the semi-sphere
+semi_sphere_coord = []
+step_azi = 5  # one render image every 5 degrees in azimuth
+step_ele = 30  # one tour every 30 degrees in elevation
+n_azi = int(360 / step_azi)
+n_view = n_azi * int(90 / step_ele)
+r = np.sqrt(3)
+for i in range(0, n_view):
+    azi = (i * step_azi) % 360
+    ele = (i // n_azi) * step_ele
+    loc_x = -r * cos(radians(ele)) * sin(radians(azi))
+    loc_y = -r * cos(radians(ele)) * cos(radians(azi))
+    loc_z = r * sin(radians(ele))
+    semi_sphere_coord.append([loc_x, loc_y, loc_z])
+semi_sphere_coord = np.array(semi_sphere_coord)
 
 
 # Add constraint to the camera
@@ -127,11 +145,10 @@ class RenderMachine:
         create_coord_map(bpy.data.objects[self.model])
 
         # Output setting
-        self.out_dir = os.path.join(out_dir, self.model, 'nocs')
-        self.depthFileOutput.base_path = os.path.join(out_dir, self.model, 'depth')
-        self.normalFileOutput.base_path = os.path.join(out_dir, self.model, 'normal')
+        self.out_dir = os.path.join(out_dir, 'nocs')
+        self.depthFileOutput.base_path = os.path.join(out_dir, 'depth')
+        self.normalFileOutput.base_path = os.path.join(out_dir, 'normal')
         self.scene.render.image_settings.file_format = 'PNG'
-        # self.depthFileOutput.format.file_format = 'OPEN_EXR'
 
     def render_grid_pose(self, pose_grid):
         for i in range(pose_grid.shape[0]):
@@ -151,29 +168,56 @@ class RenderMachine:
 
 
 if __name__ == '__main__':
-    dataset_dir = '/media/xiao/newhd/XiaoDatasets/ABC'
-    model_dir = os.path.join(dataset_dir, 'abc_0001')
-    out_dir = os.path.join(dataset_dir, 'multiviews')
-    model_files = [name for name in os.listdir(model_dir) if
-                   os.path.getsize(os.path.join(model_dir, name)) / (2 ** 20) < 10]
-
-    # dataset_dir = '/media/xiao/newhd/XiaoDatasets/T-LESS'
-    # model_dir = os.path.join(dataset_dir, 'models_obj')
-    # out_dir = os.path.join(dataset_dir, 'multiviews')
-    # model_files = os.listdir(model_dir)
-
-    model_files.sort()
-
     from tqdm import tqdm
+    import argparse
 
-    for model_file in tqdm(model_files):
-        model_path = os.path.join(model_dir, model_file)
-        model_name = model_file.split(".")[0]
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--dataset_dir', type=str, help='dataset directory')
+    parser.add_argument('--dataset_format', type=str, choices=['BOP', 'Pascal3D', 'ShapeNet'], help='dataset format')
+    parser.add_argument('--input', type=str, help='subdirectory containing obj files in the dataset directory')
+    parser.add_argument('--output', type=str, help='subdirectory to save rendering output in the dataset directory')
+    parser.add_argument('--pose', type=str, choices=['dodecahedron', 'semi_sphere'], help='poses under which the object will be rendered')
+    args = parser.parse_args()
 
-        if os.path.isdir(os.path.join(out_dir, model_name)):
-            continue
+    input_dir = os.path.join(args.dataset_dir, args.input)
+    output_dir = os.path.join(args.dataset_dir, args.output)
 
-        render_machine = RenderMachine(model_path, out_dir, rad=30, height=256, width=256)
-        render_machine.render_grid_pose(dodecahedron_vertex_coord)
+    if args.pose == 'dodecahedron':
+        poses = dodecahedron_vertex_coord
+    elif args.pose == 'semi_sphere':
+        poses = semi_sphere_coord
+    else:
+        sys.exit(0)
+
+    if args.dataset_format == 'BOP':
+        model_files = sorted(os.listdir(input_dir))
+        for model_file in tqdm(model_files):
+            model_path = os.path.join(input_dir, model_file)
+            render_dir = os.path.join(output_dir, model_file.split(".")[0])
+            if os.path.isdir(render_dir):
+                continue
+            render_machine = RenderMachine(model_path, render_dir, rad=30, height=256, width=256)
+            render_machine.render_grid_pose(poses)
+
+    elif args.dataset_format in ['Pascal3D', 'ShapeNet']:
+        categories = sorted(os.listdir(input_dir))
+        for cat in tqdm(categories):
+            cat_in = os.path.join(input_dir, cat)
+            cat_out = os.path.join(output_dir, cat)
+            model_files = sorted(os.listdir(cat_in))
+            for model_file in tqdm(model_files):
+                if args.dataset_format == 'Pascal3D':
+                    model_path = os.path.join(cat_in, model_file)
+                    model_name = model_file.split(".")[0]
+                else:
+                    model_path = os.path.join(cat_in, model_file, 'models', 'model_normalized.obj')
+                    model_name = model_file
+                render_dir = os.path.join(cat_out, model_name)
+                if os.path.isdir(render_dir):
+                    continue
+                render_machine = RenderMachine(model_path, render_dir, rad=30, height=256, width=256)
+                render_machine.render_grid_pose(poses)
+    else:
+        sys.exit(0)
 
     # os.system('rm blender_render.log')
