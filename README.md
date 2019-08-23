@@ -11,20 +11,32 @@ and [here](https://arxiv.org/abs/1903.04229)
  
 
 ## Table of Content
+* [Challenges](#challenges)
 * [Objects in the controlled environments](#objects-in-the-controlled-environments)
 * [Objects in the wild](#objects-in-the-wild)
 * [3D model datasets](#3d-model-datasets)
 * [Rendering Methods](#rendering-methods)
 
 
-## Objects in the controlled environments
+## Challenges :space_invader:
+* [ICCV 2015: Occluded Object Challenge](https://hci.iwr.uni-heidelberg.de/vislearn/iccv2015-occlusion-challenge/)
+* [ICCV 2015: Recovering Object Pose](https://labicvl.github.io/3DPose-2015.html)
+* [ECCV 2016: Recovering Object Pose](https://labicvl.github.io/R6D)
+* [ICCV 2017: Recovering Object Pose](http://cmp.felk.cvut.cz/sixd/workshop_2017/)
+* [ECCV 2018: Recovering Object Pose](http://cmp.felk.cvut.cz/sixd/workshop_2018/)
+* [ICCV 2019: Recovering Object Pose](http://cmp.felk.cvut.cz/sixd/workshop_2019/)
+* [IROS 2019: Object Pose Estimation for Bin-Picking](http://www.bin-picking.ai/en/competition.html)
+
+
+## Objects in the controlled environments :movie_camera:
 This table lists the datasets commonly known as **BOP: Benchmark 6D Object Pose Estimation**, 
 which provide accurate 3D object models and precise 2D-3D alignment.
 
 You can download all the BOP datasets [here](https://bop.felk.cvut.cz/datasets/) and
-use the [toolkit](https://github.com/thodan/bop_toolkit) provided by the authors.
+use the [toolkit](https://github.com/thodan/bop_toolkit) provided by the organizers.
 
-You can use our code ```ply2obj.py``` to convert original **.ply** files to **.obj** files,
+After downloading the data, 
+you can use our code ```ply2obj.py``` to convert original **.ply** files to **.obj** files,
 and run ```create_annotation.py``` to create a single annotation file for all the scenes in a dataset.
 
 Datasets format can be found [here](https://github.com/thodan/bop_toolkit/blob/master/docs/bop_datasets_format.md),
@@ -33,7 +45,7 @@ we use **instance id** in our annotation to indicate different instances picture
 | Dataset | Sample image | Annotation | Statistics | Reference |
 | :-----: | :-----: | :-----: | :-----: | :-----: |
 | [HomebrewedDB](https://bop.felk.cvut.cz/datasets/) | ![](https://github.com/YoungXIAO13/6DPoseEstimationDatasets/blob/master/img/HomebrewedDB.png) | 6D pose + Depth + BoundingBox| **33** models in **13** videos with **17,420** frames| [Preprint 2019](https://arxiv.org/abs/1904.03167)| 
-| [YCB-Video](https://rse-lab.cs.washington.edu/projects/posecnn/) | ![](https://github.com/YoungXIAO13/6DPoseEstimationDatasets/blob/master/img/YCB-Video.png) | 6D Pose + Depth + Mask | **21** models in **92** videos with **133,827** frames| [RSS 2018](https://arxiv.org/abs/1711.00199) |
+| [YCB-Video](https://bop.felk.cvut.cz/datasets/) | ![](https://github.com/YoungXIAO13/6DPoseEstimationDatasets/blob/master/img/YCB-Video.png) | 6D Pose + Depth + Mask | **21** models in **92** videos with **133,827** frames| [RSS 2018](https://arxiv.org/abs/1711.00199) |
 | [T-LESS](https://bop.felk.cvut.cz/datasets/)| ![](https://github.com/YoungXIAO13/6DPoseEstimationDatasets/blob/master/img/T-LESS.png) | 6D Pose + Depth | **30** models in **20** videos with **~49K** frames | [WACV 2017](http://cmp.felk.cvut.cz/t-less/)|
 | [Doumanoglou](https://bop.felk.cvut.cz/datasets/)| ![](https://github.com/YoungXIAO13/6DPoseEstimationDatasets/blob/master/img/Doumanoglou.png)| 6D Pose + Depth | **2** models in **3** videos with **183** frames| [CVPR 2016](http://rkouskou.gitlab.io/research/6D_NBV.html)|
 | [Tejani](https://bop.felk.cvut.cz/datasets/) | ![](https://github.com/YoungXIAO13/6DPoseEstimationDatasets/blob/master/img/Tejani.png) | 6D Pose + Depth | **6** models in **6** videos with **2,067** frames | [ECCV 2014](http://rkouskou.gitlab.io/research/LCHF.html)|
@@ -41,8 +53,7 @@ we use **instance id** in our annotation to indicate different instances picture
 | [LINEMOD](https://bop.felk.cvut.cz/datasets/) | ![](https://github.com/YoungXIAO13/6DPoseEstimationDatasets/blob/master/img/LINEMOD.jpg) | 6D pose + Depth for one object | **15** models in **15** videos with **18,273** frames | [ACCV 2012](http://www.stefan-hinterstoisser.com/papers/hinterstoisser2012accv.pdf) |
 
 
-
-## Objects in the wild
+## Objects in the wild :camera:
 In this table, **Pix3D** and **ScanNet** provide precise 2D-3D alignment 
 while others only provide a coarse alignment.
 
@@ -60,7 +71,7 @@ while others only provide a coarse alignment.
 | [KITTI](http://www.cvlibs.net/datasets/kitti/eval_object.php) | ![](https://github.com/YoungXIAO13/6DPoseEstimationDatasets/blob/master/img/KITTI.png) | 3D BoundingBox | **80,256** objects in **14,999** images | [CVPR 2012](http://www.cvlibs.net/publications/Geiger2012CVPR.pdf) |
 
 
-## 3D model datasets
+## 3D model datasets :bike:
 In order to testify the network **generalization** ability 
 (tested on images containing **unseen** 3D models from the training set),
 the following dataset could be used to generate synthetic training data.
@@ -68,20 +79,21 @@ the following dataset could be used to generate synthetic training data.
 Notice that **ABC** contains generic and arbitrary industrial CAD models 
 while **ShapeNetCore** and **ModelNet** contain common category objects such as cars and chairs.   
 
-| Dataset | Number of categories | Number of models | Reference |
+| Dataset | Categories | Models in total | Reference |
 | :-----: | :-----: | :-----: | :-----: |
 | [ABC](https://deep-geometry.github.io/abc-dataset/) | - | 1 million | [CVPR 2019](https://arxiv.org/pdf/1812.06216.pdf) |
 | [ShapeNetCore](https://www.shapenet.org/download/shapenetcore) | 55 | ~51,300 | [ArXiv 2015](https://arxiv.org/abs/1512.03012) | 
 | [ModelNet-40](http://modelnet.cs.princeton.edu/) | 40 | 26,960 | [CVPR 2015](https://3dshapenets.cs.princeton.edu/paper.pdf) |
 
-## Rendering methods
+
+## Rendering methods :bicyclist:
 
 ### Differentiable Renderer
 * [Neural 3D Mesh Renderer](http://hiroharu-kato.com/projects_en/neural_renderer.html): Kato el al. CVPR 2018
  
 * [RenderNet](https://github.com/thunguyenphuoc/RenderNet): Thu et al. NIPS 2018
 
-### Blender Render
+### Blender Render :mountain_bicyclist:
 In this repo, we provide python code to generate rendering images from 3D models using
 blender as a python module that is easy to install and generate photo-realistic images : )
 
