@@ -9,8 +9,8 @@ import ipdb
 
 cur_dir = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(cur_dir)
-from render_utils import *
-from image_utils import *
+from render_utils import remove_obj_lamp_and_mesh, render_without_output, setup_env, make_lamp
+from image_utils import clean_rendering_results
 
 
 # Define pose grid for 20 vertex on the regular dodecahedron
@@ -130,7 +130,7 @@ class RenderMachine:
     clip_end: rendering range in mm
     """
     def __init__(self,
-                 model_file, out_dir, rad=3000, clip_end=100, height=128, width=128):
+                 model_file, out_dir, rendering='nocs', rad=30, clip_end=100, height=256, width=256):
         # Setting up the environment
         remove_obj_lamp_and_mesh(bpy.context)
         self.scene = bpy.context.scene
@@ -142,10 +142,11 @@ class RenderMachine:
         # Import 3D models and create the normalized object coordinate space as material
         self.model = import_model(model_file, axis_forward='Y', axis_up='Z')
         normalize_model(bpy.data.objects[self.model])
-        create_coord_map(bpy.data.objects[self.model])
+        if rendering == 'nocs':
+            create_coord_map(bpy.data.objects[self.model])
 
         # Output setting
-        self.out_dir = os.path.join(out_dir, 'nocs')
+        self.out_dir = os.path.join(out_dir, rendering)
         self.depthFileOutput.base_path = os.path.join(out_dir, 'depth')
         self.normalFileOutput.base_path = os.path.join(out_dir, 'normal')
         self.scene.render.image_settings.file_format = 'PNG'
@@ -175,16 +176,15 @@ if __name__ == '__main__':
     parser.add_argument('--dataset_dir', type=str, help='dataset directory')
     parser.add_argument('--dataset_format', type=str, choices=['BOP', 'Pascal3D', 'ShapeNet'], help='dataset format')
     parser.add_argument('--input', type=str, help='subdirectory containing obj files in the dataset directory')
-    parser.add_argument('--output', type=str, help='subdirectory to save rendering output in the dataset directory')
-    parser.add_argument('--pose', type=str, choices=['dodecahedron', 'semi_sphere'], help='poses under which the object will be rendered')
+    parser.add_argument('--views', type=str, choices=['dodecahedron', 'semi_sphere'], help='poses under which the object will be rendered')
     args = parser.parse_args()
 
     input_dir = os.path.join(args.dataset_dir, args.input)
-    output_dir = os.path.join(args.dataset_dir, args.output)
+    output_dir = os.path.join(args.dataset_dir, args.views)
 
-    if args.pose == 'dodecahedron':
+    if args.views == 'dodecahedron':
         poses = dodecahedron_vertex_coord
-    elif args.pose == 'semi_sphere':
+    elif args.views == 'semi_sphere':
         poses = semi_sphere_coord
     else:
         sys.exit(0)
@@ -196,7 +196,7 @@ if __name__ == '__main__':
             render_dir = os.path.join(output_dir, model_file.split(".")[0])
             if os.path.isdir(render_dir):
                 continue
-            render_machine = RenderMachine(model_path, render_dir, rad=30, height=256, width=256)
+            render_machine = RenderMachine(model_path, render_dir)
             render_machine.render_grid_pose(poses)
 
     elif args.dataset_format in ['Pascal3D', 'ShapeNet']:
@@ -215,9 +215,9 @@ if __name__ == '__main__':
                 render_dir = os.path.join(cat_out, model_name)
                 if os.path.isdir(render_dir):
                     continue
-                render_machine = RenderMachine(model_path, render_dir, rad=30, height=256, width=256)
+                render_machine = RenderMachine(model_path, render_dir)
                 render_machine.render_grid_pose(poses)
     else:
         sys.exit(0)
 
-    # os.system('rm blender_render.log')
+    os.system('rm blender_render.log')
