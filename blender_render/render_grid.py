@@ -130,18 +130,22 @@ class RenderMachine:
     clip_end: rendering range in mm
     """
     def __init__(self,
-                 model_file, out_dir, rendering='nocs', rad=30, clip_end=100, height=256, width=256):
+                 model_file, out_dir, rendering, 
+                 target_size=128, rad=30, clip_end=100, height=256, width=256):
         # Setting up the environment
         remove_obj_lamp_and_mesh(bpy.context)
         self.scene = bpy.context.scene
         self.depthFileOutput, self.normalFileOutput = setup_env(self.scene, True, True, height, width, clip_end)
         self.camera = setup_camera(self.scene)
         self.lamp = make_lamp(rad)
+        self.target_size = target_size
         self.height, self.width = height, width
 
-        # Import 3D models and create the normalized object coordinate space as material
+        # Import 3D models and normalize it 
         self.model = import_model(model_file, axis_forward='Y', axis_up='Z')
         normalize_model(bpy.data.objects[self.model])
+        
+        # Create the normalized object coordinate space as material
         if rendering == 'nocs':
             create_coord_map(bpy.data.objects[self.model])
 
@@ -165,7 +169,7 @@ class RenderMachine:
             img_path = '{}.png'.format(self.scene.render.filepath)
             depth_path = os.path.join(self.depthFileOutput.base_path, '{:04d}_0001.png'.format(i))
             normal_path = os.path.join(self.normalFileOutput.base_path, '{:04d}_0001.png'.format(i))
-            clean_rendering_results(img_path, depth_path, normal_path)
+            clean_rendering_results(img_path, depth_path, normal_path, self.target_size)
 
 
 if __name__ == '__main__':

@@ -16,6 +16,7 @@ and [here](https://arxiv.org/abs/1903.04229)
 * [Objects in the wild](#objects-in-the-wild)
 * [3D model datasets](#3d-model-datasets)
 * [Rendering Methods](#rendering-methods)
+* [Shape Encoding](#shape-encoding)
 
 
 ## Challenges :space_invader:
@@ -36,8 +37,8 @@ You can download all the BOP datasets [here](https://bop.felk.cvut.cz/datasets/)
 use the [toolkit](https://github.com/thodan/bop_toolkit) provided by the organizers.
 
 After downloading the data, 
-you can use our code ```ply2obj.py``` to convert original **.ply** files to **.obj** files,
-and run ```create_annotation.py``` to create a single annotation file for all the scenes in a dataset.
+you can use our code ```data/BOP/ply2obj.py``` to convert original **.ply** files to **.obj** files,
+and run ```data/BOP/create_annotation.py``` to create a single annotation file for all the scenes in a dataset.
 
 Datasets format can be found [here](https://github.com/thodan/bop_toolkit/blob/master/docs/bop_datasets_format.md),
 we use **instance id** in our annotation to indicate different instances pictured in the same image.
@@ -100,7 +101,7 @@ blender as a python module that is easy to install and generate photo-realistic 
 In order to generate synthetic data, we first need to simulate a set of poses where the
 camera is uniformly distributed on the upper semi-sphere around the table plane.
 
-```./blender_render/table_poses.npz``` contains the poses obtained in LINEMOD-Occlusion dataset
+```blender_render/table_poses.npz``` contains the poses obtained in LINEMOD-Occlusion dataset
 with the distribution listed below:
     
     * Range of object distances: 346 - 1500 mm (only 3 instances below 400 mm)
@@ -108,10 +109,10 @@ with the distribution listed below:
     * Elevation range: -14 - 89 deg (only a few instances below 0 deg)
     
 You can download CAD models of the [ABC](https://deep-geometry.github.io/abc-dataset/) dataset 
-and retrieve .obj files into the target directory using ```retrieve_files.py```. 
+and retrieve .obj files into the target directory using ```data/ABC/retrieve_files.py```. 
 
 Then generate synthetic images of different models with various lightness and textures 
-under random poses by running ```./blender_render/render_random_pose.py```
+under random poses using ```blender_render/render_random_pose.py```
 
 * Other works using blender can be found 
 [here](https://github.com/weiaicunzai/blender_shapenet_render) that generates one model at a time.
@@ -133,3 +134,11 @@ resuming a lot of techniques used to generate synthetic image
 
 **Attention**: 3D models should be aligned in the same way through **meshlab** to 
 ensure the consistent orientation while wandering across the different datasets.
+
+
+## Shape Encoding
+
+We provide python scripts to generate rendered images, downsampled point clouds and downsampled meshes
+from .obj files in ```data```.
+
+In order to generate point cloud, you need to compile [O-CNN](https://github.com/wang-ps/O-CNN/tree/master/virtual_scanner) first and install [open3d](https://github.com/intel-isl/Open3D).

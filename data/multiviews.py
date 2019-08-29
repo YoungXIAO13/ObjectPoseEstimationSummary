@@ -10,6 +10,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--dataset_dir', type=str, help='dataset directory')
 parser.add_argument('--dataset_format', type=str, choices=['BOP', 'Pascal3D', 'ShapeNet'], help='dataset format')
 parser.add_argument('--input', type=str, help='subdirectory containing obj files in the dataset directory')
+parser.add_argument('--target_size', type=int, default=128, help='crop the rendering image and resize to the target size')
 parser.add_argument('--rendering', type=str, choices=['nocs', 'nontextured'], default='nocs',
                     help='rendering format which could be local field or non-textured images')
 parser.add_argument('--views', type=str, choices=['dodecahedron', 'semisphere'], default='dodecahedron',
@@ -17,7 +18,7 @@ parser.add_argument('--views', type=str, choices=['dodecahedron', 'semisphere'],
 args = parser.parse_args()
 
 input_dir = os.path.join(args.dataset_dir, args.input)
-output_dir = os.path.join(args.dataset_dir, args.views)
+output_dir = os.path.join(args.dataset_dir, 'multiviews', args.views)
 
 if args.views == 'dodecahedron':
     views = dodecahedron_vertex_coord
@@ -33,7 +34,7 @@ if args.dataset_format == 'BOP':
         render_dir = os.path.join(output_dir, model_file.split(".")[0])
         if os.path.isdir(render_dir):
             continue
-        render_machine = RenderMachine(model_path, render_dir, rendering=args.rendering)
+        render_machine = RenderMachine(model_path, render_dir, rendering=args.rendering, target_size=args.target_size)
         render_machine.render_grid_pose(views)
 
 elif args.dataset_format in ['Pascal3D', 'ShapeNet']:
@@ -52,7 +53,7 @@ elif args.dataset_format in ['Pascal3D', 'ShapeNet']:
             render_dir = os.path.join(cat_out, model_name)
             if os.path.isdir(render_dir):
                 continue
-            render_machine = RenderMachine(model_path, render_dir, rendering=args.rendering)
+            render_machine = RenderMachine(model_path, render_dir, rendering=args.rendering, target_size=args.target_size)
             render_machine.render_grid_pose(views)
 else:
     sys.exit(0)
