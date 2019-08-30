@@ -1,4 +1,6 @@
 import os, sys
+from os.path import join, dirname, basename, exists
+import shutil
 import bpy
 from mathutils import Matrix, Vector
 from PIL import Image
@@ -6,12 +8,11 @@ from math import radians, sin, cos
 import numpy as np
 import random
 import json
-import ipdb
 
-cur_dir = os.path.dirname(os.path.abspath(__file__))
+cur_dir = dirname(os.path.abspath(__file__))
 sys.path.append(cur_dir)
-from image_utils import obtain_obj_region, obtain_obj_center
-from render_utils import *
+from image_utils import obtain_obj_center, one_mask_per_image, binary_mask
+from render_utils import remove_obj_lamp_and_mesh, setup_env, make_lamp, render_without_output
 
 
 # Transform the R and T from numpy array to Matrix
@@ -135,7 +136,7 @@ class RenderMachine:
     clip_end: rendering range in mm
     """
     def __init__(self,
-                 model_files, out_dir, table_file='Platte.obj', hide_table=False, texture_dir=None, bg_dir=None,
+                 model_files, out_dir, table_file='Platte.obj', texture_dir=None, bg_dir=None,
                  dim_min=50, dim_max=150, grid=150, rad=3000, clip_end=2000,
                  fx=572, fy=574, cx=325, cy=242, height=480, width=640):
         # Setting up the environment
@@ -153,7 +154,6 @@ class RenderMachine:
         bpy.ops.import_scene.obj(filepath=table_file)
         self.table = bpy.data.objects[table_file.split('.')[0]]
         self.offset = [0, -grid, grid, -2 * grid, 2 * grid, -3 * grid, 3 * grid]
-        self.hide_table = hide_table
 
         # Import 3D models and register dimension range
         model_files = random.choices(model_files, k=30) if len(model_files) > 30 else model_files
@@ -169,7 +169,7 @@ class RenderMachine:
         # Output setting
         self.out_dir = out_dir
         self.scene.render.image_settings.file_format = 'PNG'
-        self.depthFileOutput.base_path = out_dir
+        self.depthFileOutput.base_path = join(out_dir, 'depth')
         self.depthFileOutput.format.file_format = 'OPEN_EXR'
 
     # TODO: to modify in order to be complied with T-LESS where multiple objects are present
@@ -186,7 +186,7 @@ class RenderMachine:
             else:
                 self.objs[model].hide_render = True
 
-        self.scene.render.filepath = os.path.join(self.out_dir, '{:04d}_mask'.format(idx))
+        self.scene.render.filepath = join(self.out_dir, '{:04d}_mask'.format(idx))
         self.depthFileOutput.file_slots[0].path = '{:04d}_depth_'.format(idx)
         render_without_output(use_antialiasing=False)
 
@@ -197,87 +197,129 @@ class RenderMachine:
                 add_texture_map(self.objs[model], self.textures[model])
 
         self.depthFileOutput.file_slots[0].path = '{:04d}_depth_'.format(idx)
-        self.scene.render.filepath = os.path.join(self.out_dir, '{:04d}_image'.format(idx))
+        self.scene.render.filepath = join(self.out_dir, '{:04d}_image'.format(idx))
         render_without_output(use_antialiasing=True)
 
     def render_random_pose(self, annot, start_idx, scene_id, image_id, R, T, ele):
+        """
+        Render objects under random poses
+        :param annot: annotation dictionary
+        :param start_idx:
+        :param scene_id:
+        :param image_id:
+        :param R:
+        :param T:
+        :param ele:
+        :return: annotation, rgb, mask, mask_visib, depth
+        """
         self.table.matrix_world = convert_pose_array_to_matrix(
             R, T + np.array([0, 200 * sin(radians(ele)), 200 * cos(radians(ele))])
         )
         self.table.scale = 6, 6, 6
-        self.table.hide_render = self.hide_table
+        self.depthFileOutput.file_slots[0].path = '{:06d}_'.format(image_id)
 
         # Randomize the lamp energy
         self.lamp.data.energy = np.random.uniform(self.rad * 0.5, self.rad * 1.5) / 30
 
+        # Render visible object masks
         Rotations, Translations, Scales = {}, {}, {}
-        # Render object masks
         for i in range(len(self.models)):
-            model = self.models[i]['object_name']
+            object = self.models[i]['object_name']
             R_model = rand_rotation()
             T_model = T + np.array(
                 [self.offset[i % 5], sin(radians(ele)) * self.offset[i // 5], -cos(radians(ele)) * self.offset[i // 5]]
             )
-            self.objs[model].matrix_world = convert_pose_array_to_matrix(R_model, T_model)
-            add_color(self.objs[model], color=((i + 1) * 0.01, (i + 1) * 0.01, (i + 1) * 0.01), shadeless=True)
-            scale = np.random.uniform(self.dim_min, self.dim_max) / max(self.objs[model].dimensions)
-            self.objs[model].scale = scale, scale, scale
+            self.objs[object].matrix_world = convert_pose_array_to_matrix(R_model, T_model)
+            add_color(self.objs[object], color=((i + 1) * 0.01, (i + 1) * 0.01, (i + 1) * 0.01), shadeless=True)
+            scale = np.random.uniform(self.dim_min, self.dim_max) / max(self.objs[object].dimensions)
+            self.objs[object].scale = scale, scale, scale
             Rotations[i], Translations[i], Scales[i] = R_model, T_model, scale
 
         add_color(self.table, color=(0, 0, 0), shadeless=True)
-        self.scene.render.filepath = os.path.join(self.out_dir, '{:04d}_mask'.format(image_id))
-        self.depthFileOutput.file_slots[0].path = '{:04d}_depth_'.format(image_id)
+        self.scene.render.filepath = join(self.out_dir, 'mask_visib', '{:06d}'.format(image_id))
         render_without_output(use_antialiasing=False)
+        bbox_visib, px_visib = one_mask_per_image(join(self.out_dir, 'mask_visib', '{:06d}.png'.format(image_id)),
+                                                  image_id, len(self.models))
 
-        # Save mask as uint8 image
-        mask = Image.open(os.path.join(self.out_dir, '{:04d}_mask.png'.format(image_id))).convert('L')
-        mask.save(os.path.join(self.out_dir, '{:04d}_mask.png'.format(image_id)))
+        # Render amodal object masks
+        bbox_amodal, px_amodal, truncated = [], [], []
+        self.table.hide_render = True
+        for i in range(len(self.models)):
+            object = self.models[i]['object_name']
+            self.objs[object].hide_render = True
+        for i in range(len(self.models)):
+            object = self.models[i]['object_name']
+            self.objs[object].hide_render = False
+            self.scene.render.filepath = join(self.out_dir, 'mask', '{:06d}_{:06d}'.format(image_id, i))
+            render_without_output(use_antialiasing=False)
+            bbox, px, trunc = binary_mask(join(self.out_dir, 'mask', '{:06d}_{:06d}.png'.format(image_id, i)))
+            bbox_amodal.append(bbox)
+            px_amodal.append(px)
+            truncated.append(trunc)
+            self.objs[object].hide_render = True
 
         # Render textured image and depth map
+        self.table.hide_render = False
         for i in range(len(self.models)):
-            model = self.models[i]['object_name']
-            add_texture_map(self.objs[model], os.path.join(self.texture_dir, random.choice(self.textures)))
+            object = self.models[i]['object_name']
+            self.objs[object].hide_render = False
+        for i in range(len(self.models)):
+            object = self.models[i]['object_name']
+            add_texture_map(self.objs[object], join(self.texture_dir, random.choice(self.textures)))
+
             # Generate the sample annotation
+            if px_amodal[i] == 0 or px_visib[0] == 0:
+                continue
             sample_frame = {}
             sample_frame["scene_id"] = scene_id
             sample_frame["image_id"] = image_id
-            sample_frame["obj_id"] = i
+            sample_frame["instance_id"] = i
 
-            sample_frame["model_path"] = self.models[i]['model_name']
+            sample_frame["model_name"] = self.models[i]['model_name']
             sample_frame["scale"] = Scales[i]
             sample_frame["cam_R_m2c"] = list(Rotations[i].reshape(-1))
             sample_frame["cam_t_m2c"] = list(Translations[i])
-            cx, cy, outside = obtain_obj_center(Translations[i], self.fx, self.fy, self.cx, self.cy, self.height, self.width)
+            cx, cy, inside = obtain_obj_center(Translations[i], self.fx, self.fy, self.cx, self.cy, self.height,
+                                               self.width)
             sample_frame["obj_center"] = [cx, cy]
-            sample_frame["obj_outside"] = outside
-            bbox, px_visib, occupy_fract = obtain_obj_region(os.path.join(self.out_dir, '{:04d}_mask.png'.format(image_id)), i)
-            sample_frame["bbox"] = bbox
-            sample_frame["px_visib"] = px_visib
-            sample_frame["occupy_fract"] = occupy_fract
+            sample_frame["inside"] = inside
+            sample_frame["truncated"] = truncated[i]
+            sample_frame["bbox_obj"] = bbox_amodal[i]
+            sample_frame["bbox_visib"] = bbox_visib[i]
+            sample_frame["px_count_visib"] = px_visib[i]
+            sample_frame["visib_fract"] = px_visib[i] / px_amodal[i]
             annot['{}'.format(start_idx + i)] = sample_frame
 
-        add_texture_map(self.table, os.path.join(self.bg_dir, random.choice(self.bg_imgs)))
-        self.scene.render.filepath = os.path.join(self.out_dir, '{:04d}_image'.format(image_id))
+        add_texture_map(self.table, join(self.bg_dir, random.choice(self.bg_imgs)))
+        self.scene.render.filepath = join(self.out_dir, 'rgb', '{:06d}'.format(image_id))
         render_without_output(use_antialiasing=True)
+
+        # rename depth image
+        shutil.move(join(self.depthFileOutput.base_path, '{:06d}_0001.exr'.format(image_id)),
+                    join(self.depthFileOutput.base_path, '{:06d}.exr'.format(image_id)))
 
 
 if __name__ == '__main__':
+    import pandas as pd
     # input and output directory
-    model_dir = '/media/xiao/newhd/XiaoDatasets/ABC/abc_0000'
-    out_dir = '/media/xiao/newhd/XiaoDatasets/ABC/synthetic_data_0000'
+    dataset_dir = '/home/xiao/Datasets/ABC'
+    model_dir = join(dataset_dir, 'abc_0000')
+    out_dir = join(dataset_dir, 'train_0000')
     scene_id = len(os.listdir(out_dir))
-    out_dir = os.path.join(out_dir, '{:06d}'.format(scene_id))
-    images_per_scene = 100
+    out_dir = join(out_dir, '{:06d}'.format(scene_id))
+    images_per_scene = 10
 
     # textures and backgrounds directory
-    texture_dir = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'textures')
-    bg_dir = '/media/xiao/newhd/XiaoDatasets/PascalVOC/VOC2012/JPEGImages'
+    texture_dir = join(dirname(os.path.realpath(__file__)), 'textures')
+    bg_dir = '/space_sdc/PascalVOC/VOCdevkit/VOC2012/Images/JPEGImages'
 
     # TODO: consider mutilple instances of the same shape
-    model_files = [name for name in os.listdir(model_dir) if os.path.getsize(os.path.join(model_dir, name)) / (2 ** 20) < 10]
+    df = pd.read_csv(join(dataset_dir, 'abc_0000.txt'))
+    df = df[df.ratio_max <= 5]
+    df = df[df.ratio_min >= 0.2]
     model_number = np.random.randint(5, 25)
-    model_files = random.choices(model_files, k=model_number)
-    model_files = [os.path.join(model_dir, name) for name in model_files]
+    idx = np.random.randint(0, len(df), size=(model_number,))
+    model_files = [join(model_dir, '{}.obj'.format(df.iloc[i, 0])) for i in idx]
 
     render_machine = RenderMachine(model_files, out_dir, texture_dir=texture_dir, bg_dir=bg_dir, rad=3000)
 
@@ -289,17 +331,12 @@ if __name__ == '__main__':
     idx = np.random.randint(0, R.shape[0], size=(images_per_scene,))
 
     # Read in annotation json file
-    annotation_file = '/media/xiao/newhd/XiaoDatasets/ABC/annotation_0000.json'
-    if os.path.isfile(annotation_file):
-        annot = json.load(open(annotation_file))
-        start_idx = len(annot)
-    else:
-        annot = {}
-        start_idx = 0
+    annotation_file = join(out_dir, 'scene_gt.json')
+    annot = json.load(open(annotation_file)) if exists(annotation_file) else {}
 
     for i in range(len(idx)):
-        render_machine.render_random_pose(
-            annot, start_idx + i * model_number, scene_id, i, R[idx[i], :], T[idx[i], :], Ele[idx[i]])
+        start_idx = len(annot)
+        render_machine.render_random_pose(annot, start_idx, scene_id, i, R[idx[i], :], T[idx[i], :], Ele[idx[i]])
 
     with open(annotation_file, 'w') as f:
         json.dump(annot, f, indent=4)

@@ -1,30 +1,50 @@
-import json
 import numpy as np
 from PIL import Image
 import cv2
-import ipdb
+import os
+from os.path import join, dirname, basename
+import shutil
 
+
+# Value list used to select object mask rendered by Blender
 value_list = [25,  39,  48,  56,  63,  69,  75,  80,  85,  89,
               93,  97,  101, 105, 108, 111, 115, 118, 121, 124,
               126, 129, 132, 134, 137, 139, 142, 144, 147, 149]
 
 
-# Obtain the bounding box from the mask
-def obtain_obj_region(mask_path, idx):
-    mask = cv2.imread(mask_path, -1)
-    obj_mask = np.array(mask == value_list[idx]).astype('uint8')
-    bbox = cv2.boundingRect(obj_mask)
-    px_visible = int(np.sum(obj_mask))
-    occupy_fract = px_visible / (bbox[2] * bbox[3]) if px_visible != 0 else 0
-    return bbox, px_visible, occupy_fract
+# Transform the image containing all visible object masks into one mask per image
+def one_mask_per_image(mask_path, image_id, model_number):
+    mask = np.array(Image.open(mask_path).convert('L'))
+    mask_dir = dirname(mask_path)
+    bbox, px = [], []
+    for i in range(model_number):
+        obj_mask = (mask == value_list[i]).astype('uint8')
+        bbox.append(cv2.boundingRect(obj_mask))
+        px.append(int(np.sum(obj_mask)))
+        cv2.imwrite(join(mask_dir, '{:06d}_{:06d}.png'.format(image_id, i)), obj_mask * 255)
+    os.remove(mask_path)
+    return bbox, px
+
+
+# Transform the colored mask of Blender renderer into binary mask
+def binary_mask(mask_path):
+    mask = np.array(Image.open(mask_path).convert('L'))
+    obj_mask = (mask != 0).astype('uint8')
+    x, y, w, h = cv2.boundingRect(obj_mask)
+    px = int(np.sum(obj_mask))
+    truncated = x == 0 or x + w == mask.shape[1] or y == 0 or y + h == mask.shape[0]
+    cv2.imwrite(mask_path, obj_mask * 255)
+    return (x, y, w, h), px, truncated
 
 
 # Obtain the object center from the translation vector
 def obtain_obj_center(T, fx, fy, px, py, height, width):
     cx = int(fx * T[0] / T[2] + px)
     cy = int(fy * T[1] / T[2] + py)
-    outside = True if cx <= 0 or cy <= 0 or cx >= width or cy >= height else False
-    return cx, cy, outside
+    boarder = 0.1
+    inside = True if boarder * width <= cx <= (1 - boarder) * width and boarder * height <= cy <= (
+                1 - boarder) * height else False
+    return cx, cy, inside
 
 
 # Crop and Resize the image without changing the aspect ratio

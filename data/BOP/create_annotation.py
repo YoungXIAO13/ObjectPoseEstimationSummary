@@ -37,7 +37,7 @@ for scene_id in tqdm(range(len(scenes))):
             sample_frame["obj_center"] = [cx, cy]
 
             # get annotation from scene_gt_info
-            sample_frame["bbox"] = scene_gt_info["{}".format(image_id)][n]["bbox_obj"]
+            sample_frame["bbox_obj"] = scene_gt_info["{}".format(image_id)][n]["bbox_obj"]
             sample_frame["bbox_visib"] = scene_gt_info["{}".format(image_id)][n]["bbox_visib"]
             sample_frame["px_count_visib"] = scene_gt_info["{}".format(image_id)][n]["px_count_visib"]
             sample_frame["visib_fract"] = scene_gt_info["{}".format(image_id)][n]["visib_fract"]
