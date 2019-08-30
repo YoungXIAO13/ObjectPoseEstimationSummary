@@ -65,8 +65,6 @@ elif args.dataset_format in ['Pascal3D', 'ShapeNet']:
                 model_name = model_file
 
             example_dir = join(cat_out, model_name)
-            if os.path.isdir(example_dir) and len(os.listdir(example_dir)) == 2:
-                continue
             if not os.path.isdir(example_dir):
                 os.makedirs(example_dir)
 

@@ -32,8 +32,6 @@ if args.dataset_format == 'BOP':
     for model_file in tqdm(model_files):
         model_path = os.path.join(input_dir, model_file)
         render_dir = os.path.join(output_dir, model_file.split(".")[0])
-        if os.path.isdir(render_dir):
-            continue
         render_machine = RenderMachine(model_path, render_dir, rendering=args.rendering, target_size=args.target_size)
         render_machine.render_grid_pose(views)
 
@@ -51,8 +49,6 @@ elif args.dataset_format in ['Pascal3D', 'ShapeNet']:
                 model_path = os.path.join(cat_in, model_file, 'models', 'model_normalized.obj')
                 model_name = model_file
             render_dir = os.path.join(cat_out, model_name)
-            if os.path.isdir(render_dir):
-                continue
             render_machine = RenderMachine(model_path, render_dir, rendering=args.rendering, target_size=args.target_size)
             render_machine.render_grid_pose(views)
 else:
