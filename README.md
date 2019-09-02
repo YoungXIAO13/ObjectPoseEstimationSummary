@@ -11,11 +11,11 @@ and [here](https://arxiv.org/abs/1903.04229)
  
 
 ## Table of Content
-* [Challenges](#challenges)
-* [Objects in the controlled environments](#objects-in-the-controlled-environments)
-* [Objects in the wild](#objects-in-the-wild)
-* [3D model datasets](#3d-model-datasets)
-* [Rendering Methods](#rendering-methods)
+* [Challenges :space_invader:](#challenges)
+* [Objects in the controlled environments :movie_camera:](#objects-in-the-controlled-environments)
+* [Objects in the wild :camera:](#objects-in-the-wild)
+* [3D model datasets :bike:](#3d-model-datasets)
+* [Rendering methods :bicyclist:](#rendering-methods)
 * [Shape Encoding](#shape-encoding)
 
 
@@ -95,10 +95,15 @@ while **ShapeNetCore** and **ModelNet** contain common category objects such as 
 * [RenderNet](https://github.com/thunguyenphuoc/RenderNet): Thu et al. NIPS 2018
 
 ### Blender Render :mountain_bicyclist:
-In this repo, we provide python code to generate rendering images from 3D models using
-blender as a python module that is easy to install and generate photo-realistic images : )
 
-In order to generate synthetic data, we first need to simulate a set of poses where the
+Projects using blender can be found 
+[here](https://github.com/weiaicunzai/blender_shapenet_render) 
+that generates one model at a time.
+
+In this repo, we provide python code to generate rendering images from 3D models using
+blender as a python module that is easy to install and generate photo-realistic images.
+
+In order to generate table-top synthetic data, we need to simulate a set of poses where the
 camera is uniformly distributed on the upper semi-sphere around the table plane.
 
 ```blender_render/table_poses.npz``` contains the poses obtained in LINEMOD-Occlusion dataset
@@ -108,14 +113,13 @@ with the distribution listed below:
     * Azimuth range: 0 - 360 deg
     * Elevation range: -14 - 89 deg (only a few instances below 0 deg)
     
-You can download CAD models of the [ABC](https://deep-geometry.github.io/abc-dataset/) dataset 
-and retrieve .obj files into the target directory using ```data/ABC/retrieve_files.py```. 
+* Download CAD models of the [ABC](https://deep-geometry.github.io/abc-dataset/) dataset 
+and retrieve .obj files into the target directory using 
+```dowanload_ABC.sh``` and ```retrieve_files.py``` in ```data/ABC```. 
 
-Then generate synthetic images of different models with various lightness and textures 
-under random poses using ```blender_render/render_random_pose.py```
+* Then generate synthetic images of different models with various lightness and textures 
+under random poses using ```data/ABC/random_pose.py```
 
-* Other works using blender can be found 
-[here](https://github.com/weiaicunzai/blender_shapenet_render) that generates one model at a time.
 
 ### Physical Simulator
 

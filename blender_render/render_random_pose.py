@@ -137,7 +137,7 @@ class RenderMachine:
     """
     def __init__(self,
                  model_files, out_dir, table_file='Platte.obj', texture_dir=None, bg_dir=None,
-                 dim_min=50, dim_max=150, grid=100, rad=3000, clip_end=2000,
+                 dim_min=50, dim_max=150, rad=3000, clip_end=2000,
                  fx=572, fy=574, cx=325, cy=242, height=480, width=640):
         # Setting up the environment
         remove_obj_lamp_and_mesh(bpy.context)
@@ -153,6 +153,7 @@ class RenderMachine:
         # Import table model and align it with camera frame
         bpy.ops.import_scene.obj(filepath=table_file)
         self.table = bpy.data.objects[table_file.split('.')[0]]
+        grid = np.random.uniform(dim_min, dim_max)
         self.offset = [0, -grid, grid, -2 * grid, 2 * grid, -3 * grid, 3 * grid]
 
         # Import 3D models and register dimension range
