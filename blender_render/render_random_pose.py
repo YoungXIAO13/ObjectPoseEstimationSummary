@@ -137,7 +137,7 @@ class RenderMachine:
     """
     def __init__(self,
                  model_files, out_dir, table_file='Platte.obj', texture_dir=None, bg_dir=None,
-                 dim_min=50, dim_max=150, grid=150, rad=3000, clip_end=2000,
+                 dim_min=50, dim_max=150, grid=100, rad=3000, clip_end=2000,
                  fx=572, fy=574, cx=325, cy=242, height=480, width=640):
         # Setting up the environment
         remove_obj_lamp_and_mesh(bpy.context)
@@ -307,11 +307,11 @@ if __name__ == '__main__':
     out_dir = join(dataset_dir, 'train_0000')
     scene_id = len(os.listdir(out_dir))
     out_dir = join(out_dir, '{:06d}'.format(scene_id))
-    images_per_scene = 10
+    images_per_scene = 100
 
     # textures and backgrounds directory
     texture_dir = join(dirname(os.path.realpath(__file__)), 'textures')
-    bg_dir = '/space_sdc/PascalVOC/VOCdevkit/VOC2012/Images/JPEGImages'
+    bg_dir = '/home/xiao/Datasets/PascalVOC/VOCdevkit/VOC2012/Images/JPEGImages'
 
     # TODO: consider mutilple instances of the same shape
     df = pd.read_csv(join(dataset_dir, 'abc_0000.txt'))

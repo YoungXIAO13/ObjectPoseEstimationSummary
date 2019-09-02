@@ -93,3 +93,4 @@ def clean_rendering_results(img_path, depth_path, normal_path, target_size=128):
     img.save(img_path)
     depth.save(depth_path)
     normal.save(normal_path)
+

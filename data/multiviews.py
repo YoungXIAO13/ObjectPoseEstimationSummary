@@ -6,6 +6,7 @@ import sys
 sys.path.append('..')
 from blender_render.render_grid import dodecahedron_vertex_coord, semi_sphere_coord, RenderMachine
 
+
 parser = argparse.ArgumentParser()
 parser.add_argument('--dataset_dir', type=str, help='dataset directory')
 parser.add_argument('--dataset_format', type=str, choices=['BOP', 'Pascal3D', 'ShapeNet'], help='dataset format')
