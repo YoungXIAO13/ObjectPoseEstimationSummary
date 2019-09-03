@@ -152,7 +152,7 @@ class RenderMachine:
 
         # Import table model and align it with camera frame
         bpy.ops.import_scene.obj(filepath=table_file)
-        self.table = bpy.data.objects[table_file.split('.')[0]]
+        self.table = bpy.data.objects[basename(table_file).split('.')[0]]
         grid = np.random.uniform(dim_min, dim_max)
         self.offset = [0, -grid, grid, -2 * grid, 2 * grid, -3 * grid, 3 * grid]
 
