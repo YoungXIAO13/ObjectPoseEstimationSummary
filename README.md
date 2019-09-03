@@ -12,10 +12,10 @@ and [here](https://arxiv.org/abs/1903.04229)
 
 ## Table of Content
 * [Challenges :space_invader:](#challenges-space_invader)
-* [Objects in the controlled environments :movie_camera:](#objects-in-the-controlled-environments)
-* [Objects in the wild :camera:](#objects-in-the-wild)
-* [3D model datasets :bike:](#3d-model-datasets)
-* [Rendering methods :bicyclist:](#rendering-methods)
+* [Objects in the controlled environments :movie_camera:](#objects-in-the-controlled-environments-movie_camera)
+* [Objects in the wild :camera:](#objects-in-the-wild-camera)
+* [3D model datasets :bike:](#3d-model-datasets-bike)
+* [Rendering methods :bicyclist:](#rendering-methods-bicyclist)
 * [Shape Encoding](#shape-encoding)
 
 
