@@ -11,7 +11,7 @@ and [here](https://arxiv.org/abs/1903.04229)
  
 
 ## Table of Content
-* [Challenges :space_invader:](#challenges)
+* [Challenges :space_invader:](#challenges-space_invader)
 * [Objects in the controlled environments :movie_camera:](#objects-in-the-controlled-environments)
 * [Objects in the wild :camera:](#objects-in-the-wild)
 * [3D model datasets :bike:](#3d-model-datasets)
@@ -31,7 +31,7 @@ and [here](https://arxiv.org/abs/1903.04229)
 
 ## Objects in the controlled environments :movie_camera:
 This table lists the datasets commonly known as **BOP: Benchmark 6D Object Pose Estimation**, 
-which provide accurate 3D object models and precise 2D-3D alignment.
+which provide accurate 3D object models and accurate 2D-3D alignment.
 
 You can download all the BOP datasets [here](https://bop.felk.cvut.cz/datasets/) and
 use the [toolkit](https://github.com/thodan/bop_toolkit) provided by the organizers.
@@ -55,18 +55,15 @@ we use **instance id** in our annotation to indicate different instances picture
 
 
 ## Objects in the wild :camera:
-In this table, **Pix3D** and **ScanNet** provide precise 2D-3D alignment 
-while others only provide a coarse alignment.
+In this table, **Pix3D** provides accurate 2D-3D alignment 
+while others provide a coarse alignment.
 
 **PASCAL3D+** is the de facto benchmark used for viewpoint estimation.
-
-**ScanNet** is usually used to evaluate scene reconstruction and segmentation.
 
 | Dataset | Sample image | Annotation | Statistics | Reference |
 | :-----: | :-----: | :-----: | :-----: | :-----: |
 | [ApolloCar3D](http://apolloscape.auto/car_instance.html) | ![](https://github.com/YoungXIAO13/6DPoseEstimationDatasets/blob/master/img/ApolloCar3D.png) | 6D Pose + Mask | **34** car models with **60K+** objects in **5,277** images | [CVPR 2019](https://arxiv.org/abs/1811.12222) |
 | [Pix3D](http://pix3d.csail.mit.edu/) | ![](https://github.com/YoungXIAO13/6DPoseEstimationDatasets/blob/master/img/Pix3D.png) | 6D Pose + Mask | **9** categories containing **395 models** in **10,069** images | [CVPR 2018](http://pix3d.csail.mit.edu/papers/pix3d_cvpr.pdf) |
-| [ScanNet](http://www.scan-net.org/) | ![](https://github.com/YoungXIAO13/6DPoseEstimationDatasets/blob/master/img/ScanNet.png) | 6D Pose + Segmentation + Depth | **2.5M** RGB-D frames in **1,515** scenes | [CVPR 2017](https://arxiv.org/abs/1702.04405) |
 | [ObjectNet3D](http://cvgl.stanford.edu/projects/objectnet3d/) | ![](https://github.com/YoungXIAO13/6DPoseEstimationDatasets/blob/master/img/ObjectNet3D.png) | Euler Angles + BoundingBox | **100** categories with **201,888** objects in **90,127** images | [ECCV 2016](http://cvgl.stanford.edu/papers/xiang_eccv16.pdf) |
 | [PASCAL3D+](http://cvgl.stanford.edu/projects/pascal3d.html) | ![](https://github.com/YoungXIAO13/6DPoseEstimationDatasets/blob/master/img/Pascal3D.png) | Euler Angles + BoundingBox | **12** categories with **36,292** objects in **30,889** images | [WACV 2014](https://www-cs.stanford.edu/~roozbeh/papers/wacv14.pdf) |
 | [KITTI](http://www.cvlibs.net/datasets/kitti/eval_object.php) | ![](https://github.com/YoungXIAO13/6DPoseEstimationDatasets/blob/master/img/KITTI.png) | 3D BoundingBox | **80,256** objects in **14,999** images | [CVPR 2012](http://www.cvlibs.net/publications/Geiger2012CVPR.pdf) |
@@ -96,15 +93,16 @@ while **ShapeNetCore** and **ModelNet** contain common category objects such as 
 
 ### Blender Render :mountain_bicyclist:
 
-Projects using blender can be found 
-[here](https://github.com/weiaicunzai/blender_shapenet_render) 
-that generates one model at a time.
+Rendering code in python can be found in
+[blender-cli-rendering](https://github.com/yuki-koyama/blender-cli-rendering) and
+[pvnet-rendering](https://github.com/zju3dv/pvnet-rendering)
 
-In this repo, we provide python code to generate rendering images from 3D models using
-blender as a python module that is easy to install and generate photo-realistic images.
+In this repo, we also provide script to render images from 3D models using
+python-blender that is easy to install and generate photo-realistic images.
 
-In order to generate table-top synthetic data, we need to simulate a set of poses where the
-camera is uniformly distributed on the upper semi-sphere around the table plane.
+In order to generate table-top synthetic data, 
+we need to simulate a set of poses where 
+the camera is uniformly distributed on the upper semi-sphere around the table plane.
 
 ```blender_render/table_poses.npz``` contains the poses obtained in LINEMOD-Occlusion dataset
 with the distribution listed below:

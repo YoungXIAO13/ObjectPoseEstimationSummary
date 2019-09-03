@@ -32,6 +32,7 @@ out_dir = join(args.dataset_dir, args.output)
 
 # read dataset statistics and select the appropriate models
 df = pd.read_csv(join(args.dataset_dir, args.csv))
+df = df[df.size <= 10]
 df = df[df.ratio_max <= 5]
 df = df[df.ratio_min >= 0.2]
 df = df[df.occupy_min >= 0.1]

@@ -20,7 +20,7 @@ with open(csv_file, 'w') as f:
     f.write('model_name,size,ratio_min,ratio_max,occupy_min,occupy_max\n')
 
 for model_name in tqdm(model_names):
-    size = int(os.path.getsize(join(obj_dir, '{}.obj'.format(model_name))) / (2 ** 20))
+    size = int(getsize(join(obj_dir, '{}.obj'.format(model_name))) / (2 ** 20))
     img_dir = join(view_dir, model_name, 'nocs')
     images = os.listdir(img_dir)
     ratio = []
