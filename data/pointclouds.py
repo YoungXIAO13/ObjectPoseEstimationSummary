@@ -47,6 +47,8 @@ if args.dataset_format == 'BOP':
     for model_file in tqdm(model_files):
         model_path = join(input_dir, model_file)
         example_dir = join(output_dir, model_file.split(".")[0])
+        if not isdir(example_dir):
+            os.makedirs(example_dir)
         ply_path = sample_point_cloud_from_obj(args.virtualscanner, model_path, example_dir)
         downsample_pointcloud(ply_path, args.downsample)
 
@@ -65,7 +67,7 @@ elif args.dataset_format in ['Pascal3D', 'ShapeNet']:
                 model_name = model_file
 
             example_dir = join(cat_out, model_name)
-            if not os.path.isdir(example_dir):
+            if not isdir(example_dir):
                 os.makedirs(example_dir)
 
             ply_path = sample_point_cloud_from_obj(args.virtualscanner, model_path, example_dir)
