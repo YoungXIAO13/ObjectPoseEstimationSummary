@@ -1,4 +1,5 @@
 import os, sys
+from os.path import join
 import bpy
 from mathutils import Matrix, Vector
 from math import radians, sin, cos
@@ -67,11 +68,8 @@ def setup_camera(scene):
 
 
 # Import 3D model from .obj files
-def import_model(model_file, axis_forward=None, axis_up=None):
-    if axis_forward is not None and axis_up is not None:
-        bpy.ops.import_scene.obj(filepath=model_file, axis_forward=axis_forward, axis_up=axis_up)
-    else:
-        bpy.ops.import_scene.obj(filepath=model_file)
+def import_model(model_file, axis_forward, axis_up):
+    bpy.ops.import_scene.obj(filepath=model_file, axis_forward=axis_forward, axis_up=axis_up)
     model_name = model_file.split('/')[-1].split('.')[0]
     return model_name
 
@@ -81,8 +79,7 @@ def normalize_model(obj):
     bpy.context.scene.objects.active = obj
     bpy.ops.object.origin_set(type='ORIGIN_GEOMETRY', center='BOUNDS')
     obj.location = (0, 0, 0)
-    max_dim = max(obj.dimensions)
-    obj.dimensions = obj.dimensions / max_dim
+    obj.dimensions = obj.dimensions / max(obj.dimensions)
 
 
 # Create normalized coordinate map as a color map
@@ -130,7 +127,7 @@ class RenderMachine:
     clip_end: rendering range in mm
     """
     def __init__(self,
-                 model_file, out_dir, rendering, 
+                 model_file, out_dir, rendering, up=None, forward=None,
                  target_size=128, rad=30, clip_end=100, height=256, width=256):
         # Setting up the environment
         remove_obj_lamp_and_mesh(bpy.context)
@@ -142,7 +139,10 @@ class RenderMachine:
         self.height, self.width = height, width
 
         # Import 3D models and normalize it 
-        self.model = import_model(model_file, axis_forward='Y', axis_up='Z')
+        if up is None and forward is None:
+            self.model = import_model(model_file, axis_forward='Y', axis_up='Z')
+        else:
+            self.model = import_model(model_file, axis_forward=forward, axis_up=up)
         normalize_model(bpy.data.objects[self.model])
         
         # Create the normalized object coordinate space as material
@@ -150,9 +150,9 @@ class RenderMachine:
             create_coord_map(bpy.data.objects[self.model])
 
         # Output setting
-        self.out_dir = os.path.join(out_dir, rendering)
-        self.depthFileOutput.base_path = os.path.join(out_dir, 'depth')
-        self.normalFileOutput.base_path = os.path.join(out_dir, 'normal')
+        self.out_dir = join(out_dir, rendering)
+        self.depthFileOutput.base_path = join(out_dir, 'depth')
+        self.normalFileOutput.base_path = join(out_dir, 'normal')
         self.scene.render.image_settings.file_format = 'PNG'
 
     def render_grid_pose(self, pose_grid):
@@ -160,15 +160,15 @@ class RenderMachine:
             self.camera.location = pose_grid[i]
             self.lamp.location = pose_grid[i]
 
-            self.scene.render.filepath = os.path.join(self.out_dir, '{:04d}'.format(i))
+            self.scene.render.filepath = join(self.out_dir, '{:04d}'.format(i))
             self.depthFileOutput.file_slots[0].path = '{:04d}_'.format(i)
             self.normalFileOutput.file_slots[0].path = '{:04d}_'.format(i)
             render_without_output(use_antialiasing=True)
 
             # Crop and resize the rendering results
             img_path = '{}.png'.format(self.scene.render.filepath)
-            depth_path = os.path.join(self.depthFileOutput.base_path, '{:04d}_0001.png'.format(i))
-            normal_path = os.path.join(self.normalFileOutput.base_path, '{:04d}_0001.png'.format(i))
+            depth_path = join(self.depthFileOutput.base_path, '{:04d}_0001.png'.format(i))
+            normal_path = join(self.normalFileOutput.base_path, '{:04d}_0001.png'.format(i))
             clean_rendering_results(img_path, depth_path, normal_path, self.target_size)
 
 
@@ -183,8 +183,8 @@ if __name__ == '__main__':
     parser.add_argument('--views', type=str, choices=['dodecahedron', 'semi_sphere'], help='poses under which the object will be rendered')
     args = parser.parse_args()
 
-    input_dir = os.path.join(args.dataset_dir, args.input)
-    output_dir = os.path.join(args.dataset_dir, args.views)
+    input_dir = join(args.dataset_dir, args.input)
+    output_dir = join(args.dataset_dir, args.views)
 
     if args.views == 'dodecahedron':
         poses = dodecahedron_vertex_coord
@@ -196,8 +196,8 @@ if __name__ == '__main__':
     if args.dataset_format == 'BOP':
         model_files = sorted(os.listdir(input_dir))
         for model_file in tqdm(model_files):
-            model_path = os.path.join(input_dir, model_file)
-            render_dir = os.path.join(output_dir, model_file.split(".")[0])
+            model_path = join(input_dir, model_file)
+            render_dir = join(output_dir, model_file.split(".")[0])
             if os.path.isdir(render_dir):
                 continue
             render_machine = RenderMachine(model_path, render_dir)
@@ -206,17 +206,17 @@ if __name__ == '__main__':
     elif args.dataset_format in ['Pascal3D', 'ShapeNet']:
         categories = sorted(os.listdir(input_dir))
         for cat in tqdm(categories):
-            cat_in = os.path.join(input_dir, cat)
-            cat_out = os.path.join(output_dir, cat)
+            cat_in = join(input_dir, cat)
+            cat_out = join(output_dir, cat)
             model_files = sorted(os.listdir(cat_in))
             for model_file in tqdm(model_files):
                 if args.dataset_format == 'Pascal3D':
-                    model_path = os.path.join(cat_in, model_file)
+                    model_path = join(cat_in, model_file)
                     model_name = model_file.split(".")[0]
                 else:
-                    model_path = os.path.join(cat_in, model_file, 'models', 'model_normalized.obj')
+                    model_path = join(cat_in, model_file, 'models', 'model_normalized.obj')
                     model_name = model_file
-                render_dir = os.path.join(cat_out, model_name)
+                render_dir = join(cat_out, model_name)
                 if os.path.isdir(render_dir):
                     continue
                 render_machine = RenderMachine(model_path, render_dir)

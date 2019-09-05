@@ -81,7 +81,7 @@ while **ShapeNetCore** and **ModelNet** contain common category objects such as 
 | :-----: | :-----: | :-----: | :-----: |
 | [ABC](https://deep-geometry.github.io/abc-dataset/) | - | 1 million | [CVPR 2019](https://arxiv.org/pdf/1812.06216.pdf) |
 | [ShapeNetCore](https://www.shapenet.org/download/shapenetcore) | 55 | ~51,300 | [ArXiv 2015](https://arxiv.org/abs/1512.03012) | 
-| [ModelNet-40](http://modelnet.cs.princeton.edu/) | 40 | 26,960 | [CVPR 2015](https://3dshapenets.cs.princeton.edu/paper.pdf) |
+| [ModelNet-40](http://modelnet.cs.princeton.edu/) | 40 | 12,311 | [CVPR 2015](https://3dshapenets.cs.princeton.edu/paper.pdf) |
 
 
 ## Rendering methods :bicyclist:

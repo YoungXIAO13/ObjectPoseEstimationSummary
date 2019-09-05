@@ -36,7 +36,7 @@ elif args.dataset_format in ['Pascal3D', 'ShapeNet']:
                 model_path = join(cat_in, model_file, 'models', 'model_normalized.obj')
                 model_name = model_file
 
-            example_dir = os.path.join(cat_out, model_name)
+            example_dir = join(cat_out, model_name)
             if not isdir(example_dir):
                 os.makedirs(example_dir)
 
