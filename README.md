@@ -1,17 +1,23 @@
-# ObjectPoseEstimationDatasets
-A repo to summarize **datasets** used for object pose estimation and 
-**rendering methods** used to generate synthetic training data.
+# Object Pose Estimation
+A repo to summarize [resources]((https://github.com/YoungXIAO13/ObjectPoseEstimationSummary/blob/master/paper.md)) 
+used in object pose estimation as well as viewpoint estimation.
 
 In the following tables, 3D CAD model is noted as **model** and 
 2D pictured object is noted as **object**.
-
-Papers resuming some related datesets 
-can be found [here](http://openaccess.thecvf.com/content_CVPRW_2019/papers/WiCV/Jalal_SIDOD_A_Synthetic_Image_Dataset_for_3D_Object_Pose_Recognition_CVPRW_2019_paper.pdf)
-and [here](https://arxiv.org/abs/1903.04229)
  
 
+## Contributing
+Contributions are welcome. 
+Please see the **Table of Content** which lists the things included in this repo. 
+If you wish to contribute within these boundaries, feel free to send a PR. 
+If you have suggestions for new sections to be included, please raise an issue and discuss before sending a PR.
+
+Other papers resuming related datesets can also be found in
+[Instance- and Category-level 6D Object Pose Estimation](https://arxiv.org/abs/1903.04229)
+
+
 ## Table of Content
-* [Challenges :space_invader:](#challenges-space_invader)
+* [Resources :sunglasses:](https://github.com/YoungXIAO13/ObjectPoseEstimationSummary/blob/master/paper.md)
 * [Objects in the controlled environments :movie_camera:](#objects-in-the-controlled-environments-movie_camera)
 * [Objects in the wild :camera:](#objects-in-the-wild-camera)
 * [3D model datasets :bike:](#3d-model-datasets-bike)
@@ -20,13 +26,13 @@ and [here](https://arxiv.org/abs/1903.04229)
 
 
 ## Challenges :space_invader:
-* [ICCV 2015: Occluded Object Challenge](https://hci.iwr.uni-heidelberg.de/vislearn/iccv2015-occlusion-challenge/)
-* [ICCV 2015: Recovering Object Pose](https://labicvl.github.io/3DPose-2015.html)
-* [ECCV 2016: Recovering Object Pose](https://labicvl.github.io/R6D)
-* [ICCV 2017: Recovering Object Pose](http://cmp.felk.cvut.cz/sixd/workshop_2017/)
-* [ECCV 2018: Recovering Object Pose](http://cmp.felk.cvut.cz/sixd/workshop_2018/)
-* [ICCV 2019: Recovering Object Pose](http://cmp.felk.cvut.cz/sixd/workshop_2019/)
 * [IROS 2019: Object Pose Estimation for Bin-Picking](http://www.bin-picking.ai/en/competition.html)
+* [ICCV 2019: Recovering Object Pose](http://cmp.felk.cvut.cz/sixd/workshop_2019/)
+* [ECCV 2018: Recovering Object Pose](http://cmp.felk.cvut.cz/sixd/workshop_2018/)
+* [ICCV 2017: Recovering Object Pose](http://cmp.felk.cvut.cz/sixd/workshop_2017/)
+* [ECCV 2016: Recovering Object Pose](https://labicvl.github.io/R6D)
+* [ICCV 2015: Recovering Object Pose](https://labicvl.github.io/3DPose-2015.html)
+* [ICCV 2015: Occluded Object Challenge](https://hci.iwr.uni-heidelberg.de/vislearn/iccv2015-occlusion-challenge/)
 
 
 ## Objects in the controlled environments :movie_camera:
