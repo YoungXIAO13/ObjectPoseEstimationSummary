@@ -1,10 +1,7 @@
 # Object Pose Estimation
 A repo to summarize [resources](https://github.com/YoungXIAO13/ObjectPoseEstimationSummary/blob/master/paper.md) 
-used in object pose estimation as well as viewpoint estimation.
+used in object pose estimation as well as viewpoint estimation. 
 
-In the following tables, 3D CAD model is noted as **model** and 
-2D pictured object is noted as **object**.
- 
 
 ## Contributing
 Contributions are welcome. 
@@ -25,14 +22,10 @@ Other papers resuming related datesets can also be found in
 * [Shape Encoding](#shape-encoding)
 
 
-## Challenges :space_invader:
-* [IROS 2019: Object Pose Estimation for Bin-Picking](http://www.bin-picking.ai/en/competition.html)
-* [ICCV 2019: Recovering Object Pose](http://cmp.felk.cvut.cz/sixd/workshop_2019/)
-* [ECCV 2018: Recovering Object Pose](http://cmp.felk.cvut.cz/sixd/workshop_2018/)
-* [ICCV 2017: Recovering Object Pose](http://cmp.felk.cvut.cz/sixd/workshop_2017/)
-* [ECCV 2016: Recovering Object Pose](https://labicvl.github.io/R6D)
-* [ICCV 2015: Recovering Object Pose](https://labicvl.github.io/3DPose-2015.html)
-* [ICCV 2015: Occluded Object Challenge](https://hci.iwr.uni-heidelberg.de/vislearn/iccv2015-occlusion-challenge/)
+## Resources
+* See paper list [here](https://github.com/YoungXIAO13/ObjectPoseEstimationSummary/blob/master/paper.md)
+
+* In the following tables, 3D CAD model is noted as **model** and 2D pictured object is noted as **object**.
 
 
 ## Objects in the controlled environments :movie_camera:
