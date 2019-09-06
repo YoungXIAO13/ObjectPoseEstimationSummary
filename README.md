@@ -8,9 +8,6 @@ Please see the **Table of Content** which lists the things included in this repo
 If you wish to contribute within these boundaries, feel free to send a PR. 
 If you have suggestions for new sections to be included, please raise an issue and discuss before sending a PR.
 
-Other papers resuming related datesets can also be found in
-[Instance- and Category-level 6D Object Pose Estimation](https://arxiv.org/abs/1903.04229)
-
 
 ## Table of Content
 * [Resources :sunglasses:](https://github.com/YoungXIAO13/ObjectPoseEstimationSummary/blob/master/paper.md)
