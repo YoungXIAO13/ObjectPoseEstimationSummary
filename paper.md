@@ -246,3 +246,4 @@ A curated list of challenges and papers pertaining to object pose estimation
  * [Awesome Object Pose](https://github.com/nkalavak/awesome-object-pose/blob/master/README.md)
  * [Vision-based Robotic Grasping from Object Localization, Pose Estimation, Grasp
 Detection to Motion Planning: A Review](https://arxiv.org/pdf/1905.06658v1.pdf)
+ * [Instance- and Category-level 6D Object Pose Estimation](https://arxiv.org/abs/1903.04229)
