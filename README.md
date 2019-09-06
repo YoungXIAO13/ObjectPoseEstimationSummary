@@ -1,5 +1,5 @@
 # Object Pose Estimation
-A repo to summarize [resources]((https://github.com/YoungXIAO13/ObjectPoseEstimationSummary/blob/master/paper.md)) 
+A repo to summarize [resources](https://github.com/YoungXIAO13/ObjectPoseEstimationSummary/blob/master/paper.md) 
 used in object pose estimation as well as viewpoint estimation.
 
 In the following tables, 3D CAD model is noted as **model** and 
