@@ -1,6 +1,5 @@
 # Object Pose Estimation
-A repo to summarize [resources](https://github.com/YoungXIAO13/ObjectPoseEstimationSummary/blob/master/paper.md) 
-used in object pose estimation as well as viewpoint estimation. 
+A repo to summarize resources used in object pose estimation as well as viewpoint estimation. 
 
 
 ## Contributing
