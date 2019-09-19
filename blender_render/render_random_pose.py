@@ -64,7 +64,7 @@ def add_texture_map(obj, texture_img):
 
 
 # Import 3D models from .obj files
-def import_models(model_files, use_defalut_texture=False):
+def import_models(model_files, category, use_defalut_texture=False):
     models = {}
     textures = {}
     repeat_count = {}
@@ -72,15 +72,20 @@ def import_models(model_files, use_defalut_texture=False):
         models[i] = {}
         model_file = model_files[i]
         bpy.ops.import_scene.obj(filepath=model_file)
-        model_name = model_file.split('/')[-1].split('.')[0]
+        file_name = basename(model_file).split('.')[0]
+
+        if category:
+            model_name = join(basename(dirname(model_file)), file_name)
+        else:
+            model_name = file_name
         models[i]['model_name'] = model_name
 
-        if model_name not in repeat_count.keys():
-            repeat_count[model_name] = 0
+        if file_name not in repeat_count.keys():
+            repeat_count[file_name] = 0
         else:
-            repeat_count[model_name] += 1
-
-        models[i]['object_name'] = model_name if repeat_count[model_name] == 0 else '{}.{:03d}'.format(model_name, repeat_count[model_name])
+            repeat_count[file_name] += 1
+        models[i]['object_name'] = file_name if repeat_count[file_name] == 0 else '{}.{:03d}'.format(
+            file_name, repeat_count[file_name])
 
         if use_defalut_texture:
             textures[model_name] = model_file.replace('.obj', '.png')
@@ -136,8 +141,8 @@ class RenderMachine:
     clip_end: rendering range in mm
     """
     def __init__(self,
-                 model_files, out_dir, table_file='Platte.obj', texture_dir=None, bg_dir=None,
-                 dim_min=50, dim_max=150, rad=3000, clip_end=2000,
+                 model_files, out_dir, table_file='Platte.obj', texture_dir=None, bg_dir=None, category=False,
+                 dim_min=100, dim_max=150, rad=3000, clip_end=2000,
                  fx=572, fy=574, cx=325, cy=242, height=480, width=640):
         # Setting up the environment
         remove_obj_lamp_and_mesh(bpy.context)
@@ -158,7 +163,7 @@ class RenderMachine:
 
         # Import 3D models and register dimension range
         model_files = random.choices(model_files, k=30) if len(model_files) > 30 else model_files
-        self.models, self.textures = import_models(model_files)
+        self.models, self.textures = import_models(model_files, category)
         self.dim_min, self.dim_max = dim_min, dim_max
 
         # Read texture maps and the background images
@@ -220,7 +225,7 @@ class RenderMachine:
         self.depthFileOutput.file_slots[0].path = '{:06d}_'.format(image_id)
 
         # Randomize the lamp energy
-        self.lamp.data.energy = np.random.uniform(self.rad * 0.5, self.rad * 1.5) / 30
+        self.lamp.data.energy = np.random.uniform(self.rad * 0.5, self.rad * 1.5) / 36
 
         # Render visible object masks
         Rotations, Translations, Scales = {}, {}, {}
