@@ -1,11 +1,18 @@
 import json
 import os
+from os.path import join, basename
+import argparse
 from tqdm import tqdm
 
-dataset = 'LINEMOD-Occlusion'
-test_dir = '/home/xiao/Datasets/{}/test'.format(dataset)
-scenes = os.listdir(test_dir)
-scenes.sort()
+parser = argparse.ArgumentParser()
+parser.add_argument('--dataset_dir', type=str, help='dataset directory')
+parser.add_argument('--input', type=str, help='subdirectory containing testing scenes in the dataset directory')
+args = parser.parse_args()
+
+test_dir = join(args.dataset_dir, args.input)
+scenes = sorted(os.listdir(test_dir))
+dataset = basename(args.dataset_dir)
+annotation_file = join(args.dataset_dir, '{}.json'.format(dataset))
 
 annot = {}
 idx = 0
@@ -45,7 +52,6 @@ for scene_id in tqdm(range(len(scenes))):
             annot['{}'.format(idx)] = sample_frame
             idx += 1
 
-annotation_file = '/home/xiao/Datasets/{}/{}.json'.format(dataset, dataset)
 with open(annotation_file, 'w') as f:
     json.dump(annot, f, indent=4)
 
