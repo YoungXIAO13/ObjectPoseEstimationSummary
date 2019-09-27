@@ -1,9 +1,9 @@
 from tqdm import tqdm
 import argparse
 import os
-from os.path import join, isdir, basename, dirname
+from os.path import join, isdir, basename, dirname, exists
 import shutil
-import open3d as o3d
+import pymesh
 import numpy as np
 
 
@@ -14,20 +14,23 @@ def sample_point_cloud_from_obj(virtualscanner, obj, out):
     :param out: output directory
     :return: destination path to save the generated point cloud
     """
+    ply_dest = join(out, 'sampled.ply')
+    if exists(ply_dest):
+        return ply_dest
     command = '{} {} 10'.format(virtualscanner, obj)
     os.system(command)
     ply = obj.replace('.obj', '.ply')
-    ply_dest = join(out, 'sampled.ply')
     shutil.move(ply, ply_dest)
     return ply_dest
 
 
-def downsample_pointcloud(pc_path, ratio):
-    pcd = o3d.io.read_point_cloud(pc_path)
-    points = np.asarray(pcd.points)
-    size = np.max(points) - np.min(points)
-    downpcd = o3d.geometry.voxel_down_sample(pcd, voxel_size=size*ratio)
-    o3d.io.write_point_cloud(join(dirname(pc_path), 'compressed.ply'), downpcd, True)
+def downsample_pointcloud(pc_path, point_num):
+    mesh_raw = pymesh.load_mesh(pc_path)
+    points_raw = mesh_raw.vertices
+    point_subset = np.random.choice(points_raw.shape[0], point_num, replace=False)
+    points = points_raw[point_subset]
+    mesh = pymesh.form_mesh(points, np.ones((0, 3)))
+    pymesh.save_mesh(join(dirname(pc_path), 'compressed.ply'), mesh)
 
 
 parser = argparse.ArgumentParser()
@@ -35,8 +38,7 @@ parser.add_argument('--dataset_dir', type=str, help='dataset directory')
 parser.add_argument('--dataset_format', type=str, choices=['BOP', 'Pascal3D', 'ShapeNet'], help='dataset format')
 parser.add_argument('--input', type=str, help='subdirectory containing obj files in the dataset directory')
 parser.add_argument('--virtualscanner', type=str, help='executable path of virtual scanner')
-parser.add_argument('--downsample', type=float, default=0.01,
-                    help='voxel size is ratio * object size to downsample the ponitcloud')
+parser.add_argument('--downsample', type=int, default=5000, help='downsampled points')
 args = parser.parse_args()
 
 input_dir = join(args.dataset_dir, args.input)
