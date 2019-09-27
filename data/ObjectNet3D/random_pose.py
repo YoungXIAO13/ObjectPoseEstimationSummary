@@ -50,7 +50,7 @@ for scene_id in range(args.scenes):
     scene_file = join(scene_out, 'scene_gt.json')
 
     # randomly select a category in SUN397 for each scene
-    bg_dir = join(args.bg_dir, 'SUN397_256', random.choice(bg_cats)[1:])
+    bg_dir = join(args.bg_dir, 'SUN397', random.choice(bg_cats)[1:])
 
     # randomly select some categories in ObjectNet3D for each scene
     scene_cats = random.sample(cats, np.random.randint(5, 25))
