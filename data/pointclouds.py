@@ -27,8 +27,11 @@ def sample_point_cloud_from_obj(virtualscanner, obj, out):
 def downsample_pointcloud(pc_path, point_num):
     mesh_raw = pymesh.load_mesh(pc_path)
     points_raw = mesh_raw.vertices
-    point_subset = np.random.choice(points_raw.shape[0], point_num, replace=False)
-    points = points_raw[point_subset]
+    if points_raw.shape[0] > point_num:
+        point_subset = np.random.choice(points_raw.shape[0], point_num, replace=False)
+        points = points_raw[point_subset]
+    else:
+        points = points_raw
     mesh = pymesh.form_mesh(points, np.ones((0, 3)))
     pymesh.save_mesh(join(dirname(pc_path), 'compressed.ply'), mesh)
 
