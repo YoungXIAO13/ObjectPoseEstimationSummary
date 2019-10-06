@@ -242,8 +242,8 @@ A curated list of challenges and papers pertaining to object pose estimation
  
 ## Other resources
 
- * [https://paperswithcode.com/task/6d-pose-estimation](https://paperswithcode.com/task/6d-pose-estimation)
- * [Awesome Object Pose](https://github.com/nkalavak/awesome-object-pose/blob/master/README.md)
+ * [Papers with code 6d-pose-estimation](https://paperswithcode.com/task/6d-pose-estimation)
+ * [Papers with code viewpoint-estimation](https://paperswithcode.com/task/viewpoint-estimation)
  * [Vision-based Robotic Grasping from Object Localization, Pose Estimation, Grasp
 Detection to Motion Planning: A Review](https://arxiv.org/pdf/1905.06658v1.pdf)
  * [Instance- and Category-level 6D Object Pose Estimation](https://arxiv.org/abs/1903.04229)
