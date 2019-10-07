@@ -203,7 +203,11 @@ A curated list of challenges and papers pertaining to object pose estimation
 #### CVPR 2016
 * **Uncertainty-Driven**: Eric Brachmann, Frank Michel, Alexander Krull, Michael Ying Yang, Stefan Gumhold, Carsten Rother.\
 "Uncertainty-Driven 6D Pose Estimation of Objects and Scenes from a Single RGB Image." CVPR (2016)
-[pdf](http://wwwpub.zih.tu-dresden.de/~cvweb/publications/papers/2016/rgbpose.pdf) 
+[pdf](http://wwwpub.zih.tu-dresden.de/~cvweb/publications/papers/2016/rgbpose.pdf)
+
+* **Recover 6D Pose**: Andreas Doumanoglou, Rigas Kouskouridas, Sotiris Malassiotis, Tae-Kyun Kim.\
+"Recovering 6D Object Pose and Predicting Next-Best-View in the Crowd." CVPR (2016)
+[pdf](https://arxiv.org/abs/1512.07506)
 
 
 #### ICCV 2015
@@ -218,6 +222,11 @@ A curated list of challenges and papers pertaining to object pose estimation
 * **Analysis by Synthesis**: Alexander Krull, Eric Brachmann, Frank Michel, Michael Ying Yang, Stefan Gumhold, Carsten Rother.\
 "Learning Analysis-by-Synthesis for 6D Pose Estimation in RGB-D Images." ICCV (2015)
 [pdf](https://arxiv.org/abs/1508.04546)
+
+* **Object Parts Representation**: 
+Alberto Crivellaro, Mahdi Rad, Yannick Verdie, Kwang Moo Yi, Pascal Fua, Vincent Lepetit.\
+"A Novel Representation of Parts for Accurate 3D Object Detection and Tracking in Monocular Images." ICCV (2015)
+[pdf](https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Crivellaro_A_Novel_Representation_ICCV_2015_paper.pdf)
 
 
 #### BMVC 2015
@@ -239,6 +248,28 @@ A curated list of challenges and papers pertaining to object pose estimation
 "Learning Descriptors for Object Recognition and 3D Pose Estimation." CVPR (2015)
 [code](https://github.com/paroj/ObjRecPoseEst) | [pdf](https://arxiv.org/abs/1502.05908)
 
+ 
+#### ECCV 2014
+* **Latent-Class Hough Forests**: Alykhan Tejani, Danhang Tang, Rigas Kouskouridas, and Tae-Kyun Kim.\
+"Latent-Class Hough Forests for 3D Object Detection and Pose Estimation." ECCV (2014)
+[pdf](https://labicvl.github.io/docs/pubs/Aly_ECCV_2014.pdf)
+
+* **6D Pose and 3D Object Coordinates**: Eric Brachmann, Alexander Krull, Frank Michel, Stefan Gumhold, Jamie Shotton, Carsten Rother.\
+"Learning 6D Object Pose Estimation using 3D Object Coordinates" ECCV (2014)
+[pdf](http://wwwpub.zih.tu-dresden.de/~cvweb/publications/papers/2014/PoseEstimationECCV2014.pdf)
+
+
+#### ACCV 2012
+* **LINEMOD**: Stefan Hinterstoisser, Vincent Lepetit, Slobodan Ilic, Stefan Holzer, Gary Bradski, Kurt Konolige, Nassir Navab.\
+"Model Based Training, Detection and Pose Estimation of Texture-Less 3D Objects in Heavily Cluttered Scenes." ACCV (2012)
+[pdf](https://icwww.epfl.ch/~lepetit/papers/hinterstoisser_accv12.pdf)
+
+
+#### CVPR 2010
+* **Point-Pari Feature**: Bertram Drost, Markus Ulrich, Nassir Navab, Slobodan Ilic.\
+"Model Globally, Match Locally: Efficient and Robust 3D Object Recognition." CVPR (2010)
+[pdf](http://campar.in.tum.de/pub/drost2010CVPR/drost2010CVPR.pdf)
+ 
  
 ## Other resources
 
