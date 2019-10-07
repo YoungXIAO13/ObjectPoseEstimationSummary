@@ -266,7 +266,7 @@ Alberto Crivellaro, Mahdi Rad, Yannick Verdie, Kwang Moo Yi, Pascal Fua, Vincent
 
 
 #### CVPR 2010
-* **Point-Pari Feature**: Bertram Drost, Markus Ulrich, Nassir Navab, Slobodan Ilic.\
+* **Point-Pair Feature**: Bertram Drost, Markus Ulrich, Nassir Navab, Slobodan Ilic.\
 "Model Globally, Match Locally: Efficient and Robust 3D Object Recognition." CVPR (2010)
 [pdf](http://campar.in.tum.de/pub/drost2010CVPR/drost2010CVPR.pdf)
  
