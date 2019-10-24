@@ -15,6 +15,11 @@ A curated list of challenges and papers pertaining to object pose estimation
 ## Papers :ghost:
 
 #### ArXiv
+
+* **Multi-path**: Martin Sundermeyer, Maximilian Durner, En Yen Puang, Zoltan-Csaba Marton, Rudolph Triebel.
+"Multi-path Learning for Object Pose Estimation Across Domains."
+[pdf](https://arxiv.org/abs/1908.00151)
+
 * **DPOD**: Sergey Zakharov, Ivan Shugurov, Slobodan Ilic.\
 "DPOD: 6D Pose Object Detector and Refiner."
 [pdf](https://arxiv.org/abs/1902.11020)
@@ -28,6 +33,14 @@ A curated list of challenges and papers pertaining to object pose estimation
 * **RGB-CAD**: Georgios Georgakis, Srikrishna Karanam, Ziyan Wu, Jana Kosecka.\
 "Learning Local RGB-to-CAD Correspondences for Object Pose Estimation." ICCV (2019)
 [pdf](https://arxiv.org/abs/1811.07249) 
+
+* **CorNet**: Giorgia Pitteri, Slobodan Ilic, Vincent Lepetit.\
+"CorNet: Generic 3D Corners for 6D Pose Estimation of New Objects without Retraining." ICCV workshop (2019)
+[pdf](https://arxiv.org/abs/1908.11457)
+
+* **CullNet**: Kartik Gupta, Lars Petersson, Richard Hartley.\
+"CullNet: Calibrated and Pose Aware Confidence Scores for Object Pose Estimation." ICCV workshop (2019)
+[pdf](https://arxiv.org/abs/1909.13476)
 
 
 #### BMVC 2019
@@ -112,6 +125,10 @@ A curated list of challenges and papers pertaining to object pose estimation
 * **Pose Refine**: Fabian Manhardt, Wadim Kehl, Nassir Navab, Federico Tombari.\
 "Deep Model-Based 6D Pose Refinement in RGB." ECCV (2018)
 [code](https://github.com/fabi92/eccv18-rgb_pose_refinement) | [pdf](https://arxiv.org/abs/1810.03065)
+
+* **Fine-Grained**: Yaming Wang, Xiao Tan, Yi Yang, Xiao Liu, Errui Ding, Feng Zhou, Larry S. Davis.\
+"3D Pose Estimation for Fine-Grained Object Categories." ECCV workshop (2018)
+[pdf](https://arxiv.org/abs/1806.04314)
 
 
 #### BMVC 2018

@@ -63,6 +63,8 @@ elif args.dataset_format in ['Pascal3D', 'ShapeNet']:
         cat_in = join(input_dir, cat)
         cat_out = join(output_dir, cat)
         model_files = sorted(os.listdir(cat_in))
+        if len(model_files) > 200:
+            model_files = model_files[:200]
         for model_file in tqdm(model_files):
             if args.dataset_format == 'Pascal3D':
                 model_path = join(cat_in, model_file)
