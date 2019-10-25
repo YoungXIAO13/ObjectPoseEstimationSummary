@@ -1,6 +1,7 @@
-# Object Pose Estimation
+# Object Pose Estimation [Paper List](https://github.com/YoungXIAO13/ObjectPoseEstimationSummary/blob/master/paper.md)
 A repo to summarize resources used in object pose estimation as well as viewpoint estimation. 
 
+In the following tables, 3D CAD model is noted as **model** and 2D pictured object is noted as **object**.
 
 ## Contributing
 Contributions are welcome. 
@@ -16,12 +17,6 @@ If you have suggestions for new sections to be included, please raise an issue a
 * [3D model datasets :bike:](#3d-model-datasets-bike)
 * [Rendering methods :bicyclist:](#rendering-methods-bicyclist)
 * [Shape Encoding](#shape-encoding)
-
-
-## Resources
-* See paper list [here](https://github.com/YoungXIAO13/ObjectPoseEstimationSummary/blob/master/paper.md)
-
-* In the following tables, 3D CAD model is noted as **model** and 2D pictured object is noted as **object**.
 
 
 ## Objects in the controlled environments :movie_camera:
