@@ -34,6 +34,10 @@ A curated list of challenges and papers pertaining to object pose estimation
 "Learning Local RGB-to-CAD Correspondences for Object Pose Estimation." ICCV (2019)
 [pdf](https://arxiv.org/abs/1811.07249) 
 
+* **Pix2Pose**: Kiru Park, Timothy Patten, Markus Vincze.\
+"Pix2Pose: Pixel-Wise Coordinate Regression of Objects for 6D Pose Estimation." ICCV (2019)
+[code](https://github.com/kirumang/Pix2Pose) | [pdf](https://arxiv.org/abs/1908.07433)
+
 * **CorNet**: Giorgia Pitteri, Slobodan Ilic, Vincent Lepetit.\
 "CorNet: Generic 3D Corners for 6D Pose Estimation of New Objects without Retraining." ICCV workshop (2019)
 [pdf](https://arxiv.org/abs/1908.11457)
