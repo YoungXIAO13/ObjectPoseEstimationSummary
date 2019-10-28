@@ -20,23 +20,36 @@ A curated list of challenges and papers pertaining to object pose estimation
 "Multi-path Learning for Object Pose Estimation Across Domains."
 [pdf](https://arxiv.org/abs/1908.00151)
 
-* **DPOD**: Sergey Zakharov, Ivan Shugurov, Slobodan Ilic.\
-"DPOD: 6D Pose Object Detector and Refiner."
-[pdf](https://arxiv.org/abs/1902.11020)
-
 
 #### ICCV 2019
+
 * **GP2C**: Alexander Grabner, Peter M. Roth and Vincent Lepetit.\
 "GP2C: Geometric Projection Parameter Consensus for Joint 3D Pose and Focal Length Estimation in the Wild." ICCV (2019)
 [pdf](https://arxiv.org/abs/1908.02809)
 
 * **RGB-CAD**: Georgios Georgakis, Srikrishna Karanam, Ziyan Wu, Jana Kosecka.\
 "Learning Local RGB-to-CAD Correspondences for Object Pose Estimation." ICCV (2019)
-[pdf](https://arxiv.org/abs/1811.07249) 
+[pdf](https://arxiv.org/abs/1811.07249)
+
+* **Wasserstein Training**: Xiaofeng Liu, Yang Zou, Tong Che, Peng Ding, Ping Jia, Jane You, B.V.K. Vijaya Kumar.\
+"Conservative Wasserstein Training for Pose Estimation." ICCV (2019)
+[pdf](http://openaccess.thecvf.com/content_ICCV_2019/papers/Liu_Conservative_Wasserstein_Training_for_Pose_Estimation_ICCV_2019_paper.pdf)
 
 * **Pix2Pose**: Kiru Park, Timothy Patten, Markus Vincze.\
 "Pix2Pose: Pixel-Wise Coordinate Regression of Objects for 6D Pose Estimation." ICCV (2019)
 [code](https://github.com/kirumang/Pix2Pose) | [pdf](https://arxiv.org/abs/1908.07433)
+
+* **DPOD**: Sergey Zakharov, Ivan Shugurov, Slobodan Ilic.\
+"DPOD: 6D Pose Object Detector and Refiner." ICCV (2019)
+[pdf](https://arxiv.org/abs/1902.11020)
+
+* **CDPN**: Zhigang Li, Gu Wang, Xiangyang Ji.\
+"CDPN: Coordinates-Based Disentangled Pose Network for Real-Time RGB-Based 6-DoF Object Pose Estimation."
+[pdf](http://openaccess.thecvf.com/content_ICCV_2019/papers/Li_CDPN_Coordinates-Based_Disentangled_Pose_Network_for_Real-Time_RGB-Based_6-DoF_Object_ICCV_2019_paper.pdf)
+
+* **Pose Ambiguity**: Fabian Manhardt, Diego Martin Arroyo, Christian Rupprecht, Benjamin Busam, Tolga Birdal, Nassir Navab, Federico Tombari.\
+"Explaining the Ambiguity of Object Detection and 6D Pose From Visual Data."
+[pdf](https://arxiv.org/abs/1812.00287)
 
 * **CorNet**: Giorgia Pitteri, Slobodan Ilic, Vincent Lepetit.\
 "CorNet: Generic 3D Corners for 6D Pose Estimation of New Objects without Retraining." ICCV workshop (2019)
@@ -117,6 +130,10 @@ A curated list of challenges and papers pertaining to object pose estimation
 * **Heatmap**: Markus Oberweger, Mahdi Rad, Vincent Lepetit.\
 "Making Deep Heatmaps Robust to Partial Occlusions for 3D Object Pose Estimation." ECCV (2018)
 [pdf](https://arxiv.org/abs/1804.03959)
+
+* **Deep Directional Statistics**: Sergey Prokudin, Peter Gehler, Sebastian Nowozin.\
+"Deep Directional Statistics: Pose Estimation with Uncertainty Quantification." ECCV (2018)
+[code](https://github.com/sergeyprokudin/deep_direct_stat) | [pdf](https://arxiv.org/abs/1805.03430)
 
 * **Viewpoint Estimation**: Gilad Divon, Ayellet Tal.\
 "Viewpoint Estimation-Insights & Model." ECCV (2018) 
