@@ -16,7 +16,7 @@ A curated list of challenges and papers pertaining to object pose estimation
 
 #### ArXiv
 
-* **Multi-path**: Martin Sundermeyer, Maximilian Durner, En Yen Puang, Zoltan-Csaba Marton, Rudolph Triebel.
+* **Multi-path**: Martin Sundermeyer, Maximilian Durner, En Yen Puang, Zoltan-Csaba Marton, Rudolph Triebel.\
 "Multi-path Learning for Object Pose Estimation Across Domains."\
 [pdf](https://arxiv.org/abs/1908.00151)
 
@@ -44,11 +44,11 @@ A curated list of challenges and papers pertaining to object pose estimation
 [pdf](https://arxiv.org/abs/1902.11020)
 
 * **CDPN**: Zhigang Li, Gu Wang, Xiangyang Ji.\
-"CDPN: Coordinates-Based Disentangled Pose Network for Real-Time RGB-Based 6-DoF Object Pose Estimation."\
+"CDPN: Coordinates-Based Disentangled Pose Network for Real-Time RGB-Based 6-DoF Object Pose Estimation." ICCV (2019)\
 [pdf](http://openaccess.thecvf.com/content_ICCV_2019/papers/Li_CDPN_Coordinates-Based_Disentangled_Pose_Network_for_Real-Time_RGB-Based_6-DoF_Object_ICCV_2019_paper.pdf)
 
 * **Pose Ambiguity**: Fabian Manhardt, Diego Martin Arroyo, Christian Rupprecht, Benjamin Busam, Tolga Birdal, Nassir Navab, Federico Tombari.\
-"Explaining the Ambiguity of Object Detection and 6D Pose From Visual Data."\
+"Explaining the Ambiguity of Object Detection and 6D Pose From Visual Data." ICCV (2019)\
 [pdf](https://arxiv.org/abs/1812.00287)
 
 * **CorNet**: Giorgia Pitteri, Slobodan Ilic, Vincent Lepetit.\
