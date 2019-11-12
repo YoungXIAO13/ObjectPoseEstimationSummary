@@ -167,6 +167,15 @@ A curated list of challenges and papers pertaining to object pose estimation
 
 
 #### CVPR 2018
+
+* **MultiView Consistency**:  Shubham Tulsiani, Alexei A. Efros, Jitendra Malik.\
+"Multi-view Consistency as Supervisory Signal for Learning Shape and Pose Prediction." CVPR (2018) \
+[code](https://github.com/shubhtuls/mvcSnP) | [pdf](https://arxiv.org/abs/1801.03910)
+
+* **RotationNet**: Asako Kanezaki, Yasuyuki Matsushita, Yoshifumi Nishida.\
+"RotationNet: Joint Object Categorization and Pose Estimation Using Multiviews from Unsupervised Viewpoints." CVPR (2018)\
+[code](https://github.com/kanezaki/pytorch-rotationnet) | [pdf](https://arxiv.org/abs/1603.06208)
+
 * **3D-RCNN**: Abhijit Kundu, Yin Li, James M. Rehg.\
 "3D-RCNN: Instance-level 3D Object Reconstruction via Render-and-Compare." CVPR (2018)\
 [pdf](http://abhijitkundu.info/Publications/3DRCNN_CVPR18.pdf)
@@ -182,10 +191,6 @@ A curated list of challenges and papers pertaining to object pose estimation
 * **YOLO-6D**: Bugra Tekin, Sudipta N. Sinha, Pascal Fua.\
 "Real-Time Seamless Single Shot 6D Object Pose Prediction." CVPR (2018)\
 [code](https://github.com/Microsoft/singleshotpose) | [pdf](https://arxiv.org/abs/1711.08848)
-
-* **RotationNet**: Asako Kanezaki, Yasuyuki Matsushita, Yoshifumi Nishida.\
-"RotationNet: Joint Object Categorization and Pose Estimation Using Multiviews from Unsupervised Viewpoints." CVPR (2018)\
-[code](https://github.com/kanezaki/pytorch-rotationnet) | [pdf](https://arxiv.org/abs/1603.06208)
 
 
 #### ICCV 2017
