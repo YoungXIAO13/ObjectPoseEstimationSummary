@@ -38,7 +38,7 @@ def downsample_pointcloud(pc_path, point_num):
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--dataset_dir', type=str, help='dataset directory')
-parser.add_argument('--dataset_format', type=str, choices=['BOP', 'Pascal3D', 'ShapeNet'], help='dataset format')
+parser.add_argument('--dataset', type=str, choices=['BOP', 'Pascal3D', 'ShapeNet', 'Pix3D'])
 parser.add_argument('--input', type=str, help='subdirectory containing obj files in the dataset directory')
 parser.add_argument('--virtualscanner', type=str, help='executable path of virtual scanner')
 parser.add_argument('--downsample', type=int, default=5000, help='downsampled points')
@@ -47,7 +47,7 @@ args = parser.parse_args()
 input_dir = join(args.dataset_dir, args.input)
 output_dir = join(args.dataset_dir, 'pointcloud')
 
-if args.dataset_format == 'BOP':
+if args.dataset == 'BOP':
     model_files = sorted(os.listdir(input_dir))
     for model_file in tqdm(model_files):
         model_path = join(input_dir, model_file)
@@ -57,20 +57,22 @@ if args.dataset_format == 'BOP':
         ply_path = sample_point_cloud_from_obj(args.virtualscanner, model_path, example_dir)
         downsample_pointcloud(ply_path, args.downsample)
 
-elif args.dataset_format in ['Pascal3D', 'ShapeNet']:
+elif args.dataset in ['Pascal3D', 'ShapeNet', 'Pix3D']:
     categories = sorted(os.listdir(input_dir))
-    for cat in tqdm(categories):
+    for cat in tqdm(categories, desc='Generating point cloud for {}'.format(args.dataset)):
         cat_in = join(input_dir, cat)
         cat_out = join(output_dir, cat)
         model_files = sorted(os.listdir(cat_in))
-        if len(model_files) > 200:
-            model_files = model_files[:200]
-        for model_file in tqdm(model_files):
-            if args.dataset_format == 'Pascal3D':
+
+        for model_file in tqdm(model_files, desc='Generating point cloud for {} class'.format(cat)):
+            if args.dataset == 'Pascal3D':
                 model_path = join(cat_in, model_file)
                 model_name = model_file.split(".")[0]
-            else:
+            elif args.dataset == 'ShapeNet':
                 model_path = join(cat_in, model_file, 'models', 'model_normalized.obj')
+                model_name = model_file
+            else:
+                model_path = join(cat_in, model_file, 'model.obj')
                 model_name = model_file
 
             example_dir = join(cat_out, model_name)
