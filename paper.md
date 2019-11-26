@@ -1,4 +1,4 @@
-# Object Pose Estimation
+# Awesome Object Pose Estimation
 
 A curated list of challenges and papers pertaining to object pose estimation
 
