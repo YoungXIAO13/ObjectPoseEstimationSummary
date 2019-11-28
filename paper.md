@@ -16,6 +16,10 @@ A curated list of challenges and papers pertaining to object pose estimation
 
 #### ArXiv
 
+* **Single-Stage 6D Pose**: Yinlin Hu, Pascal Fua, Wei Wang, Mathieu Salzmann.\
+"Single-Stage 6D Object Pose Estimation."\
+[pdf](https://arxiv.org/pdf/1911.08324.pdf)
+
 * **Multi-path**: Martin Sundermeyer, Maximilian Durner, En Yen Puang, Zoltan-Csaba Marton, Rudolph Triebel.\
 "Multi-path Learning for Object Pose Estimation Across Domains."\
 [pdf](https://arxiv.org/abs/1908.00151)
