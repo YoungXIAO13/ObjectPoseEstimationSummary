@@ -23,7 +23,7 @@ for scene_id in tqdm(range(len(scenes))):
     scene_gt_info = json.load(open(os.path.join(scene_dir, 'scene_gt_info.json')))
     scene_camera = json.load(open(os.path.join(scene_dir, 'scene_camera.json')))
 
-    for image_id in tqdm(range(len(scene_gt))):
+    for image_id in tqdm(scene_gt.keys(), desc='scene_id = {}'.format(scene_id)):
 
         # Loop on obj ids of one image
         for n in range(len(scene_gt["{}".format(image_id)])):
