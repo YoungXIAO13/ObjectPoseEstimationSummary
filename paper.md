@@ -16,6 +16,14 @@ A curated list of challenges and papers pertaining to object pose estimation
 
 #### ArXiv
 
+* **LatentFusion**: Keunhong Park, Arsalan Mousavian, Yu Xiang, Dieter Fox.\
+"LatentFusion: End-to-End Differentiable Reconstruction and Rendering for Unseen Object Pose Estimation."\
+[pdf](https://arxiv.org/abs/1912.00416)
+
+* **Self-Supervised 6D**: Xinke Deng, Yu Xiang, Arsalan Mousavian, Clemens Eppner, Timothy Bretl and Dieter Fox.\
+"Self-supervised 6D Object Pose Estimation for Robot Manipulation."\
+[pdf](https://arxiv.org/abs/1909.10159)
+
 * **Single-Stage 6D Pose**: Yinlin Hu, Pascal Fua, Wei Wang, Mathieu Salzmann.\
 "Single-Stage 6D Object Pose Estimation."\
 [pdf](https://arxiv.org/pdf/1911.08324.pdf)
@@ -24,6 +32,12 @@ A curated list of challenges and papers pertaining to object pose estimation
 "Multi-path Learning for Object Pose Estimation Across Domains."\
 [pdf](https://arxiv.org/abs/1908.00151)
 
+
+#### Robotics 2019
+
+* **PoseRBPF**: Xinke Deng, Arsalan Mousavian, Yu Xiang, Fei Xia, Timothy Bretl and Dieter Fox.\
+"PoseRBPF: A Rao-Blackwellized Particle Filter for 6D Object Pose Tracking." RSS (2019)\
+[pdf](https://arxiv.org/abs/1905.09304)
 
 #### ICCV 2019
 
@@ -104,6 +118,10 @@ A curated list of challenges and papers pertaining to object pose estimation
 * **PoseCNN**: Yu Xiang, Tanner Schmidt, Venkatraman Narayanan, Dieter Fox.\
 "PoseCNN: A Convolutional Neural Network for 6D Object Pose Estimation in Cluttered Scenes." RSS (2018)\
 [code](https://github.com/yuxng/PoseCNN) | [pdf](https://arxiv.org/abs/1711.00199)
+
+* **DOPE**: Jonathan Tremblay, Thang To, Balakumar Sundaralingam, Yu Xiang, Dieter Fox, Stan Birchfield.\
+"Deep Object Pose Estimation for Semantic Robotic Grasping of Household Objects."(CoRL 2018) \
+[code](https://github.com/NVlabs/Deep_Object_Pose) | [pdf](https://arxiv.org/abs/1809.10790)
 
 * **SilhoNet**: Gideon Billings, Matthew Johnson-Roberson.\
 "SilhoNet: An RGB Method for 3D Object Pose Estimation and Grasp Planning." ICRA (2018)\
