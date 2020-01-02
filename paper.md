@@ -16,6 +16,10 @@ A curated list of challenges and papers pertaining to object pose estimation
 
 #### ArXiv
 
+* **6-PACK**: Chen Wang, Roberto Martín-Martín, Danfei Xu, Jun Lv, Cewu Lu, Li Fei-Fei, Silvio Savarese, Yuke Zhu.\
+"6-PACK: Category-level 6D Pose Tracker with Anchor-Based Keypoints".\
+[code](https://github.com/j96w/6-PACK) | [pdf](https://arxiv.org/abs/1910.10750)
+
 * **LatentFusion**: Keunhong Park, Arsalan Mousavian, Yu Xiang, Dieter Fox.\
 "LatentFusion: End-to-End Differentiable Reconstruction and Rendering for Unseen Object Pose Estimation."\
 [pdf](https://arxiv.org/abs/1912.00416)
