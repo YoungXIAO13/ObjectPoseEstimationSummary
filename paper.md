@@ -20,10 +20,6 @@ A curated list of challenges and papers pertaining to object pose estimation
 "HybridPose: 6D Object Pose Estimation under Hybrid Representations."\
 [code](https://github.com/chensong1995/HybridPose) | [pdf](https://arxiv.org/abs/2001.01869)
 
-* **6-PACK**: Chen Wang, Roberto Martín-Martín, Danfei Xu, Jun Lv, Cewu Lu, Li Fei-Fei, Silvio Savarese, Yuke Zhu.\
-"6-PACK: Category-level 6D Pose Tracker with Anchor-Based Keypoints."\
-[code](https://github.com/j96w/6-PACK) | [pdf](https://arxiv.org/abs/1910.10750)
-
 * **LatentFusion**: Keunhong Park, Arsalan Mousavian, Yu Xiang, Dieter Fox.\
 "LatentFusion: End-to-End Differentiable Reconstruction and Rendering for Unseen Object Pose Estimation."\
 [pdf](https://arxiv.org/abs/1912.00416)
@@ -32,13 +28,31 @@ A curated list of challenges and papers pertaining to object pose estimation
 "Self-supervised 6D Object Pose Estimation for Robot Manipulation."\
 [pdf](https://arxiv.org/abs/1909.10159)
 
-* **Single-Stage 6D Pose**: Yinlin Hu, Pascal Fua, Wei Wang, Mathieu Salzmann.\
-"Single-Stage 6D Object Pose Estimation."\
-[pdf](https://arxiv.org/pdf/1911.08324.pdf)
-
 * **Multi-path**: Martin Sundermeyer, Maximilian Durner, En Yen Puang, Zoltan-Csaba Marton, Rudolph Triebel.\
 "Multi-path Learning for Object Pose Estimation Across Domains."\
 [pdf](https://arxiv.org/abs/1908.00151)
+
+
+#### CVPR 2020
+
+* **BPnP**: Bo Chen, Tat-Jun Chin, Alvaro Parra, Jiewei Cao, Nan Li.\
+"End-to-End Learnable Geometric Vision by Backpropagating PnP Optimization." CVPR (2020)\
+[code](https://github.com/BoChenYS/BPnP) | [pdf](https://arxiv.org/abs/1909.06043)
+
+* **PVN3D**: Yisheng He, Wei Sun, Haibin Huang, Jianran Liu, Haoqiang Fan, Jian Sun.\
+"PVN3D: A Deep Point-wise 3D Keypoints Voting Network for 6DoF Pose Estimation." CVPR (2020)\
+[code](https://github.com/ethnhe/PVN3D) | [pdf](https://arxiv.org/abs/1911.04231)
+
+* **Single-Stage 6D Pose**: Yinlin Hu, Pascal Fua, Wei Wang, Mathieu Salzmann.\
+"Single-Stage 6D Object Pose Estimation." CVPR (2020)\
+[pdf](https://arxiv.org/pdf/1911.08324.pdf)
+
+
+#### Robotics 2020
+
+* **6-PACK**: Chen Wang, Roberto Martín-Martín, Danfei Xu, Jun Lv, Cewu Lu, Li Fei-Fei, Silvio Savarese, Yuke Zhu.\
+"6-PACK: Category-level 6D Pose Tracker with Anchor-Based Keypoints." ICRA (2020)\
+[code](https://github.com/j96w/6-PACK) | [pdf](https://arxiv.org/abs/1910.10750)
 
 
 #### Robotics 2019
