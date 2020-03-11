@@ -20,20 +20,16 @@ A curated list of challenges and papers pertaining to object pose estimation
 "HybridPose: 6D Object Pose Estimation under Hybrid Representations."\
 [code](https://github.com/chensong1995/HybridPose) | [pdf](https://arxiv.org/abs/2001.01869)
 
-* **LatentFusion**: Keunhong Park, Arsalan Mousavian, Yu Xiang, Dieter Fox.\
-"LatentFusion: End-to-End Differentiable Reconstruction and Rendering for Unseen Object Pose Estimation."\
-[pdf](https://arxiv.org/abs/1912.00416)
-
-* **Self-Supervised 6D**: Xinke Deng, Yu Xiang, Arsalan Mousavian, Clemens Eppner, Timothy Bretl and Dieter Fox.\
-"Self-supervised 6D Object Pose Estimation for Robot Manipulation."\
-[pdf](https://arxiv.org/abs/1909.10159)
-
 * **Multi-path**: Martin Sundermeyer, Maximilian Durner, En Yen Puang, Zoltan-Csaba Marton, Rudolph Triebel.\
 "Multi-path Learning for Object Pose Estimation Across Domains."\
 [pdf](https://arxiv.org/abs/1908.00151)
 
 
 #### CVPR 2020
+
+* **LatentFusion**: Keunhong Park, Arsalan Mousavian, Yu Xiang, Dieter Fox.\
+"LatentFusion: End-to-End Differentiable Reconstruction and Rendering for Unseen Object Pose Estimation." CVPR (2020)\
+[pdf](https://arxiv.org/abs/1912.00416)
 
 * **BPnP**: Bo Chen, Tat-Jun Chin, Alvaro Parra, Jiewei Cao, Nan Li.\
 "End-to-End Learnable Geometric Vision by Backpropagating PnP Optimization." CVPR (2020)\
@@ -53,6 +49,14 @@ A curated list of challenges and papers pertaining to object pose estimation
 * **6-PACK**: Chen Wang, Roberto Martín-Martín, Danfei Xu, Jun Lv, Cewu Lu, Li Fei-Fei, Silvio Savarese, Yuke Zhu.\
 "6-PACK: Category-level 6D Pose Tracker with Anchor-Based Keypoints." ICRA (2020)\
 [code](https://github.com/j96w/6-PACK) | [pdf](https://arxiv.org/abs/1910.10750)
+
+* **Self-Supervised 6D**: Xinke Deng, Yu Xiang, Arsalan Mousavian, Clemens Eppner, Timothy Bretl and Dieter Fox.\
+"Self-supervised 6D Object Pose Estimation for Robot Manipulation." ICRA (2020)\
+[pdf](https://arxiv.org/abs/1909.10159)
+
+* **DirectShape**: Rui Wang, Nan Yang, Joerg Stueckler, Daniel Cremers.\
+"DirectShape: Direct Photometric Alignment of Shape Priors for Visual Vehicle Pose and Shape Estimation." ICRA (2020)\
+[pdf](https://arxiv.org/abs/1904.10097)
 
 
 #### Robotics 2019
