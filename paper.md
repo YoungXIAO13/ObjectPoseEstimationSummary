@@ -3,7 +3,7 @@
 A curated list of challenges and papers pertaining to object pose estimation
 
 ## Challenges :space_invader:
-* [IROS 2019: Object Pose Estimation for Bin-Picking](http://www.bin-picking.ai/en/competition.html)
+* [ECCV 2020: Recovering Object Pose](http://cmp.felk.cvut.cz/sixd/workshop_2020/)
 * [ICCV 2019: Recovering Object Pose](http://cmp.felk.cvut.cz/sixd/workshop_2019/)
 * [ECCV 2018: Recovering Object Pose](http://cmp.felk.cvut.cz/sixd/workshop_2018/)
 * [ICCV 2017: Recovering Object Pose](http://cmp.felk.cvut.cz/sixd/workshop_2017/)
@@ -15,6 +15,10 @@ A curated list of challenges and papers pertaining to object pose estimation
 ## Papers :ghost:
 
 #### ArXiv
+
+* **CPS**: Fabian Manhardt, Manuel Nickel, Sven Meier, Luca Minciullo, Nassir Navab.\
+"CPS: Class-level 6D Pose and Shape Estimation From Monocular Images."\
+[pdf](https://arxiv.org/abs/2003.05848)
 
 * **HybridPose**: Chen Song, Jiaru Song, Qixing Huang.\
 "HybridPose: 6D Object Pose Estimation under Hybrid Representations."\
