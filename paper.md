@@ -14,7 +14,7 @@ A curated list of challenges and papers pertaining to object pose estimation
 
 ## Papers :ghost:
 
-#### ArXiv
+### ArXiv
 
 * **CPS**: Fabian Manhardt, Manuel Nickel, Sven Meier, Luca Minciullo, Nassir Navab.\
 "CPS: Class-level 6D Pose and Shape Estimation From Monocular Images."\
@@ -30,7 +30,7 @@ A curated list of challenges and papers pertaining to object pose estimation
 
 ---
 
-#### 2020
+### 2020
 
 * **LatentFusion**: Keunhong Park, Arsalan Mousavian, Yu Xiang, Dieter Fox.\
 "LatentFusion: End-to-End Differentiable Reconstruction and Rendering for Unseen Object Pose Estimation." CVPR (2020)\
@@ -48,7 +48,7 @@ A curated list of challenges and papers pertaining to object pose estimation
 "Single-Stage 6D Object Pose Estimation." CVPR (2020)\
 [pdf](https://arxiv.org/pdf/1911.08324.pdf)
 
-------
+####
 
 * **6-PACK**: Chen Wang, Roberto Martín-Martín, Danfei Xu, Jun Lv, Cewu Lu, Li Fei-Fei, Silvio Savarese, Yuke Zhu.\
 "6-PACK: Category-level 6D Pose Tracker with Anchor-Based Keypoints." ICRA (2020)\
@@ -63,7 +63,7 @@ A curated list of challenges and papers pertaining to object pose estimation
 [pdf](https://arxiv.org/abs/1904.10097)
 
 
-#### 2019
+### 2019
 
 * **PoseRBPF**: Xinke Deng, Arsalan Mousavian, Yu Xiang, Fei Xia, Timothy Bretl and Dieter Fox.\
 "PoseRBPF: A Rao-Blackwellized Particle Filter for 6D Object Pose Tracking." RSS (2019)\
@@ -144,7 +144,7 @@ A curated list of challenges and papers pertaining to object pose estimation
 [code](https://github.com/leoshine/Spherical_Regression) | [pdf](https://arxiv.org/abs/1904.05404)
 
 
-#### 2018
+### 2018
 
 * **PoseCNN**: Yu Xiang, Tanner Schmidt, Venkatraman Narayanan, Dieter Fox.\
 "PoseCNN: A Convolutional Neural Network for 6D Object Pose Estimation in Cluttered Scenes." RSS (2018)\
@@ -256,7 +256,7 @@ A curated list of challenges and papers pertaining to object pose estimation
 [code](https://github.com/Microsoft/singleshotpose) | [pdf](https://arxiv.org/abs/1711.08848)
 
 
-#### 2017
+### 2017
 
 * **BB8**: Mahdi Rad, Vincent Lepetit.\
 "BB8: A Scalable, Accurate, Robust to Partial Occlusion Method for Predicting the 3D Poses of Challenging Objects without Using Depth." ICCV (2017)\
@@ -295,7 +295,7 @@ A curated list of challenges and papers pertaining to object pose estimation
 [pdf](https://arxiv.org/abs/1708.05628)
 
 
-#### 2016
+### 2016
 
 * **Point Pair**: Stefan Hinterstoisser, Vincent Lepetit, Naresh Rajkumar, Kurt Konolige.\
 "Going Further with Point Pair Features." ECCV (2016)\
@@ -322,7 +322,7 @@ A curated list of challenges and papers pertaining to object pose estimation
 [pdf](https://arxiv.org/abs/1512.07506)
 
 
-#### 2015
+### 2015
 
 * **Render for CNN**: Hao Su, Charles R. Qi, Yangyan Li, Leonidas J. Guibas.\
 "Render for CNN: Viewpoint Estimation in Images Using CNNs Trained with Rendered 3D Model Views." ICCV (2015)\
@@ -362,7 +362,7 @@ Alberto Crivellaro, Mahdi Rad, Yannick Verdie, Kwang Moo Yi, Pascal Fua, Vincent
 [code](https://github.com/paroj/ObjRecPoseEst) | [pdf](https://arxiv.org/abs/1502.05908)
 
  
-#### 2014
+### 2014
 
 * **Latent-Class Hough Forests**: Alykhan Tejani, Danhang Tang, Rigas Kouskouridas, and Tae-Kyun Kim.\
 "Latent-Class Hough Forests for 3D Object Detection and Pose Estimation." ECCV (2014)\
@@ -373,14 +373,14 @@ Alberto Crivellaro, Mahdi Rad, Yannick Verdie, Kwang Moo Yi, Pascal Fua, Vincent
 [pdf](http://wwwpub.zih.tu-dresden.de/~cvweb/publications/papers/2014/PoseEstimationECCV2014.pdf)
 
 
-#### 2012
+### 2012
 
 * **LINEMOD**: Stefan Hinterstoisser, Vincent Lepetit, Slobodan Ilic, Stefan Holzer, Gary Bradski, Kurt Konolige, Nassir Navab.\
 "Model Based Training, Detection and Pose Estimation of Texture-Less 3D Objects in Heavily Cluttered Scenes." ACCV (2012)\
 [pdf](https://icwww.epfl.ch/~lepetit/papers/hinterstoisser_accv12.pdf)
 
 
-#### 2010
+### 2010
 * **Point-Pair Feature**: Bertram Drost, Markus Ulrich, Nassir Navab, Slobodan Ilic.\
 "Model Globally, Match Locally: Efficient and Robust 3D Object Recognition." CVPR (2010)\
 [pdf](http://campar.in.tum.de/pub/drost2010CVPR/drost2010CVPR.pdf)
