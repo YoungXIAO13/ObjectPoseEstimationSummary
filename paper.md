@@ -69,7 +69,7 @@ A curated list of challenges and papers pertaining to object pose estimation
 "PoseRBPF: A Rao-Blackwellized Particle Filter for 6D Object Pose Tracking." RSS (2019)\
 [pdf](https://arxiv.org/abs/1905.09304)
 
----
+#
 
 * **GP2C**: Alexander Grabner, Peter M. Roth and Vincent Lepetit.\
 "GP2C: Geometric Projection Parameter Consensus for Joint 3D Pose and Focal Length Estimation in the Wild." ICCV (2019)\
@@ -107,7 +107,7 @@ A curated list of challenges and papers pertaining to object pose estimation
 "CullNet: Calibrated and Pose Aware Confidence Scores for Object Pose Estimation." ICCV workshop (2019)\
 [pdf](https://arxiv.org/abs/1909.13476)
 
----
+#
 
 * **PoseFromShape**: Yang Xiao, Xuchong Qiu, Pierre-Alain Langlois, Mathieu Aubry, Renaud Marlet.\
 "Pose from Shape: Deep Pose Estimation for Arbitrary 3D Objects." BMVC (2019)\
@@ -117,7 +117,7 @@ A curated list of challenges and papers pertaining to object pose estimation
 "Few-Shot Viewpoint Estimation." BMVC (2019)\
 [pdf](https://arxiv.org/abs/1905.04957)
 
----
+#
 
 * **PVNet**: Sida Peng, Yuan Liu, Qixing Huang, Xiaowei Zhou, Hujun Bao. \
 "PVNet: Pixel-wise Voting Network for 6DoF Pose Estimation" CVPR (2019)\
@@ -166,7 +166,7 @@ A curated list of challenges and papers pertaining to object pose estimation
 "Real-Time Object Pose Estimation with Pose Interpreter Networks." IROS (2018)\
 [code](https://github.com/jimmyyhwu/pose-interpreter-networks) | [pdf](https://arxiv.org/abs/1808.01099)
 
----
+#
 
 * **iPose**: Omid Hosseini Jafari, Siva Karthik Mustikovela, Karl Pertsch, Eric Brachmann, Carsten Rother.\
 "iPose: Instance-Aware 6D Pose Estimation of Partly Occluded Objects." ACCV (2018)\
@@ -176,7 +176,7 @@ A curated list of challenges and papers pertaining to object pose estimation
 "Domain Transfer for 3D Pose Estimation from Color Images without Manual Annotations." ACCV (2018)\
 [pdf](https://arxiv.org/abs/1810.03707)
 
----
+#
 
 * **AugmentedAutoencoder**: Martin Sundermeyer, Zoltan-Csaba Marton, Maximilian Durner, Manuel Brucker, Rudolph Triebel.\
 "Implicit 3D Orientation Learning for 6D Object Detection from RGB Images." ECCV (2018)\
@@ -214,7 +214,7 @@ A curated list of challenges and papers pertaining to object pose estimation
 "3D Pose Estimation for Fine-Grained Object Categories." ECCV workshop (2018)\
 [pdf](https://arxiv.org/abs/1806.04314)
 
----
+#
 
 * **Classification-Regression**: Siddharth Mahendran, Haider Ali, Rene Vidal.\
 "A Mixed Classification-Regression Framework for 3D Pose Estimation from 2D Images." BMVC (2018)\
@@ -228,8 +228,7 @@ A curated list of challenges and papers pertaining to object pose estimation
 "Multi-Task Deep Networks for Depth-Based 6D Object Pose and Joint Registration in Crowd Scenarios". BMVC (2018)\
 [pdf](https://arxiv.org/abs/1806.03891)
 
-
----
+#
 
 * **MultiView Consistency**:  Shubham Tulsiani, Alexei A. Efros, Jitendra Malik.\
 "Multi-view Consistency as Supervisory Signal for Learning Shape and Pose Prediction." CVPR (2018) \
@@ -274,13 +273,13 @@ A curated list of challenges and papers pertaining to object pose estimation
 "Rethinking Reprojection: Closing the Loop for Pose-aware Shape Reconstruction from a Single Image". ICCV (2017)\
 [pdf](http://openaccess.thecvf.com/content_ICCV_2017/papers/Zhu_Rethinking_Reprojection_Closing_ICCV_2017_paper.pdf)
 
----
+#
 
 * **ALCN**: Mahdi Rad, Peter M. Roth, Vincent Lepetit.\
 "ALCN: Meta-Learning for Contrast Normalization Applied to Robust 3D Pose Estimation." BMVC (2017)\
 [pdf](https://arxiv.org/abs/1708.09633)
 
----
+#
 
 * **Global Hypothesis**: Frank Michel, Alexander Kirillov, Eric Brachmann, Alexander Krull, Stefan Gumhold, Bogdan Savchynskyy, Carsten Rother.\
 "Global Hypothesis Generation for 6D Object Pose Estimation." CVPR (2017)\
@@ -305,13 +304,13 @@ A curated list of challenges and papers pertaining to object pose estimation
 "Deep Learning of Local RGB-D Patches for 3D Object Detection and 6D Pose Estimation." ECCV (2016)\
 [pdf](https://arxiv.org/abs/1607.06038)
 
----
+#
 
 * **Crafting Multi-Task**: Francisco Massa, Renaud Marlet, Mathieu Aubry.\
 "Crafting a multi-task CNN for viewpoint estimation." BMVC (2016)\
 [code](http://imagine.enpc.fr/~suzano-f/bmvc2016-pose/) | [pdf](https://arxiv.org/abs/1609.03894)
 
----
+#
 
 * **Uncertainty-Driven**: Eric Brachmann, Frank Michel, Alexander Krull, Michael Ying Yang, Stefan Gumhold, Carsten Rother.\
 "Uncertainty-Driven 6D Pose Estimation of Objects and Scenes from a Single RGB Image." CVPR (2016)\
@@ -341,7 +340,7 @@ Alberto Crivellaro, Mahdi Rad, Yannick Verdie, Kwang Moo Yi, Pascal Fua, Vincent
 "A Novel Representation of Parts for Accurate 3D Object Detection and Tracking in Monocular Images." ICCV (2015)\
 [pdf](https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Crivellaro_A_Novel_Representation_ICCV_2015_paper.pdf)
 
----
+#
 
 * **Hashmod**: Wadim Kehl, Federico Tombari, Nassir Navab, Slobodan Ilic, Vincent Lepetit.\
 "Hashmod: A Hashing Method for Scalable 3D Object Detection." BMVC (2015)\
@@ -351,7 +350,7 @@ Alberto Crivellaro, Mahdi Rad, Yannick Verdie, Kwang Moo Yi, Pascal Fua, Vincent
 "Pose Estimation of Kinematic Chain Instances via Object Coordinate Regression." BMVC (2015)\
 [pdf](http://wwwpub.zih.tu-dresden.de/~cvweb/publications/papers/2015/Pose_Estimation_of_Kinematic_Chain_Instances_via_Object_Coordinate_Regression-Michel-BMVC15.pdf)
 
----
+#
 
 * **Viewpoints & Keypoints**: Shubham Tulsiani and Jitendra Malik.\
 "Viewpoints and Keypoints." CVPR (2015)\
