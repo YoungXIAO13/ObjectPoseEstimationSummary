@@ -28,6 +28,7 @@ A curated list of challenges and papers pertaining to object pose estimation
 "Multi-path Learning for Object Pose Estimation Across Domains."\
 [pdf](https://arxiv.org/abs/1908.00151)
 
+---
 
 #### 2020
 
@@ -47,7 +48,7 @@ A curated list of challenges and papers pertaining to object pose estimation
 "Single-Stage 6D Object Pose Estimation." CVPR (2020)\
 [pdf](https://arxiv.org/pdf/1911.08324.pdf)
 
----
+------
 
 * **6-PACK**: Chen Wang, Roberto Martín-Martín, Danfei Xu, Jun Lv, Cewu Lu, Li Fei-Fei, Silvio Savarese, Yuke Zhu.\
 "6-PACK: Category-level 6D Pose Tracker with Anchor-Based Keypoints." ICRA (2020)\
