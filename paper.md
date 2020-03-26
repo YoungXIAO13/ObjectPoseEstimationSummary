@@ -14,19 +14,35 @@ A curated list of challenges and papers pertaining to object pose estimation
 
 ## Papers :ghost:
 
-### ArXiv
+### Pre-Print
 
 * **CPS**: Fabian Manhardt, Manuel Nickel, Sven Meier, Luca Minciullo, Nassir Navab.\
 "CPS: Class-level 6D Pose and Shape Estimation From Monocular Images."\
 [pdf](https://arxiv.org/abs/2003.05848)
 
+* **MobilePose**: Tingbo Hou, Adel Ahmadyan, Liangkai Zhang, Jianing Wei, Matthias Grundmann.\
+"MobilePose: Real-Time Pose Estimation for Unseen Objects with Weak Shape Supervision."\
+[pdf](https://arxiv.org/abs/2003.03522)
+
 * **HybridPose**: Chen Song, Jiaru Song, Qixing Huang.\
 "HybridPose: 6D Object Pose Estimation under Hybrid Representations."\
 [code](https://github.com/chensong1995/HybridPose) | [pdf](https://arxiv.org/abs/2001.01869)
 
+* **Pose Conditioned Mesh Reconstruction**: Pedro Castro, Anil Armagan, Tae-Kyun Kim.\
+"Accurate 6D Object Pose Estimation by Pose Conditioned Mesh Reconstruction."\
+[pdf](https://arxiv.org/abs/1910.10653)
+
+* **KeyPose**: Xingyu Liu, Rico Jonschkowski, Anelia Angelova, Kurt Konolige.\
+"KeyPose: Multi-view 3D Labeling and Keypoint Estimation for Transparent Objects."\
+[pdf](https://arxiv.org/abs/1912.02805)
+
 * **Multi-path**: Martin Sundermeyer, Maximilian Durner, En Yen Puang, Zoltan-Csaba Marton, Rudolph Triebel.\
 "Multi-path Learning for Object Pose Estimation Across Domains."\
 [pdf](https://arxiv.org/abs/1908.00151)
+
+* **DPVL**: Xin Yu, Zheyu Zhuang, Piotr Koniusz, Hongdong Li.\
+"6DoF Object Pose Estimation via Differentiable Proxy Voting Loss."\
+[pdf](https://arxiv.org/abs/2002.03923)
 
 ---
 
@@ -36,17 +52,21 @@ A curated list of challenges and papers pertaining to object pose estimation
 "LatentFusion: End-to-End Differentiable Reconstruction and Rendering for Unseen Object Pose Estimation." CVPR (2020)\
 [pdf](https://arxiv.org/abs/1912.00416)
 
-* **BPnP**: Bo Chen, Tat-Jun Chin, Alvaro Parra, Jiewei Cao, Nan Li.\
-"End-to-End Learnable Geometric Vision by Backpropagating PnP Optimization." CVPR (2020)\
-[code](https://github.com/BoChenYS/BPnP) | [pdf](https://arxiv.org/abs/1909.06043)
-
 * **PVN3D**: Yisheng He, Wei Sun, Haibin Huang, Jianran Liu, Haoqiang Fan, Jian Sun.\
 "PVN3D: A Deep Point-wise 3D Keypoints Voting Network for 6DoF Pose Estimation." CVPR (2020)\
 [code](https://github.com/ethnhe/PVN3D) | [pdf](https://arxiv.org/abs/1911.04231)
 
+* **BPnP**: Bo Chen, Tat-Jun Chin, Alvaro Parra, Jiewei Cao, Nan Li.\
+"End-to-End Learnable Geometric Vision by Backpropagating PnP Optimization." CVPR (2020)\
+[code](https://github.com/BoChenYS/BPnP) | [pdf](https://arxiv.org/abs/1909.06043)
+
 * **Single-Stage 6D Pose**: Yinlin Hu, Pascal Fua, Wei Wang, Mathieu Salzmann.\
 "Single-Stage 6D Object Pose Estimation." CVPR (2020)\
 [pdf](https://arxiv.org/pdf/1911.08324.pdf)
+
+* **Articulated Object Pose**: Xiaolong Li, He Wang, Li Yi, Leonidas Guibas, A. Lynn Abbott, Shuran Song.\
+"Category-Level Articulated Object Pose Estimation." CVPR (2020)\
+[pdf](https://arxiv.org/abs/1912.11913)
 
 #
 
@@ -292,6 +312,12 @@ A curated list of challenges and papers pertaining to object pose estimation
 * **3D Pose Regression**: Siddharth Mahendran, Haider Ali, Rene Vidal.\
 "3D Pose Regression using Convolutional Neural Networks." CVPR workshop (2017) \
 [pdf](https://arxiv.org/abs/1708.05628)
+
+#
+
+* **Multi-View Self-Supervised**: Andy Zeng, Kuan-Ting Yu, Shuran Song, Daniel Suo, Ed Walker Jr., Alberto Rodriguez, Jianxiong Xiao.\
+"Multi-view Self-supervised Deep Learning for 6D Pose Estimation in the Amazon Picking Challenge." ICRA (2017)\
+[code](https://github.com/andyzeng/apc-vision-toolbox) | [pdf](https://arxiv.org/abs/1609.09475)
 
 
 ### 2016
