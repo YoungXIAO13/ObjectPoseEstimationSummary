@@ -24,17 +24,25 @@ A curated list of challenges and papers pertaining to object pose estimation
 "MobilePose: Real-Time Pose Estimation for Unseen Objects with Weak Shape Supervision."\
 [pdf](https://arxiv.org/abs/2003.03522)
 
+* **YOLOff**: Mathieu Gonzalez, Amine Kacete, Albert Murienne, Eric Marchand.\
+"YOLOff: You Only Learn Offsets for robust 6DoF object pose estimation."\
+[pdf](https://arxiv.org/abs/2002.00911)
+
 * **HybridPose**: Chen Song, Jiaru Song, Qixing Huang.\
 "HybridPose: 6D Object Pose Estimation under Hybrid Representations."\
 [code](https://github.com/chensong1995/HybridPose) | [pdf](https://arxiv.org/abs/2001.01869)
 
-* **Pose Conditioned Mesh Reconstruction**: Pedro Castro, Anil Armagan, Tae-Kyun Kim.\
-"Accurate 6D Object Pose Estimation by Pose Conditioned Mesh Reconstruction."\
-[pdf](https://arxiv.org/abs/1910.10653)
+* **P2GNet**: Peiyu Yu, Yongming Rao, Jiwen Lu, Jie Zhou.\
+"P2GNet: Pose-Guided Point Cloud Generating Networks for 6-DoF Object Pose Estimation."\
+[pdf](https://arxiv.org/abs/1912.09316)
 
 * **KeyPose**: Xingyu Liu, Rico Jonschkowski, Anelia Angelova, Kurt Konolige.\
 "KeyPose: Multi-view 3D Labeling and Keypoint Estimation for Transparent Objects."\
 [pdf](https://arxiv.org/abs/1912.02805)
+
+* **Pose Conditioned Mesh Reconstruction**: Pedro Castro, Anil Armagan, Tae-Kyun Kim.\
+"Accurate 6D Object Pose Estimation by Pose Conditioned Mesh Reconstruction."\
+[pdf](https://arxiv.org/abs/1910.10653)
 
 * **Multi-path**: Martin Sundermeyer, Maximilian Durner, En Yen Puang, Zoltan-Csaba Marton, Rudolph Triebel.\
 "Multi-path Learning for Object Pose Estimation Across Domains."\
@@ -82,6 +90,19 @@ A curated list of challenges and papers pertaining to object pose estimation
 "DirectShape: Direct Photometric Alignment of Shape Priors for Visual Vehicle Pose and Shape Estimation." ICRA (2020)\
 [pdf](https://arxiv.org/abs/1904.10097)
 
+* **RotationAnchor**: Meng Tian, Liang Pan, Marcelo H Ang Jr, Gim Hee Lee.\
+"Robust 6D Object Pose Estimation by Learning RGB-D Features." ICRA (2020)\
+[code](https://github.com/mentian/object-posenet) | [pdf](https://arxiv.org/abs/2003.00188)
+
+#
+
+* **PointPoseNet**: Wei Chen, Jinming Duan, Hector Basevi, Hyung Jin Chang, Ales Leonardis.\
+"PointPoseNet: Point Pose Network for Robust 6D Object Pose Estimation." WACV (2020)\
+[pdf](http://openaccess.thecvf.com/content_WACV_2020/papers/Chen_PonitPoseNet_Point_Pose_Network_for_Robust_6D_Object_Pose_Estimation_WACV_2020_paper.pdf)
+
+* **SymGAN**: Phil Ammirato, Jonathan Tremblay, Ming-Yu Liu, Alexander Berg, Dieter Fox.\
+"SymGAN: Orientation Estimation without Annotation for Symmetric Objects." WACV (2020)\
+[pdf](http://openaccess.thecvf.com/content_WACV_2020/papers/Ammirato_SymGAN_Orientation_Estimation_without_Annotation_for_Symmetric_Objects_WACV_2020_paper.pdf)
 
 ### 2019
 
@@ -415,6 +436,7 @@ Alberto Crivellaro, Mahdi Rad, Yannick Verdie, Kwang Moo Yi, Pascal Fua, Vincent
 
  * [Papers with code 6d-pose-estimation](https://paperswithcode.com/task/6d-pose-estimation)
  * [Papers with code viewpoint-estimation](https://paperswithcode.com/task/viewpoint-estimation)
+ * [A Review on Object Pose Recovery](https://arxiv.org/abs/2001.10609)
+ * [Instance- and Category-level 6D Object Pose Estimation](https://arxiv.org/abs/1903.04229)
  * [Vision-based Robotic Grasping from Object Localization, Pose Estimation, Grasp
 Detection to Motion Planning: A Review](https://arxiv.org/pdf/1905.06658v1.pdf)
- * [Instance- and Category-level 6D Object Pose Estimation](https://arxiv.org/abs/1903.04229)
