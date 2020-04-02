@@ -64,6 +64,10 @@ A curated list of challenges and papers pertaining to object pose estimation
 "PVN3D: A Deep Point-wise 3D Keypoints Voting Network for 6DoF Pose Estimation." CVPR (2020)\
 [code](https://github.com/ethnhe/PVN3D) | [pdf](https://arxiv.org/abs/1911.04231)
 
+* **G2L-Net**: Wei Chen, Xi Jia, Hyung Jin Chang, Jinming Duan, Ales Leonardis.\
+"G2L-Net: Global to Local Network for Real-time 6D Pose Estimation with Embedding Vector Features." CVPR (2020)\
+[code](https://github.com/DC1991/G2L_Net) | [pdf](https://arxiv.org/abs/2003.11089)
+
 * **BPnP**: Bo Chen, Tat-Jun Chin, Alvaro Parra, Jiewei Cao, Nan Li.\
 "End-to-End Learnable Geometric Vision by Backpropagating PnP Optimization." CVPR (2020)\
 [code](https://github.com/BoChenYS/BPnP) | [pdf](https://arxiv.org/abs/1909.06043)
@@ -71,6 +75,10 @@ A curated list of challenges and papers pertaining to object pose estimation
 * **Single-Stage 6D Pose**: Yinlin Hu, Pascal Fua, Wei Wang, Mathieu Salzmann.\
 "Single-Stage 6D Object Pose Estimation." CVPR (2020)\
 [pdf](https://arxiv.org/pdf/1911.08324.pdf)
+
+* **Cylindrical Convolution**: Sunghun Joung, Seungryong Kim, Hanjae Kim, Minsu Kim, Ig-Jae Kim, Junghyun Cho, Kwanghoon Sohn.\
+"Cylindrical Convolutional Networks for Joint Object Detection and Viewpoint Estimation." CVPR (2020)\
+[pdf](https://arxiv.org/abs/2003.11303)
 
 * **Articulated Object Pose**: Xiaolong Li, He Wang, Li Yi, Leonidas Guibas, A. Lynn Abbott, Shuran Song.\
 "Category-Level Articulated Object Pose Estimation." CVPR (2020)\
