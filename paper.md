@@ -17,8 +17,12 @@ A curated list of challenges and papers pertaining to object pose estimation
 ### Pre-Print
 
 * **Two Challenges**: Juil Sock, Pedro Castro, Anil Armagan, Guillermo Garcia-Hernando, Tae-Kyun Kim.\
-"Tackling Two Challenges of 6D Object Pose Estimation: Lack of Real Annotated RGB Images and Scalability to Number of Objects."
+"Tackling Two Challenges of 6D Object Pose Estimation: Lack of Real Annotated RGB Images and Scalability to Number of Objects."\
 [pdf](https://arxiv.org/abs/2003.12344)
+
+* **Self6D**: Gu Wang, Fabian Manhardt, Jianzhun Shao, Xiangyang Ji, Nassir Navab, Federico Tombari.\
+"Self6D: Self-Supervised Monocular 6D Object Pose Estimation."\
+[pdf](https://arxiv.org/abs/2004.06468)
 
 * **CPS**: Fabian Manhardt, Manuel Nickel, Sven Meier, Luca Minciullo, Nassir Navab.\
 "CPS: Class-level 6D Pose and Shape Estimation From Monocular Images."\
@@ -31,6 +35,10 @@ A curated list of challenges and papers pertaining to object pose estimation
 * **YOLOff**: Mathieu Gonzalez, Amine Kacete, Albert Murienne, Eric Marchand.\
 "YOLOff: You Only Learn Offsets for robust 6DoF object pose estimation."\
 [pdf](https://arxiv.org/abs/2002.00911)
+
+* **Canonical Shape Space**: Dengsheng Chen, Jun Li, Zheng Wang, Kai Xu.\
+"Learning Canonical Shape Space for Category-Level 6D Object Pose and Size Estimation."\
+[pdf](https://arxiv.org/abs/2001.09322)
 
 * **P2GNet**: Peiyu Yu, Yongming Rao, Jiwen Lu, Jie Zhou.\
 "P2GNet: Pose-Guided Point Cloud Generating Networks for 6-DoF Object Pose Estimation."\
@@ -60,6 +68,10 @@ A curated list of challenges and papers pertaining to object pose estimation
 "LatentFusion: End-to-End Differentiable Reconstruction and Rendering for Unseen Object Pose Estimation." CVPR (2020)\
 [pdf](https://arxiv.org/abs/1912.00416)
 
+* **MoreFusion**: Kentaro Wada, Edgar Sucar, Stephen James, Daniel Lenton, Andrew J. Davison.\
+"MoreFusion: Multi-object Reasoning for 6D Pose Estimation from Volumetric Fusion." CVPR (2020)\
+[code](https://morefusion.wkentaro.com) | [pdf](https://arxiv.org/abs/2004.04336)
+
 * **HybridPose**: Chen Song, Jiaru Song, Qixing Huang.\
 "HybridPose: 6D Object Pose Estimation under Hybrid Representations." CVPR (2020)\
 [code](https://github.com/chensong1995/HybridPose) | [pdf](https://arxiv.org/abs/2001.01869)
@@ -79,6 +91,10 @@ A curated list of challenges and papers pertaining to object pose estimation
 * **G2L-Net**: Wei Chen, Xi Jia, Hyung Jin Chang, Jinming Duan, Ales Leonardis.\
 "G2L-Net: Global to Local Network for Real-time 6D Pose Estimation with Embedding Vector Features." CVPR (2020)\
 [code](https://github.com/DC1991/G2L_Net) | [pdf](https://arxiv.org/abs/2003.11089)
+
+* **SSV**: Siva Karthik Mustikovela, Varun Jampani, Shalini De Mello, Sifei Liu, Umar Iqbal, Carsten Rother, Jan Kautz.\
+"Self-Supervised Viewpoint Learning From Image Collections." CVPR (2020)\
+[code](https://github.com/NVlabs/SSV) | [pdf](https://arxiv.org/abs/2004.01793)
 
 * **Cylindrical Convolution**: Sunghun Joung, Seungryong Kim, Hanjae Kim, Minsu Kim, Ig-Jae Kim, Junghyun Cho, Kwanghoon Sohn.\
 "Cylindrical Convolutional Networks for Joint Object Detection and Viewpoint Estimation." CVPR (2020)\
