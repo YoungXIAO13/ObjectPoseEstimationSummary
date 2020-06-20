@@ -36,10 +36,6 @@ A curated list of challenges and papers pertaining to object pose estimation
 "YOLOff: You Only Learn Offsets for robust 6DoF object pose estimation."\
 [pdf](https://arxiv.org/abs/2002.00911)
 
-* **Canonical Shape Space**: Dengsheng Chen, Jun Li, Zheng Wang, Kai Xu.\
-"Learning Canonical Shape Space for Category-Level 6D Object Pose and Size Estimation."\
-[pdf](https://arxiv.org/abs/2001.09322)
-
 * **P2GNet**: Peiyu Yu, Yongming Rao, Jiwen Lu, Jie Zhou.\
 "P2GNet: Pose-Guided Point Cloud Generating Networks for 6-DoF Object Pose Estimation."\
 [pdf](https://arxiv.org/abs/1912.09316)
@@ -52,10 +48,6 @@ A curated list of challenges and papers pertaining to object pose estimation
 "Accurate 6D Object Pose Estimation by Pose Conditioned Mesh Reconstruction."\
 [pdf](https://arxiv.org/abs/1910.10653)
 
-* **Multi-path**: Martin Sundermeyer, Maximilian Durner, En Yen Puang, Zoltan-Csaba Marton, Rudolph Triebel.\
-"Multi-path Learning for Object Pose Estimation Across Domains."\
-[pdf](https://arxiv.org/abs/1908.00151)
-
 * **DPVL**: Xin Yu, Zheyu Zhuang, Piotr Koniusz, Hongdong Li.\
 "6DoF Object Pose Estimation via Differentiable Proxy Voting Loss."\
 [pdf](https://arxiv.org/abs/2002.03923)
@@ -63,6 +55,10 @@ A curated list of challenges and papers pertaining to object pose estimation
 ---
 
 ### 2020
+
+* **EPOS**: Tomas Hodan, Daniel Barath, Jiri Matas.\
+"EPOS: Estimating 6D Pose of Objects with Symmetries." CVPR (2020)\
+[code](http://cmp.felk.cvut.cz/epos/) | [pdf](http://openaccess.thecvf.com/content_CVPR_2020/papers/Hodan_EPOS_Estimating_6D_Pose_of_Objects_With_Symmetries_CVPR_2020_paper.pdf)
 
 * **LatentFusion**: Keunhong Park, Arsalan Mousavian, Yu Xiang, Dieter Fox.\
 "LatentFusion: End-to-End Differentiable Reconstruction and Rendering for Unseen Object Pose Estimation." CVPR (2020)\
@@ -87,6 +83,18 @@ A curated list of challenges and papers pertaining to object pose estimation
 * **PVN3D**: Yisheng He, Wei Sun, Haibin Huang, Jianran Liu, Haoqiang Fan, Jian Sun.\
 "PVN3D: A Deep Point-wise 3D Keypoints Voting Network for 6DoF Pose Estimation." CVPR (2020)\
 [code](https://github.com/ethnhe/PVN3D) | [pdf](https://arxiv.org/abs/1911.04231)
+
+* **PFRL**: Jianzhun Shao, Yuhang Jiang, Gu Wang, Zhigang Li, Xiangyang Ji.\
+"PFRL: Pose-Free Reinforcement Learning for 6D Pose Estimation." CVPR (2020) \
+[pdf](http://openaccess.thecvf.com/content_CVPR_2020/papers/Shao_PFRL_Pose-Free_Reinforcement_Learning_for_6D_Pose_Estimation_CVPR_2020_paper.pdf)
+
+* **Canonical Shape Space**: Dengsheng Chen, Jun Li, Zheng Wang, Kai Xu.\
+"Learning Canonical Shape Space for Category-Level 6D Object Pose and Size Estimation." CVPR (2020)\
+[pdf](https://arxiv.org/abs/2001.09322)
+
+* **OK-POSE**: Wanqing Zhao, Shaobo Zhang, Ziyu Guan, Wei Zhao, Jinye Peng, Jianping Fan.\
+"Learning deep network for detecting 3D object keypoints and 6D poses." CVPR (2020)\
+[pdf](http://openaccess.thecvf.com/content_CVPR_2020/papers/Zhao_Learning_Deep_Network_for_Detecting_3D_Object_Keypoints_and_6D_CVPR_2020_paper.pdf)
 
 * **G2L-Net**: Wei Chen, Xi Jia, Hyung Jin Chang, Jinming Duan, Ales Leonardis.\
 "G2L-Net: Global to Local Network for Real-time 6D Pose Estimation with Embedding Vector Features." CVPR (2020)\
