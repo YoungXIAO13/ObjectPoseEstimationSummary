@@ -40,10 +40,6 @@ A curated list of challenges and papers pertaining to object pose estimation
 "P2GNet: Pose-Guided Point Cloud Generating Networks for 6-DoF Object Pose Estimation."\
 [pdf](https://arxiv.org/abs/1912.09316)
 
-* **KeyPose**: Xingyu Liu, Rico Jonschkowski, Anelia Angelova, Kurt Konolige.\
-"KeyPose: Multi-view 3D Labeling and Keypoint Estimation for Transparent Objects."\
-[pdf](https://arxiv.org/abs/1912.02805)
-
 * **Pose Conditioned Mesh Reconstruction**: Pedro Castro, Anil Armagan, Tae-Kyun Kim.\
 "Accurate 6D Object Pose Estimation by Pose Conditioned Mesh Reconstruction."\
 [pdf](https://arxiv.org/abs/1910.10653)
@@ -67,6 +63,10 @@ A curated list of challenges and papers pertaining to object pose estimation
 * **MoreFusion**: Kentaro Wada, Edgar Sucar, Stephen James, Daniel Lenton, Andrew J. Davison.\
 "MoreFusion: Multi-object Reasoning for 6D Pose Estimation from Volumetric Fusion." CVPR (2020)\
 [code](https://morefusion.wkentaro.com) | [pdf](https://arxiv.org/abs/2004.04336)
+
+* **Multi-Path**: Martin Sundermeyer, Maximilian Durner, En Yen Puang, Zoltan-Csaba Marton, Narunas Vaskevicius, Kai O. Arras, Rudolph Triebel.\
+"Multi-path Learning for Object Pose Estimation Across Domains." CVPR (2020)\
+[code](https://github.com/DLR-RM/AugmentedAutoencoder/tree/multipath) | [pdf](https://arxiv.org/abs/1908.00151)
 
 * **HybridPose**: Chen Song, Jiaru Song, Qixing Huang.\
 "HybridPose: 6D Object Pose Estimation under Hybrid Representations." CVPR (2020)\
@@ -95,6 +95,14 @@ A curated list of challenges and papers pertaining to object pose estimation
 * **OK-POSE**: Wanqing Zhao, Shaobo Zhang, Ziyu Guan, Wei Zhao, Jinye Peng, Jianping Fan.\
 "Learning deep network for detecting 3D object keypoints and 6D poses." CVPR (2020)\
 [pdf](http://openaccess.thecvf.com/content_CVPR_2020/papers/Zhao_Learning_Deep_Network_for_Detecting_3D_Object_Keypoints_and_6D_CVPR_2020_paper.pdf)
+
+* **KeyPose**: Xingyu Liu, Rico Jonschkowski, Anelia Angelova, Kurt Konolige.\
+"KeyPose: Multi-view 3D Labeling and Keypoint Estimation for Transparent Objects." CVPR (2020)\
+[code](https://sites.google.com/view/keypose) | [pdf](https://arxiv.org/abs/1912.02805)
+
+* **ConsistentLandmarks**: Ming Cai, Ian Reid.\
+"Reconstruct Locally, Localize Globally: A Model Free Method for Object Pose Estimation." CVPR (2020)\
+[pdf](http://openaccess.thecvf.com/content_CVPR_2020/papers/Cai_Reconstruct_Locally_Localize_Globally_A_Model_Free_Method_for_Object_CVPR_2020_paper.pdf)
 
 * **G2L-Net**: Wei Chen, Xi Jia, Hyung Jin Chang, Jinming Duan, Ales Leonardis.\
 "G2L-Net: Global to Local Network for Real-time 6D Pose Estimation with Embedding Vector Features." CVPR (2020)\
