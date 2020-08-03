@@ -20,10 +20,6 @@ A curated list of challenges and papers pertaining to object pose estimation
 "Tackling Two Challenges of 6D Object Pose Estimation: Lack of Real Annotated RGB Images and Scalability to Number of Objects."\
 [pdf](https://arxiv.org/abs/2003.12344)
 
-* **Self6D**: Gu Wang, Fabian Manhardt, Jianzhun Shao, Xiangyang Ji, Nassir Navab, Federico Tombari.\
-"Self6D: Self-Supervised Monocular 6D Object Pose Estimation."\
-[pdf](https://arxiv.org/abs/2004.06468)
-
 * **CPS**: Fabian Manhardt, Manuel Nickel, Sven Meier, Luca Minciullo, Nassir Navab.\
 "CPS: Class-level 6D Pose and Shape Estimation From Monocular Images."\
 [pdf](https://arxiv.org/abs/2003.05848)
@@ -51,6 +47,28 @@ A curated list of challenges and papers pertaining to object pose estimation
 ---
 
 ### 2020
+
+* **Few-Shot Viewpoint**: Yang Xiao, Renaud Marlet.\
+"Few-Shot Object Detection and Viewpoint Estimation for Objects in the Wild." ECCV (2020)\
+[code](https://github.com/YoungXIAO13/FewShotViewpoint) | [pdf](https://arxiv.org/abs/2007.12107)
+
+* **Self6D**: Gu Wang, Fabian Manhardt, Jianzhun Shao, Xiangyang Ji, Nassir Navab, Federico Tombari.\
+"Self6D: Self-Supervised Monocular 6D Object Pose Estimation." ECCV (2020)\
+[pdf](https://arxiv.org/abs/2004.06468)
+
+* **Neural Object Learning**: Kiru Park, Timothy Patten, Markus Vincze.\
+"Neural Object Learning for 6D Pose Estimation Using a Few Cluttered Images." ECCV (2020)\
+[pdf](https://arxiv.org/abs/2005.03717)
+
+* **Geometric Correspondence Fields**: Alexander Grabner, Yaming Wang, Peizhao Zhang, Peihong Guo, Tong Xiao, Peter Vajda, Peter M. Roth, Vincent Lepetit.\
+"Geometric Correspondence Fields: Learned Differentiable Rendering for 3D Pose Refinement in the Wild." ECCV (2020)\
+[pdf](https://arxiv.org/abs/2007.08939)
+
+* **Shape Prior Deformation**: Meng Tian, Marcelo H Ang Jr, Gim Hee Lee.\
+"Shape Prior Deformation for Categorical 6D Object Pose and Size Estimation." ECCV (2020)\
+[code](https://github.com/mentian/object-deformnet) | [pdf](https://arxiv.org/abs/2007.08454)
+
+#
 
 * **EPOS**: Tomas Hodan, Daniel Barath, Jiri Matas.\
 "EPOS: Estimating 6D Pose of Objects with Symmetries." CVPR (2020)\
@@ -198,7 +216,7 @@ A curated list of challenges and papers pertaining to object pose estimation
 "Pose from Shape: Deep Pose Estimation for Arbitrary 3D Objects." BMVC (2019)\
 [code](https://github.com/YoungXIAO13/PoseFromShape) | [pdf](https://arxiv.org/abs/1906.05105) 
 
-* **Few-Shot Viewpoint**: Hung-Yu Tseng, Shalini De Mello, Jonathan Tremblay, Sifei Liu, Stan Birchfield, Ming-Hsuan Yang, Jan Kautz.\
+* **MetaView**: Hung-Yu Tseng, Shalini De Mello, Jonathan Tremblay, Sifei Liu, Stan Birchfield, Ming-Hsuan Yang, Jan Kautz.\
 "Few-Shot Viewpoint Estimation." BMVC (2019)\
 [pdf](https://arxiv.org/abs/1905.04957)
 
