@@ -48,6 +48,10 @@ A curated list of challenges and papers pertaining to object pose estimation
 
 ### 2020
 
+* **CosyPose**: Yann Labbé, Justin Carpentier, Mathieu Aubry, Josef Sivic.\
+"CosyPose: Consistent multi-view multi-object 6D pose estimation." ECCV (2020)\
+[code](https://github.com/ylabbe/cosypose) | [pdf](https://arxiv.org/abs/2008.08465)
+
 * **Few-Shot Viewpoint**: Yang Xiao, Renaud Marlet.\
 "Few-Shot Object Detection and Viewpoint Estimation for Objects in the Wild." ECCV (2020)\
 [code](https://github.com/YoungXIAO13/FewShotViewpoint) | [pdf](https://arxiv.org/abs/2007.12107)
@@ -56,13 +60,13 @@ A curated list of challenges and papers pertaining to object pose estimation
 "Self6D: Self-Supervised Monocular 6D Object Pose Estimation." ECCV (2020)\
 [pdf](https://arxiv.org/abs/2004.06468)
 
-* **Neural Object Learning**: Kiru Park, Timothy Patten, Markus Vincze.\
-"Neural Object Learning for 6D Pose Estimation Using a Few Cluttered Images." ECCV (2020)\
-[pdf](https://arxiv.org/abs/2005.03717)
-
 * **Geometric Correspondence Fields**: Alexander Grabner, Yaming Wang, Peizhao Zhang, Peihong Guo, Tong Xiao, Peter Vajda, Peter M. Roth, Vincent Lepetit.\
 "Geometric Correspondence Fields: Learned Differentiable Rendering for 3D Pose Refinement in the Wild." ECCV (2020)\
 [pdf](https://arxiv.org/abs/2007.08939)
+
+* **NOL**: Kiru Park, Timothy Patten, Markus Vincze.\
+"Neural Object Learning for 6D Pose Estimation Using a Few Cluttered Images." ECCV (2020)\
+[code](https://github.com/kirumang/NOL) | [pdf](https://arxiv.org/abs/2005.03717)
 
 * **Shape Prior Deformation**: Meng Tian, Marcelo H Ang Jr, Gim Hee Lee.\
 "Shape Prior Deformation for Categorical 6D Object Pose and Size Estimation." ECCV (2020)\
