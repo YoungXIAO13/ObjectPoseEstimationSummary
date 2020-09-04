@@ -15,7 +15,7 @@ If you have suggestions for new sections to be included, please raise an issue a
 * [Objects in the controlled environments :movie_camera:](#objects-in-the-controlled-environments-movie_camera)
 * [Objects in the wild :camera:](#objects-in-the-wild-camera)
 * [3D model datasets :bike:](#3d-model-datasets-bike)
-* [Rendering methods :bicyclist:](#rendering-methods-moutain_bicyclist)
+* [Rendering methods :bicyclist:](#rendering-methods-mountain_bicyclist)
 
 
 ## Objects in the controlled environments :movie_camera:
