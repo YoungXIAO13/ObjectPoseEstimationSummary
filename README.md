@@ -35,6 +35,7 @@ we use **instance id** in our annotation to indicate different instances picture
 
 | Dataset | Sample image | Annotation | Statistics | Reference |
 | :-----: | :-----: | :-----: | :-----: | :-----: |
+| [GraspNet-1B](https://graspnet.net/index.html) | ![](https://graspnet.net/images/datakn.gif) | 6D pose + Depth + Mask| **88** models in **190** videos with **97,280** frames| [CVPR 2020](https://openaccess.thecvf.com/content_CVPR_2020/papers/Fang_GraspNet-1Billion_A_Large-Scale_Benchmark_for_General_Object_Grasping_CVPR_2020_paper.pdf)| 
 | [HomebrewedDB](https://bop.felk.cvut.cz/datasets/) | ![](https://github.com/YoungXIAO13/6DPoseEstimationDatasets/blob/master/img/HomebrewedDB.png) | 6D pose + Depth + BoundingBox| **33** models in **13** videos with **17,420** frames| [Preprint 2019](https://arxiv.org/abs/1904.03167)| 
 | [YCB-Video](https://bop.felk.cvut.cz/datasets/) | ![](https://github.com/YoungXIAO13/6DPoseEstimationDatasets/blob/master/img/YCB-Video.png) | 6D Pose + Depth + Mask | **21** models in **92** videos with **133,827** frames| [RSS 2018](https://arxiv.org/abs/1711.00199) |
 | [T-LESS](https://bop.felk.cvut.cz/datasets/)| ![](https://github.com/YoungXIAO13/6DPoseEstimationDatasets/blob/master/img/T-LESS.png) | 6D Pose + Depth | **30** models in **20** videos with **~49K** frames | [WACV 2017](http://cmp.felk.cvut.cz/t-less/)|
