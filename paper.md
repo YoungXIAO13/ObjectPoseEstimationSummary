@@ -68,6 +68,10 @@ A curated list of challenges and papers pertaining to object pose estimation
 "Shape Prior Deformation for Categorical 6D Object Pose and Size Estimation." ECCV (2020)\
 [code](https://github.com/mentian/object-deformnet) | [pdf](https://arxiv.org/abs/2007.08454)
 
+* **Neural Analysis-by-Synthesis**: Xu Chen, Zijian Dong, Jie Song, Andreas Geiger, Otmar Hilliges.\
+"Category Level Object Pose Estimation via Neural Analysis-by-Synthesis." ECCV (2020)\
+[pdf](https://arxiv.org/abs/2008.08145)
+
 * **Geometric Correspondence Fields**: Alexander Grabner, Yaming Wang, Peizhao Zhang, Peihong Guo, Tong Xiao, Peter Vajda, Peter M. Roth, Vincent Lepetit.\
 "Geometric Correspondence Fields: Learned Differentiable Rendering for 3D Pose Refinement in the Wild." ECCV (2020)\
 [pdf](https://arxiv.org/abs/2007.08939)
