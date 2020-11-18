@@ -28,17 +28,10 @@ A curated list of challenges and papers pertaining to object pose estimation
 "MobilePose: Real-Time Pose Estimation for Unseen Objects with Weak Shape Supervision."\
 [pdf](https://arxiv.org/abs/2003.03522)
 
-* **P2GNet**: Peiyu Yu, Yongming Rao, Jiwen Lu, Jie Zhou.\
-"P2GNet: Pose-Guided Point Cloud Generating Networks for 6-DoF Object Pose Estimation."\
-[pdf](https://arxiv.org/abs/1912.09316)
-
 * **Pose Conditioned Mesh Reconstruction**: Pedro Castro, Anil Armagan, Tae-Kyun Kim.\
 "Accurate 6D Object Pose Estimation by Pose Conditioned Mesh Reconstruction."\
 [pdf](https://arxiv.org/abs/1910.10653)
 
-* **DPVL**: Xin Yu, Zheyu Zhuang, Piotr Koniusz, Hongdong Li.\
-"6DoF Object Pose Estimation via Differentiable Proxy Voting Loss."\
-[pdf](https://arxiv.org/abs/2002.03923)
 
 ---
 
@@ -71,6 +64,17 @@ A curated list of challenges and papers pertaining to object pose estimation
 * **Geometric Correspondence Fields**: Alexander Grabner, Yaming Wang, Peizhao Zhang, Peihong Guo, Tong Xiao, Peter Vajda, Peter M. Roth, Vincent Lepetit.\
 "Geometric Correspondence Fields: Learned Differentiable Rendering for 3D Pose Refinement in the Wild." ECCV (2020)\
 [pdf](https://arxiv.org/abs/2007.08939)
+
+
+#
+
+* **DPVL**: Xin Yu, Zheyu Zhuang, Piotr Koniusz, Hongdong Li.\
+"6DoF Object Pose Estimation via Differentiable Proxy Voting Loss." BMVC (2020)\
+[pdf](https://arxiv.org/abs/2002.03923)
+
+* **Pose Proposal Critic**: Lucas Brynte, Fredrik Kahl.\
+"Pose Proposal Critic: Robust Pose Refinement by Learning Reprojection Errors." BMVC (2020)\
+[pdf](https://arxiv.org/abs/2005.06262)
 
 #
 
