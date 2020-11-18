@@ -12,10 +12,27 @@ If you have suggestions for new sections to be included, please raise an issue a
 
 ## Table of Content
 * [Resources :sunglasses:](https://github.com/YoungXIAO13/ObjectPoseEstimationSummary/blob/master/paper.md)
-* [Objects in the controlled environments :movie_camera:](#objects-in-the-controlled-environments-movie_camera)
 * [Objects in the wild :camera:](#objects-in-the-wild-camera)
+* [Objects in the controlled environments :movie_camera:](#objects-in-the-controlled-environments-movie_camera)
 * [3D model datasets :bike:](#3d-model-datasets-bike)
 * [Rendering methods :bicyclist:](#rendering-methods-mountain_bicyclist)
+
+
+## Objects in the wild :camera:
+In this table, **Pix3D** provides accurate 2D-3D alignment 
+while others provide a coarse alignment.
+
+**PASCAL3D+** is the de facto benchmark used for viewpoint estimation.
+
+| Dataset | Sample image | Annotation | Statistics | Reference |
+| :-----: | :-----: | :-----: | :-----: | :-----: |
+| [Objectron](https://github.com/google-research-datasets/Objectron/) | ![](https://github.com/google-research-datasets/Objectron/blob/master/docs/images/objectron_samples.gif) | 3D Bounding Box | **15K** annotated videos and **4M** annotated images | [Blog 2020](https://ai.googleblog.com/2020/11/announcing-objectron-dataset.html?m=1) |
+| [ApolloCar3D](http://apolloscape.auto/car_instance.html) | ![](https://github.com/YoungXIAO13/6DPoseEstimationDatasets/blob/master/img/ApolloCar3D.png) | 6D Pose + Mask | **34** car models with **60K+** objects in **5,277** images | [CVPR 2019](https://arxiv.org/abs/1811.12222) |
+| [Pix3D](http://pix3d.csail.mit.edu/) | ![](https://github.com/YoungXIAO13/6DPoseEstimationDatasets/blob/master/img/Pix3D.png) | 6D Pose + Mask | **9** categories containing **395 models** in **10,069** images | [CVPR 2018](http://pix3d.csail.mit.edu/papers/pix3d_cvpr.pdf) |
+| [ObjectNet3D](http://cvgl.stanford.edu/projects/objectnet3d/) | ![](https://github.com/YoungXIAO13/6DPoseEstimationDatasets/blob/master/img/ObjectNet3D.png) | Euler Angles + BoundingBox | **100** categories with **201,888** objects in **90,127** images | [ECCV 2016](http://cvgl.stanford.edu/papers/xiang_eccv16.pdf) |
+| [PASCAL3D+](http://cvgl.stanford.edu/projects/pascal3d.html) | ![](https://github.com/YoungXIAO13/6DPoseEstimationDatasets/blob/master/img/Pascal3D.png) | Euler Angles + BoundingBox | **12** categories with **36,292** objects in **30,889** images | [WACV 2014](https://www-cs.stanford.edu/~roozbeh/papers/wacv14.pdf) |
+| [KITTI](http://www.cvlibs.net/datasets/kitti/eval_object.php) | ![](https://github.com/YoungXIAO13/6DPoseEstimationDatasets/blob/master/img/KITTI.png) | 3D BoundingBox | **80,256** objects in **14,999** images | [CVPR 2012](http://www.cvlibs.net/publications/Geiger2012CVPR.pdf) |
+
 
 
 ## Objects in the controlled environments :movie_camera:
@@ -42,21 +59,6 @@ we use **instance id** in our annotation to indicate different instances picture
 | [Tejani](http://rkouskou.gitlab.io/research/LCHF.html) | ![](https://github.com/YoungXIAO13/6DPoseEstimationDatasets/blob/master/img/Tejani.png) | 6D Pose + Depth | **6** models in **6** videos with **2,067** frames | [ECCV 2014](http://rkouskou.gitlab.io/publications/docs/ECCV_2014.pdf)|
 | [Occluded-LINEMOD](https://bop.felk.cvut.cz/datasets/) | ![](https://github.com/YoungXIAO13/6DPoseEstimationDatasets/blob/master/img/LINEMOD-O.jpg) | 6D Pose + Depth | **8** models in **1,214** frames with **8,992** objects | [ECCV 2014](http://wwwpub.zih.tu-dresden.de/~cvweb/publications/papers/2014/PoseEstimationECCV2014.pdf) | 
 | [LINEMOD](https://bop.felk.cvut.cz/datasets/) | ![](https://github.com/YoungXIAO13/6DPoseEstimationDatasets/blob/master/img/LINEMOD.jpg) | 6D pose + Depth for one object | **15** models in **15** videos with **18,273** frames | [ACCV 2012](http://www.stefan-hinterstoisser.com/papers/hinterstoisser2012accv.pdf) |
-
-
-## Objects in the wild :camera:
-In this table, **Pix3D** provides accurate 2D-3D alignment 
-while others provide a coarse alignment.
-
-**PASCAL3D+** is the de facto benchmark used for viewpoint estimation.
-
-| Dataset | Sample image | Annotation | Statistics | Reference |
-| :-----: | :-----: | :-----: | :-----: | :-----: |
-| [ApolloCar3D](http://apolloscape.auto/car_instance.html) | ![](https://github.com/YoungXIAO13/6DPoseEstimationDatasets/blob/master/img/ApolloCar3D.png) | 6D Pose + Mask | **34** car models with **60K+** objects in **5,277** images | [CVPR 2019](https://arxiv.org/abs/1811.12222) |
-| [Pix3D](http://pix3d.csail.mit.edu/) | ![](https://github.com/YoungXIAO13/6DPoseEstimationDatasets/blob/master/img/Pix3D.png) | 6D Pose + Mask | **9** categories containing **395 models** in **10,069** images | [CVPR 2018](http://pix3d.csail.mit.edu/papers/pix3d_cvpr.pdf) |
-| [ObjectNet3D](http://cvgl.stanford.edu/projects/objectnet3d/) | ![](https://github.com/YoungXIAO13/6DPoseEstimationDatasets/blob/master/img/ObjectNet3D.png) | Euler Angles + BoundingBox | **100** categories with **201,888** objects in **90,127** images | [ECCV 2016](http://cvgl.stanford.edu/papers/xiang_eccv16.pdf) |
-| [PASCAL3D+](http://cvgl.stanford.edu/projects/pascal3d.html) | ![](https://github.com/YoungXIAO13/6DPoseEstimationDatasets/blob/master/img/Pascal3D.png) | Euler Angles + BoundingBox | **12** categories with **36,292** objects in **30,889** images | [WACV 2014](https://www-cs.stanford.edu/~roozbeh/papers/wacv14.pdf) |
-| [KITTI](http://www.cvlibs.net/datasets/kitti/eval_object.php) | ![](https://github.com/YoungXIAO13/6DPoseEstimationDatasets/blob/master/img/KITTI.png) | 3D BoundingBox | **80,256** objects in **14,999** images | [CVPR 2012](http://www.cvlibs.net/publications/Geiger2012CVPR.pdf) |
 
 
 ## 3D model datasets :bike:
