@@ -16,9 +16,9 @@ A curated list of challenges and papers pertaining to object pose estimation
 
 ### Pre-Print
 
-* **Two Challenges**: Juil Sock, Pedro Castro, Anil Armagan, Guillermo Garcia-Hernando, Tae-Kyun Kim.\
-"Tackling Two Challenges of 6D Object Pose Estimation: Lack of Real Annotated RGB Images and Scalability to Number of Objects."\
-[pdf](https://arxiv.org/abs/2003.12344)
+* **PyraPose**: Stefan Thalhammer, Markus Leitner, Timothy Patten, Markus Vincze.\
+"PyraPose: Feature Pyramids for Fast and Accurate Object Pose Estimation under Domain Shift."\
+[pdf](https://arxiv.org/abs/2010.16117)
 
 * **CPS**: Fabian Manhardt, Manuel Nickel, Sven Meier, Luca Minciullo, Nassir Navab.\
 "CPS: Class-level 6D Pose and Shape Estimation From Monocular Images."\
@@ -27,10 +27,6 @@ A curated list of challenges and papers pertaining to object pose estimation
 * **MobilePose**: Tingbo Hou, Adel Ahmadyan, Liangkai Zhang, Jianing Wei, Matthias Grundmann.\
 "MobilePose: Real-Time Pose Estimation for Unseen Objects with Weak Shape Supervision."\
 [pdf](https://arxiv.org/abs/2003.03522)
-
-* **YOLOff**: Mathieu Gonzalez, Amine Kacete, Albert Murienne, Eric Marchand.\
-"YOLOff: You Only Learn Offsets for robust 6DoF object pose estimation."\
-[pdf](https://arxiv.org/abs/2002.00911)
 
 * **P2GNet**: Peiyu Yu, Yongming Rao, Jiwen Lu, Jie Zhou.\
 "P2GNet: Pose-Guided Point Cloud Generating Networks for 6-DoF Object Pose Estimation."\
@@ -75,7 +71,6 @@ A curated list of challenges and papers pertaining to object pose estimation
 * **Geometric Correspondence Fields**: Alexander Grabner, Yaming Wang, Peizhao Zhang, Peihong Guo, Tong Xiao, Peter Vajda, Peter M. Roth, Vincent Lepetit.\
 "Geometric Correspondence Fields: Learned Differentiable Rendering for 3D Pose Refinement in the Wild." ECCV (2020)\
 [pdf](https://arxiv.org/abs/2007.08939)
-
 
 #
 
@@ -167,6 +162,10 @@ A curated list of challenges and papers pertaining to object pose estimation
 
 #
 
+* **Self-Supervised 6D**: Juil Sock, Guillermo Garcia-Hernando, Anil Armagan, Tae-Kyun Kim.\
+"Introducing Pose Consistency and Warp-Alignment for Self-Supervised 6D Object Pose Estimation in Color Images." 3DV (2020)\
+[pdf](https://arxiv.org/abs/2003.12344)
+
 * **PointPoseNet**: Wei Chen, Jinming Duan, Hector Basevi, Hyung Jin Chang, Ales Leonardis.\
 "PointPoseNet: Point Pose Network for Robust 6D Object Pose Estimation." WACV (2020)\
 [pdf](http://openaccess.thecvf.com/content_WACV_2020/papers/Chen_PonitPoseNet_Point_Pose_Network_for_Robust_6D_Object_Pose_Estimation_WACV_2020_paper.pdf)
@@ -176,12 +175,6 @@ A curated list of challenges and papers pertaining to object pose estimation
 [pdf](http://openaccess.thecvf.com/content_WACV_2020/papers/Ammirato_SymGAN_Orientation_Estimation_without_Annotation_for_Symmetric_Objects_WACV_2020_paper.pdf)
 
 ### 2019
-
-* **PoseRBPF**: Xinke Deng, Arsalan Mousavian, Yu Xiang, Fei Xia, Timothy Bretl and Dieter Fox.\
-"PoseRBPF: A Rao-Blackwellized Particle Filter for 6D Object Pose Tracking." RSS (2019)\
-[pdf](https://arxiv.org/abs/1905.09304)
-
-#
 
 * **Pix2Pose**: Kiru Park, Timothy Patten, Markus Vincze.\
 "Pix2Pose: Pixel-Wise Coordinate Regression of Objects for 6D Pose Estimation." ICCV (2019)\
@@ -255,40 +248,14 @@ A curated list of challenges and papers pertaining to object pose estimation
 "ROI-10D: Monocular Lifting of 2D Detection to 6D Pose and Metric Shape." CVPR (2019)\
 [pdf](https://arxiv.org/abs/1812.02781)
 
+#
+
+* **PoseRBPF**: Xinke Deng, Arsalan Mousavian, Yu Xiang, Fei Xia, Timothy Bretl and Dieter Fox.\
+"PoseRBPF: A Rao-Blackwellized Particle Filter for 6D Object Pose Tracking." RSS (2019)\
+[pdf](https://arxiv.org/abs/1905.09304)
+
 
 ### 2018
-
-* **PoseCNN**: Yu Xiang, Tanner Schmidt, Venkatraman Narayanan, Dieter Fox.\
-"PoseCNN: A Convolutional Neural Network for 6D Object Pose Estimation in Cluttered Scenes." RSS (2018)\
-[code](https://github.com/yuxng/PoseCNN) | [pdf](https://arxiv.org/abs/1711.00199)
-
-* **DOPE**: Jonathan Tremblay, Thang To, Balakumar Sundaralingam, Yu Xiang, Dieter Fox, Stan Birchfield.\
-"Deep Object Pose Estimation for Semantic Robotic Grasping of Household Objects."(CoRL 2018) \
-[code](https://github.com/NVlabs/Deep_Object_Pose) | [pdf](https://arxiv.org/abs/1809.10790)
-
-* **SilhoNet**: Gideon Billings, Matthew Johnson-Roberson.\
-"SilhoNet: An RGB Method for 3D Object Pose Estimation and Grasp Planning." ICRA (2018)\
-[code](https://github.com/gidobot/SilhoNet) | [pdf](https://arxiv.org/abs/1809.06893)
-
-* **Rotational Symmetry**: Enric Corona, Kaustav Kundu, Sanja Fidler.\
-"Pose Estimation for Objects with Rotational Symmetry." IROS (2018)\
-[code](https://github.com/enriccorona/PoseSym) | [pdf](https://arxiv.org/abs/1810.05780)
-
-* **Pose Interpreter**: Jimmy Wu, Bolei Zhou, Rebecca Russell, Vincent Kee, Syler Wagner, Mitchell Hebert, Antonio Torralba, David M.S. Johnson.\
-"Real-Time Object Pose Estimation with Pose Interpreter Networks." IROS (2018)\
-[code](https://github.com/jimmyyhwu/pose-interpreter-networks) | [pdf](https://arxiv.org/abs/1808.01099)
-
-#
-
-* **iPose**: Omid Hosseini Jafari, Siva Karthik Mustikovela, Karl Pertsch, Eric Brachmann, Carsten Rother.\
-"iPose: Instance-Aware 6D Pose Estimation of Partly Occluded Objects." ACCV (2018)\
-[pdf](https://arxiv.org/abs/1712.01924)
-
-* **Domain Transfer**: Mahdi Rad, Markus Oberweger, Vincent Lepetit.\
-"Domain Transfer for 3D Pose Estimation from Color Images without Manual Annotations." ACCV (2018)\
-[pdf](https://arxiv.org/abs/1810.03707)
-
-#
 
 * **Implicit 3D Orientation**: Martin Sundermeyer, Zoltan-Csaba Marton, Maximilian Durner, Manuel Brucker, Rudolph Triebel.\
 "Implicit 3D Orientation Learning for 6D Object Detection from RGB Images." ECCV (2018)\
@@ -365,6 +332,39 @@ A curated list of challenges and papers pertaining to object pose estimation
 * **3D Pose and 3D Model**: Alexander Grabner, Peter M. Roth, and Vincent Lepetit.\
 "3D Pose Estimation and 3D Model Retrieval for Objects in the Wild." CVPR (2018)\
 [pdf](https://arxiv.org/abs/1803.11493)
+
+#
+
+* **PoseCNN**: Yu Xiang, Tanner Schmidt, Venkatraman Narayanan, Dieter Fox.\
+"PoseCNN: A Convolutional Neural Network for 6D Object Pose Estimation in Cluttered Scenes." RSS (2018)\
+[code](https://github.com/yuxng/PoseCNN) | [pdf](https://arxiv.org/abs/1711.00199)
+
+* **DOPE**: Jonathan Tremblay, Thang To, Balakumar Sundaralingam, Yu Xiang, Dieter Fox, Stan Birchfield.\
+"Deep Object Pose Estimation for Semantic Robotic Grasping of Household Objects."(CoRL 2018) \
+[code](https://github.com/NVlabs/Deep_Object_Pose) | [pdf](https://arxiv.org/abs/1809.10790)
+
+* **SilhoNet**: Gideon Billings, Matthew Johnson-Roberson.\
+"SilhoNet: An RGB Method for 3D Object Pose Estimation and Grasp Planning." ICRA (2018)\
+[code](https://github.com/gidobot/SilhoNet) | [pdf](https://arxiv.org/abs/1809.06893)
+
+* **Rotational Symmetry**: Enric Corona, Kaustav Kundu, Sanja Fidler.\
+"Pose Estimation for Objects with Rotational Symmetry." IROS (2018)\
+[code](https://github.com/enriccorona/PoseSym) | [pdf](https://arxiv.org/abs/1810.05780)
+
+* **Pose Interpreter**: Jimmy Wu, Bolei Zhou, Rebecca Russell, Vincent Kee, Syler Wagner, Mitchell Hebert, Antonio Torralba, David M.S. Johnson.\
+"Real-Time Object Pose Estimation with Pose Interpreter Networks." IROS (2018)\
+[code](https://github.com/jimmyyhwu/pose-interpreter-networks) | [pdf](https://arxiv.org/abs/1808.01099)
+
+#
+
+* **iPose**: Omid Hosseini Jafari, Siva Karthik Mustikovela, Karl Pertsch, Eric Brachmann, Carsten Rother.\
+"iPose: Instance-Aware 6D Pose Estimation of Partly Occluded Objects." ACCV (2018)\
+[pdf](https://arxiv.org/abs/1712.01924)
+
+* **Domain Transfer**: Mahdi Rad, Markus Oberweger, Vincent Lepetit.\
+"Domain Transfer for 3D Pose Estimation from Color Images without Manual Annotations." ACCV (2018)\
+[pdf](https://arxiv.org/abs/1810.03707)
+
 
 ### 2017
 
