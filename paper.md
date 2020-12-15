@@ -16,6 +16,10 @@ A curated list of challenges and papers pertaining to object pose estimation
 
 ### Pre-Print
 
+* **Vid2CAD**: Kevis-Kokitsi Maninis, Stefan Popov, Matthias Nießner, Vittorio Ferrari.\
+"Vid2CAD: CAD Model Alignment using Multi-View Constraints from Videos."\
+[pdf](https://arxiv.org/abs/2012.04641)
+
 * **PyraPose**: Stefan Thalhammer, Markus Leitner, Timothy Patten, Markus Vincze.\
 "PyraPose: Feature Pyramids for Fast and Accurate Object Pose Estimation under Domain Shift."\
 [pdf](https://arxiv.org/abs/2010.16117)
@@ -56,6 +60,10 @@ A curated list of challenges and papers pertaining to object pose estimation
 * **Shape Prior Deformation**: Meng Tian, Marcelo H Ang Jr, Gim Hee Lee.\
 "Shape Prior Deformation for Categorical 6D Object Pose and Size Estimation." ECCV (2020)\
 [code](https://github.com/mentian/object-deformnet) | [pdf](https://arxiv.org/abs/2007.08454)
+
+* **Mask2CAD**: Weicheng Kuo, Anelia Angelova, Tsung-Yi Lin, Angela Dai.\
+"Mask2CAD: 3D Shape Prediction by Learning to Segment and Retrieve." ECCV (2020)\
+[pdf](https://arxiv.org/abs/2007.13034)
 
 * **Neural Analysis-by-Synthesis**: Xu Chen, Zijian Dong, Jie Song, Andreas Geiger, Otmar Hilliges.\
 "Category Level Object Pose Estimation via Neural Analysis-by-Synthesis." ECCV (2020)\
