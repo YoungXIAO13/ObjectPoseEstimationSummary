@@ -16,6 +16,10 @@ A curated list of challenges and papers pertaining to object pose estimation
 
 ### Pre-Print
 
+* **GDR-Net**: Gu Wang, Fabian Manhardt, Federico Tombari, Xiangyang Ji.\
+"GDR-Net: Geometry-Guided Direct Regression Network for Monocular 6D Object Pose Estimation."\
+[pdf](https://arxiv.org/abs/2102.12145)
+
 * **StablePose**: Junwen Huang, Yifei Shi, Xin Xu, Yifan Zhang, Kai Xu.\
 "StablePose: Learning 6D Object Poses from Geometrically Stable Patches."\
 [pdf](https://arxiv.org/abs/2102.09334)
