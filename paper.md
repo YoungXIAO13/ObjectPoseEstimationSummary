@@ -16,14 +16,6 @@ A curated list of challenges and papers pertaining to object pose estimation
 
 ### Pre-Print
 
-* **GDR-Net**: Gu Wang, Fabian Manhardt, Federico Tombari, Xiangyang Ji.\
-"GDR-Net: Geometry-Guided Direct Regression Network for Monocular 6D Object Pose Estimation."\
-[pdf](https://arxiv.org/abs/2102.12145)
-
-* **StablePose**: Junwen Huang, Yifei Shi, Xin Xu, Yifan Zhang, Kai Xu.\
-"StablePose: Learning 6D Object Poses from Geometrically Stable Patches."\
-[pdf](https://arxiv.org/abs/2102.09334)
-
 * **Vid2CAD**: Kevis-Kokitsi Maninis, Stefan Popov, Matthias Nießner, Vittorio Ferrari.\
 "Vid2CAD: CAD Model Alignment using Multi-View Constraints from Videos."\
 [pdf](https://arxiv.org/abs/2012.04641)
@@ -46,6 +38,37 @@ A curated list of challenges and papers pertaining to object pose estimation
 
 
 ---
+
+### 2021
+
+* **FS-Net**: Wei Chen, Xi Jia, Hyung Jin Chang, Jinming Duan, Linlin Shen, Ales Leonardis.\
+"FS-Net: Fast Shape-Based Network for Category-Level 6D Object Pose Estimation With Decoupled Rotation Mechanism."\
+[code](https://github.com/DC1991/FS_Net) | [pdf](https://arxiv.org/abs/2103.07054)
+
+* **RobotPose**: Yann Labbé, Justin Carpentier, Mathieu Aubry, Josef Sivic.\
+"Single-view robot pose and joint angle estimation via render & compare." CVPR (2021)\
+[code](https://github.com/ylabbe/robopose) | [pdf](https://arxiv.org/abs/2104.09359)
+
+* **FFB6D**: Yisheng He, Haibin Huang, Haoqiang Fan, Qifeng Chen, Jian Sun.\
+"FFB6D: A Full Flow Bidirectional Fusion Network for 6D Pose Estimation."\
+[code](https://github.com/ethnhe/FFB6D) | [pdf](https://arxiv.org/abs/2103.02242)
+
+* **GDR-Net**: Gu Wang, Fabian Manhardt, Federico Tombari, Xiangyang Ji.\
+"GDR-Net: Geometry-Guided Direct Regression Network for Monocular 6D Object Pose Estimation." CVPR (2021)\
+[pdf](https://arxiv.org/abs/2102.12145)
+
+* **StablePose**: Yifei Shi, Junwen Huang, Xin Xu, Yifan Zhang, Kai Xu.\
+"StablePose: Learning 6D Object Poses from Geometrically Stable Patches." CVPR (2021)\
+[pdf](https://arxiv.org/abs/2102.09334)
+
+* **WideDepth**: Yinlin Hu, Sebastien Speierer, Wenzel Jakob, Pascal Fua, Mathieu Salzmann.\
+"Wide-Depth-Range 6D Object Pose Estimation in Space." CVPR (2021)\
+[pdf](https://arxiv.org/abs/2104.00337)
+
+* **Keypoint-Graph**: Shaobo Zhang, Wanqing Zhao, Ziyu Guan, Xianlin Peng, Jinye Peng.\
+"Keypoint-Graph-Driven Learning Framework for Object Pose Estimation." CVPR (2021).\
+[pdf](https://openaccess.thecvf.com/content/CVPR2021/html/Zhang_Keypoint-Graph-Driven_Learning_Framework_for_Object_Pose_Estimation_CVPR_2021_paper.html)
+
 
 ### 2020
 
