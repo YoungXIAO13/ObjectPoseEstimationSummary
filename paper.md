@@ -49,13 +49,13 @@ A curated list of challenges and papers pertaining to object pose estimation
 "Single-view robot pose and joint angle estimation via render & compare." CVPR (2021)\
 [code](https://github.com/ylabbe/robopose) | [pdf](https://arxiv.org/abs/2104.09359)
 
+* **GDR-Net**: Gu Wang, Fabian Manhardt, Federico Tombari, Xiangyang Ji.\
+"GDR-Net: Geometry-Guided Direct Regression Network for Monocular 6D Object Pose Estimation." CVPR (2021)\
+[code](https://github.com/THU-DA-6D-Pose-Group/GDR-Net) | [pdf](https://arxiv.org/abs/2102.12145)
+
 * **FFB6D**: Yisheng He, Haibin Huang, Haoqiang Fan, Qifeng Chen, Jian Sun.\
 "FFB6D: A Full Flow Bidirectional Fusion Network for 6D Pose Estimation."\
 [code](https://github.com/ethnhe/FFB6D) | [pdf](https://arxiv.org/abs/2103.02242)
-
-* **GDR-Net**: Gu Wang, Fabian Manhardt, Federico Tombari, Xiangyang Ji.\
-"GDR-Net: Geometry-Guided Direct Regression Network for Monocular 6D Object Pose Estimation." CVPR (2021)\
-[pdf](https://arxiv.org/abs/2102.12145)
 
 * **StablePose**: Yifei Shi, Junwen Huang, Xin Xu, Yifan Zhang, Kai Xu.\
 "StablePose: Learning 6D Object Poses from Geometrically Stable Patches." CVPR (2021)\
