@@ -1,12 +1,12 @@
 # Awesome Object Pose Estimation [\[Paper List\]](https://github.com/YoungXIAO13/ObjectPoseEstimationSummary/blob/master/paper.md)
-A repo to summarize resources used in object pose estimation as well as viewpoint estimation. 
+A repo to summarize resources used in object pose estimation as well as viewpoint estimation.
 
 In the following tables, 3D CAD model is noted as **model** and 2D pictured object is noted as **object**.
 
 ## Contributing
-Contributions are welcome. 
-Please see the **Table of Content** which lists the things included in this repo. 
-If you wish to contribute within these boundaries, feel free to send a PR. 
+Contributions are welcome.
+Please see the **Table of Content** which lists the things included in this repo.
+If you wish to contribute within these boundaries, feel free to send a PR.
 If you have suggestions for new sections to be included, please raise an issue and discuss before sending a PR.
 
 
@@ -19,7 +19,7 @@ If you have suggestions for new sections to be included, please raise an issue a
 
 
 ## Objects in the wild :camera:
-In this table, **Pix3D** provides accurate 2D-3D alignment 
+In this table, **Pix3D** provides accurate 2D-3D alignment
 while others provide a coarse alignment.
 
 **PASCAL3D+** is the de facto benchmark used for viewpoint estimation.
@@ -36,13 +36,13 @@ while others provide a coarse alignment.
 
 
 ## Objects in the controlled environments :movie_camera:
-This table lists the datasets commonly known as **BOP: Benchmark 6D Object Pose Estimation**, 
+This table lists the datasets commonly known as **BOP: Benchmark 6D Object Pose Estimation**,
 which provide accurate 3D object models and accurate 2D-3D alignment.
 
 You can download all the BOP datasets [**here**](https://bop.felk.cvut.cz/datasets/) and
 use the [**toolkit**](https://github.com/thodan/bop_toolkit) provided by the organizers.
 
-After downloading the data, 
+After downloading the data,
 you can use our code ```data/BOP/ply2obj.py``` to convert original **.ply** files to **.obj** files,
 and run ```data/BOP/create_annotation.py``` to create a single annotation file for all the scenes in a dataset.
 
@@ -51,28 +51,29 @@ we use **instance id** in our annotation to indicate different instances picture
 
 | Dataset | Sample image | Annotation | Statistics | Reference |
 | :-----: | :-----: | :-----: | :-----: | :-----: |
-| [GraspNet-1B](https://graspnet.net/index.html) | ![](https://graspnet.net/images/datakn.gif) | 6D pose + Depth + Mask| **88** models in **190** videos with **97,280** frames| [CVPR 2020](https://openaccess.thecvf.com/content_CVPR_2020/papers/Fang_GraspNet-1Billion_A_Large-Scale_Benchmark_for_General_Object_Grasping_CVPR_2020_paper.pdf)| 
-| [NOCS](https://hughw19.github.io/NOCS_CVPR2019) | ![](https://github.com/YoungXIAO13/6DPoseEstimationDatasets/blob/master/img/nocs_real.jpg) | 6D pose + Depth + NOCS| **6** categories in **300K** composited images and **8K** real images| [CVPR 2019](https://arxiv.org/abs/1901.02970)| 
+| [GraspNet-1B](https://graspnet.net/index.html) | ![](https://graspnet.net/images/datakn.gif) | 6D pose + Depth + Mask| **88** models in **190** videos with **97,280** frames| [CVPR 2020](https://openaccess.thecvf.com/content_CVPR_2020/papers/Fang_GraspNet-1Billion_A_Large-Scale_Benchmark_for_General_Object_Grasping_CVPR_2020_paper.pdf)|
+| [NOCS](https://hughw19.github.io/NOCS_CVPR2019) | ![](https://github.com/YoungXIAO13/6DPoseEstimationDatasets/blob/master/img/nocs_real.jpg) | 6D pose + Depth + NOCS| **6** categories in **300K** composited images and **8K** real images| [CVPR 2019](https://arxiv.org/abs/1901.02970)|
+| [YCBInEOAT](https://github.com/wenbowen123/iros20-6d-pose-tracking) | ![](https://github.com/wenbowen123/BundleTrack/blob/master/media/vis_video_bleach0_method_ours_c.gif) | 6D pose + RGBD Video| **5** models in **9** videos with **7449** frames with **moving** objects| [IROS 2020](https://arxiv.org/pdf/2007.13866.pdf)|
 | [YCB-Video](https://rse-lab.cs.washington.edu/projects/posecnn/) | ![](https://github.com/YoungXIAO13/6DPoseEstimationDatasets/blob/master/img/YCB-Video.png) | 6D Pose + Depth + Mask | **21** models in **92** videos with **133,827** frames| [RSS 2018](https://arxiv.org/abs/1711.00199) |
 | [T-LESS](http://cmp.felk.cvut.cz/t-less/)| ![](https://github.com/YoungXIAO13/6DPoseEstimationDatasets/blob/master/img/T-LESS.png) | 6D Pose + Depth | **30** models in **20** videos with **~49K** frames | [WACV 2017](https://arxiv.org/abs/1701.05498)|
 | [Doumanoglou](http://rkouskou.gitlab.io/research/6D_NBV.html)| ![](https://bop.felk.cvut.cz/media/icbin_thumb_gt.jpg)| 6D Pose + Depth | **2** models in **3** videos with **183** frames| [CVPR 2016](https://arxiv.org/abs/1512.07506)|
 | [Tejani](http://rkouskou.gitlab.io/research/LCHF.html) | ![](https://bop.felk.cvut.cz/media/icmi_thumb_gt.jpg) | 6D Pose + Depth | **6** models in **6** videos with **2,067** frames | [ECCV 2014](http://rkouskou.gitlab.io/publications/docs/ECCV_2014.pdf)|
-| [Occluded-LINEMOD](https://bop.felk.cvut.cz/datasets/) | ![](https://github.com/YoungXIAO13/6DPoseEstimationDatasets/blob/master/img/LINEMOD-O.jpg) | 6D Pose + Depth | **8** models in **1,214** frames with **8,992** objects | [ECCV 2014](http://wwwpub.zih.tu-dresden.de/~cvweb/publications/papers/2014/PoseEstimationECCV2014.pdf) | 
+| [Occluded-LINEMOD](https://bop.felk.cvut.cz/datasets/) | ![](https://github.com/YoungXIAO13/6DPoseEstimationDatasets/blob/master/img/LINEMOD-O.jpg) | 6D Pose + Depth | **8** models in **1,214** frames with **8,992** objects | [ECCV 2014](http://wwwpub.zih.tu-dresden.de/~cvweb/publications/papers/2014/PoseEstimationECCV2014.pdf) |
 | [LINEMOD](https://bop.felk.cvut.cz/datasets/) | ![](https://github.com/YoungXIAO13/6DPoseEstimationDatasets/blob/master/img/LINEMOD.jpg) | 6D pose + Depth for one object | **15** models in **15** videos with **18,273** frames | [ACCV 2012](http://www.stefan-hinterstoisser.com/papers/hinterstoisser2012accv.pdf) |
 
 
 ## 3D model datasets :bike:
-In order to testify the network **generalization** ability 
+In order to testify the network **generalization** ability
 (tested on images containing **unseen** 3D models from the training set),
 the following dataset could be used to generate synthetic training data.
 
-Notice that **ABC** contains generic and arbitrary industrial CAD models 
-while **ShapeNetCore** and **ModelNet** contain common category objects such as cars and chairs.   
+Notice that **ABC** contains generic and arbitrary industrial CAD models
+while **ShapeNetCore** and **ModelNet** contain common category objects such as cars and chairs.
 
 | Dataset | Categories | Models in total | Reference |
 | :-----: | :-----: | :-----: | :-----: |
 | [ABC](https://deep-geometry.github.io/abc-dataset/) | - | 1 million | [CVPR 2019](https://arxiv.org/pdf/1812.06216.pdf) |
-| [ShapeNetCore](https://www.shapenet.org/download/shapenetcore) | 55 | ~51,300 | [ArXiv 2015](https://arxiv.org/abs/1512.03012) | 
+| [ShapeNetCore](https://www.shapenet.org/download/shapenetcore) | 55 | ~51,300 | [ArXiv 2015](https://arxiv.org/abs/1512.03012) |
 | [ModelNet-40](http://modelnet.cs.princeton.edu/) | 40 | 12,311 | [CVPR 2015](https://3dshapenets.cs.princeton.edu/paper.pdf) |
 
 
@@ -80,7 +81,7 @@ while **ShapeNetCore** and **ModelNet** contain common category objects such as 
 
 ### Differentiable Renderer
 * [Neural 3D Mesh Renderer](http://hiroharu-kato.com/projects_en/neural_renderer.html): Kato el al. CVPR 2018
- 
+
 * [RenderNet](https://github.com/thunguyenphuoc/RenderNet): Thu et al. NIPS 2018
 
 ### Blender Render :
@@ -93,16 +94,16 @@ while **ShapeNetCore** and **ModelNet** contain common category objects such as 
 
 ### Physical Simulator
 
-[PyBullet](https://github.com/bulletphysics/bullet3/tree/master/examples/pybullet): 
+[PyBullet](https://github.com/bulletphysics/bullet3/tree/master/examples/pybullet):
 a very popular one in the Robotics community.
 
 
 ### Others
 * [Glumpy](https://github.com/glumpy/glumpy): does not support headless rendering (failed on ssh mode)
 
-* [UnrealCV](https://github.com/unrealcv/unrealcv): extension of Unreal Engine 4, 
+* [UnrealCV](https://github.com/unrealcv/unrealcv): extension of Unreal Engine 4,
 helps interact with virtual world and communicate with external program.
 
-* [SyntheticComputerVision](https://github.com/unrealcv/synthetic-computer-vision): 
-resuming a lot of techniques used to generate synthetic image 
+* [SyntheticComputerVision](https://github.com/unrealcv/synthetic-computer-vision):
+resuming a lot of techniques used to generate synthetic image
 

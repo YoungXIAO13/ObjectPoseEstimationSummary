@@ -9,7 +9,7 @@ A curated list of challenges and papers pertaining to object pose estimation
 * [ICCV 2017: Recovering Object Pose](http://cmp.felk.cvut.cz/sixd/workshop_2017/)
 * [ECCV 2016: Recovering Object Pose](https://labicvl.github.io/R6D)
 * [ICCV 2015: Recovering Object Pose](https://labicvl.github.io/3DPose-2015.html)
-* [ICCV 2015: Occluded Object Challenge](https://hci.iwr.uni-heidelberg.de/vislearn/iccv2015-occlusion-challenge/) 
+* [ICCV 2015: Occluded Object Challenge](https://hci.iwr.uni-heidelberg.de/vislearn/iccv2015-occlusion-challenge/)
 
 
 ## Papers :ghost:
@@ -41,6 +41,10 @@ A curated list of challenges and papers pertaining to object pose estimation
 
 ### 2021
 
+* **BundleTrack**: Bowen Wen, Kostas Bekris.\
+"BundleTrack: 6D Pose Tracking for Novel Objects without Instance or Category-Level 3D Models." IROS (2021)\
+[code](https://github.com/wenbowen123/BundleTrack) | [pdf](https://arxiv.org/abs/2108.00516)
+
 * **FS-Net**: Wei Chen, Xi Jia, Hyung Jin Chang, Jinming Duan, Linlin Shen, Ales Leonardis.\
 "FS-Net: Fast Shape-Based Network for Category-Level 6D Object Pose Estimation With Decoupled Rotation Mechanism."\
 [code](https://github.com/DC1991/FS_Net) | [pdf](https://arxiv.org/abs/2103.07054)
@@ -71,6 +75,10 @@ A curated list of challenges and papers pertaining to object pose estimation
 
 
 ### 2020
+
+* **se(3)-TrackNet**: Bowen Wen, Chaitanya Mitash, Baozhang Ren and Kostas Bekris.\
+"se(3)-TrackNet: Data-driven 6D Pose Tracking by Calibrating Image Residuals in Synthetic Domains." IROS (2020)\
+[code](https://github.com/wenbowen123/iros20-6d-pose-tracking) | [pdf](https://arxiv.org/abs/2007.13866)
 
 * **CosyPose**: Yann Labbé, Justin Carpentier, Mathieu Aubry, Josef Sivic.\
 "CosyPose: Consistent multi-view multi-object 6D pose estimation." ECCV (2020)\
@@ -283,7 +291,7 @@ A curated list of challenges and papers pertaining to object pose estimation
 
 * **PoseFromShape**: Yang Xiao, Xuchong Qiu, Pierre-Alain Langlois, Mathieu Aubry, Renaud Marlet.\
 "Pose from Shape: Deep Pose Estimation for Arbitrary 3D Objects." BMVC (2019)\
-[code](https://github.com/YoungXIAO13/PoseFromShape) | [pdf](https://arxiv.org/abs/1906.05105) 
+[code](https://github.com/YoungXIAO13/PoseFromShape) | [pdf](https://arxiv.org/abs/1906.05105)
 
 * **MetaView**: Hung-Yu Tseng, Shalini De Mello, Jonathan Tremblay, Sifei Liu, Stan Birchfield, Ming-Hsuan Yang, Jan Kautz.\
 "Few-Shot Viewpoint Estimation." BMVC (2019)\
@@ -365,7 +373,7 @@ A curated list of challenges and papers pertaining to object pose estimation
 * **Classification-Regression**: Siddharth Mahendran, Haider Ali, Rene Vidal.\
 "A Mixed Classification-Regression Framework for 3D Pose Estimation from 2D Images." BMVC (2018)\
 [code](https://github.com/JHUVisionLab/multi-modal-regression) | [pdf](https://arxiv.org/abs/1805.03225)
-  
+
 * **Stochastic Congruent Sets**: Chaitanya Mitash, Abdeslam Boularias, Kostas Bekris.\
 "Robust 6D Object Pose Estimation with Stochastic Congruent Sets." BMVC (2018)\
 [code](https://github.com/cmitash/model_matching) | [pdf](https://arxiv.org/abs/1805.06324)
@@ -485,7 +493,7 @@ A curated list of challenges and papers pertaining to object pose estimation
 "Learning Analysis-by-Synthesis for 6D Pose Estimation in RGB-D Images." ICCV (2015)\
 [pdf](https://arxiv.org/abs/1508.04546)
 
-* **Object Parts Representation**: 
+* **Object Parts Representation**:
 Alberto Crivellaro, Mahdi Rad, Yannick Verdie, Kwang Moo Yi, Pascal Fua, Vincent Lepetit.\
 "A Novel Representation of Parts for Accurate 3D Object Detection and Tracking in Monocular Images." ICCV (2015)\
 [pdf](https://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Crivellaro_A_Novel_Representation_ICCV_2015_paper.pdf)
@@ -510,7 +518,7 @@ Alberto Crivellaro, Mahdi Rad, Yannick Verdie, Kwang Moo Yi, Pascal Fua, Vincent
 "Pose Estimation of Kinematic Chain Instances via Object Coordinate Regression." BMVC (2015)\
 [pdf](http://wwwpub.zih.tu-dresden.de/~cvweb/publications/papers/2015/Pose_Estimation_of_Kinematic_Chain_Instances_via_Object_Coordinate_Regression-Michel-BMVC15.pdf)
 
- 
+
 ### 2014
 
 * **Latent-Class Hough Forests**: Alykhan Tejani, Danhang Tang, Rigas Kouskouridas, and Tae-Kyun Kim.\
@@ -533,8 +541,8 @@ Alberto Crivellaro, Mahdi Rad, Yannick Verdie, Kwang Moo Yi, Pascal Fua, Vincent
 * **Point-Pair Feature**: Bertram Drost, Markus Ulrich, Nassir Navab, Slobodan Ilic.\
 "Model Globally, Match Locally: Efficient and Robust 3D Object Recognition." CVPR (2010)\
 [pdf](http://campar.in.tum.de/pub/drost2010CVPR/drost2010CVPR.pdf)
- 
- 
+
+
 ## Other resources
 
  * [Papers with code 6d-pose-estimation](https://paperswithcode.com/task/6d-pose-estimation)
