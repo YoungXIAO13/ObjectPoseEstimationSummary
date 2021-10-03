@@ -41,12 +41,43 @@ A curated list of challenges and papers pertaining to object pose estimation
 
 ### 2021
 
-* **BundleTrack**: Bowen Wen, Kostas Bekris.\
-"BundleTrack: 6D Pose Tracking for Novel Objects without Instance or Category-Level 3D Models." IROS (2021)\
-[code](https://github.com/wenbowen123/BundleTrack) | [pdf](https://arxiv.org/abs/2108.00516)
+* **CAPTRA**: Yijia Weng, He Wang, Qiang Zhou, Yuzhe Qin, Yueqi Duan, Qingnan Fan, Baoquan Chen, Hao Su, Leonidas J. Guibas.\
+"CAPTRA: CAtegory-level Pose Tracking for Rigid and Articulated Objects from Point Clouds." ICCV (2021)\
+[code](https://github.com/halfsummer11/CAPTRA) | [pdf](https://arxiv.org/abs/2104.03437)
+
+* **RePOSE**: Shun Iwase, Xingyu Liu, Rawal Khirodkar, Rio Yokota, Kris M. Kitani.\
+"RePOSE: Fast 6D Object Pose Refinement via Deep Texture Rendering." ICCV (2021)\
+[code](https://github.com/sh8/repose) | [pdf](https://arxiv.org/abs/2104.00633)
+
+* **DualPoseNet**: Jiehong Lin, Zewei Wei, Zhihao Li, Songcen Xu, Kui Jia, Yuanqing Li.\
+"DualPoseNet: Category-level 6D Object Pose and Size Estimation Using Dual Pose Network with Refined Learning of Pose Consistency." ICCV (2021)\
+[code](https://github.com/Gorilla-Lab-SCUT/DualPoseNet) | [pdf](https://arxiv.org/abs/2103.06526)
+
+* **StereOBJ-1M**: Xingyu Liu, Shun Iwase, Kris M. Kitani.\
+"StereOBJ-1M: Large-scale Stereo Image Dataset for 6D Object Pose Estimation." ICCV (2021)\
+[pdf](https://arxiv.org/abs/2109.10115)
+
+* **SO-Pose**: Yan Di, Fabian Manhardt, Gu Wang, Xiangyang Ji, Nassir Navab, Federico Tombari.\
+"SO-Pose: Exploiting Self-Occlusion for Direct 6D Pose Estimation." ICCV (2021)\
+[pdf](https://arxiv.org/abs/2108.08367)
+
+* **PR-GCN**: Guangyuan Zhou, Huiqun Wang, Jiaxin Chen, Di Huang.\
+"PR-GCN: A Deep Graph Convolutional Network with Point Refinement for 6D Pose Estimation." ICCV (2021)\
+[pdf](https://arxiv.org/abs/2108.09916)
+
+* **ELLIPSDF**: Mo Shan, Qiaojun Feng, You-Yi Jau, Nikolay Atanasov.\
+"ELLIPSDF: Joint Object Pose and Shape Optimization with a Bi-level Ellipsoid and Signed Distance Function Description." ICCV (2021)\
+[pdf](https://arxiv.org/abs/2108.00355)
+
+* **ODAM**: Kejie Li, Daniel DeTone, Steven Chen, Minh Vo, Ian Reid, Hamid Rezatofighi, Chris Sweeney, Julian Straub, Richard Newcombe.\
+"ODAM: Object Detection, Association, and Mapping using Posed RGB Video." ICCV (2021)\
+[pdf](https://arxiv.org/abs/2108.10165)
+
+
+#
 
 * **FS-Net**: Wei Chen, Xi Jia, Hyung Jin Chang, Jinming Duan, Linlin Shen, Ales Leonardis.\
-"FS-Net: Fast Shape-Based Network for Category-Level 6D Object Pose Estimation With Decoupled Rotation Mechanism."\
+"FS-Net: Fast Shape-Based Network for Category-Level 6D Object Pose Estimation With Decoupled Rotation Mechanism." CVPR (2021)\
 [code](https://github.com/DC1991/FS_Net) | [pdf](https://arxiv.org/abs/2103.07054)
 
 * **RobotPose**: Yann Labbé, Justin Carpentier, Mathieu Aubry, Josef Sivic.\
@@ -58,7 +89,7 @@ A curated list of challenges and papers pertaining to object pose estimation
 [code](https://github.com/THU-DA-6D-Pose-Group/GDR-Net) | [pdf](https://arxiv.org/abs/2102.12145)
 
 * **FFB6D**: Yisheng He, Haibin Huang, Haoqiang Fan, Qifeng Chen, Jian Sun.\
-"FFB6D: A Full Flow Bidirectional Fusion Network for 6D Pose Estimation."\
+"FFB6D: A Full Flow Bidirectional Fusion Network for 6D Pose Estimation." CVPR (2021)\
 [code](https://github.com/ethnhe/FFB6D) | [pdf](https://arxiv.org/abs/2103.02242)
 
 * **StablePose**: Yifei Shi, Junwen Huang, Xin Xu, Yifan Zhang, Kai Xu.\
@@ -73,12 +104,14 @@ A curated list of challenges and papers pertaining to object pose estimation
 "Keypoint-Graph-Driven Learning Framework for Object Pose Estimation." CVPR (2021).\
 [pdf](https://openaccess.thecvf.com/content/CVPR2021/html/Zhang_Keypoint-Graph-Driven_Learning_Framework_for_Object_Pose_Estimation_CVPR_2021_paper.html)
 
+#
+
+* **BundleTrack**: Bowen Wen, Kostas Bekris.\
+"BundleTrack: 6D Pose Tracking for Novel Objects without Instance or Category-Level 3D Models." IROS (2021)\
+[code](https://github.com/wenbowen123/BundleTrack) | [pdf](https://arxiv.org/abs/2108.00516)
+
 
 ### 2020
-
-* **se(3)-TrackNet**: Bowen Wen, Chaitanya Mitash, Baozhang Ren and Kostas Bekris.\
-"se(3)-TrackNet: Data-driven 6D Pose Tracking by Calibrating Image Residuals in Synthetic Domains." IROS (2020)\
-[code](https://github.com/wenbowen123/iros20-6d-pose-tracking) | [pdf](https://arxiv.org/abs/2007.13866)
 
 * **CosyPose**: Yann Labbé, Justin Carpentier, Mathieu Aubry, Josef Sivic.\
 "CosyPose: Consistent multi-view multi-object 6D pose estimation." ECCV (2020)\
@@ -205,6 +238,10 @@ A curated list of challenges and papers pertaining to object pose estimation
 [pdf](http://openaccess.thecvf.com/content_WACV_2020/papers/Ammirato_SymGAN_Orientation_Estimation_without_Annotation_for_Symmetric_Objects_WACV_2020_paper.pdf)
 
 #
+
+* **se(3)-TrackNet**: Bowen Wen, Chaitanya Mitash, Baozhang Ren and Kostas Bekris.\
+"se(3)-TrackNet: Data-driven 6D Pose Tracking by Calibrating Image Residuals in Synthetic Domains." IROS (2020)\
+[code](https://github.com/wenbowen123/iros20-6d-pose-tracking) | [pdf](https://arxiv.org/abs/2007.13866)
 
 * **6-PACK**: Chen Wang, Roberto Martín-Martín, Danfei Xu, Jun Lv, Cewu Lu, Li Fei-Fei, Silvio Savarese, Yuke Zhu.\
 "6-PACK: Category-level 6D Pose Tracker with Anchor-Based Keypoints." ICRA (2020)\
