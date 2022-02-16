@@ -92,6 +92,8 @@ while **ShapeNetCore** and **ModelNet** contain common category objects such as 
 
 * [pvnet-rendering](https://github.com/zju3dv/pvnet-rendering)
 
+* [bpycv](https://github.com/DIYer22/bpycv)
+
 ### Physical Simulator
 
 [PyBullet](https://github.com/bulletphysics/bullet3/tree/master/examples/pybullet):
