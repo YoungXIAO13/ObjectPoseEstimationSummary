@@ -35,8 +35,38 @@ A curated list of challenges and papers pertaining to object pose estimation
 * **Pose Conditioned Mesh Reconstruction**: Pedro Castro, Anil Armagan, Tae-Kyun Kim.\
 "Accurate 6D Object Pose Estimation by Pose Conditioned Mesh Reconstruction."\
 [pdf](https://arxiv.org/abs/1910.10653)
+---
 
+### 2022
 
+* **Template-pose**: Van Nguyen Nguyen, Yinlin Hu, Yang Xiao, Mathieu Salzmann, Vincent Lepetit\
+"Templates for 3D Object Pose Estimation Revisited: Generalization to New Objects and Robustness to Occlusions." CVPR (2022)\
+[code](https://github.com/nv-nguyen/template-pose) | [pdf](https://arxiv.org/pdf/2203.17234)
+
+* **OSOP**: Ivan Shugurov, Fu Li, Benjamin Busam, Slobodan Ilic\
+"OSOP: A Multi-Stage One Shot Object Pose Estimation Framework." CVPR (2022)\
+[pdf](https://arxiv.org/pdf/2203.15533v2.pdf)
+
+* **FS6D**: Yisheng He, Yao Wang, Haoqiang Fan, Jian Sun, Qifeng Chen\
+"FS6D: Few-Shot 6D Pose Estimation of Novel Objects." CVPR (2022)\
+[pdf](https://arxiv.org/pdf/2203.14628.pdf)
+
+* **OVE6D**: Dingding Cai, Janne Heikkilä, Esa Rahtu\
+"OVE6D: Object Viewpoint Encoding for Depth-based 6D Object Pose Estimation ." CVPR (2022)\
+[pdf](https://arxiv.org/pdf/2203.01072.pdf)
+
+* **RNNPose**: Yan Xu, Kwan-Yee Lin, Guofeng Zhang, Xiaogang Wang, Hongsheng Li\
+"RNNPose: Recurrent 6-DoF Object Pose Refinement with Robust Correspondence Field Estimation and Pose Optimization ." CVPR (2022)\
+[pdf](https://arxiv.org/pdf/2203.12870.pdf)
+
+* **GPV-Pose**: Yan Di , Ruida Zhang, Zhiqiang Lou , Fabian Manhardt, Xiangyang Ji, Nassir Navab, Federico Tombari\
+"GPV-Pose: Category-level Object Pose Estimation via Geometry-guided Point-wise Voting." CVPR (2022)\
+[pdf](https://arxiv.org/pdf/2203.07918.pdf)
+
+* **ZebraPose**: Yongzhi Su, Mahdi Saleh, Torben Fetzer, Jason Rambach, Nassir Navab, Benjamin Busam, Didier Stricker, Federico Tombari\
+"ZebraPose: Coarse to Fine Surface Encoding for 6DoF Object Pose Estimation
+." CVPR (2022)\
+[pdf](https://arxiv.org/pdf/2203.09418.pdf)
 ---
 
 ### 2021
