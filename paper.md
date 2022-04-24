@@ -14,29 +14,6 @@ A curated list of challenges and papers pertaining to object pose estimation
 
 ## Papers :ghost:
 
-### Pre-Print
-
-* **Vid2CAD**: Kevis-Kokitsi Maninis, Stefan Popov, Matthias Nießner, Vittorio Ferrari.\
-"Vid2CAD: CAD Model Alignment using Multi-View Constraints from Videos."\
-[pdf](https://arxiv.org/abs/2012.04641)
-
-* **PyraPose**: Stefan Thalhammer, Markus Leitner, Timothy Patten, Markus Vincze.\
-"PyraPose: Feature Pyramids for Fast and Accurate Object Pose Estimation under Domain Shift."\
-[pdf](https://arxiv.org/abs/2010.16117)
-
-* **CPS**: Fabian Manhardt, Manuel Nickel, Sven Meier, Luca Minciullo, Nassir Navab.\
-"CPS: Class-level 6D Pose and Shape Estimation From Monocular Images."\
-[pdf](https://arxiv.org/abs/2003.05848)
-
-* **MobilePose**: Tingbo Hou, Adel Ahmadyan, Liangkai Zhang, Jianing Wei, Matthias Grundmann.\
-"MobilePose: Real-Time Pose Estimation for Unseen Objects with Weak Shape Supervision."\
-[pdf](https://arxiv.org/abs/2003.03522)
-
-* **Pose Conditioned Mesh Reconstruction**: Pedro Castro, Anil Armagan, Tae-Kyun Kim.\
-"Accurate 6D Object Pose Estimation by Pose Conditioned Mesh Reconstruction."\
-[pdf](https://arxiv.org/abs/1910.10653)
----
-
 ### 2022
 
 * **Template-pose**: Van Nguyen Nguyen, Yinlin Hu, Yang Xiao, Mathieu Salzmann, Vincent Lepetit\
