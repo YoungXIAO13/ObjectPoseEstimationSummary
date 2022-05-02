@@ -16,6 +16,9 @@ A curated list of challenges and papers pertaining to object pose estimation
 
 ### 2022
 
+### 2022 
+(generic-> category level -> tracking/refinement -> specific)
+
 * **Template-pose**: Van Nguyen Nguyen, Yinlin Hu, Yang Xiao, Mathieu Salzmann, Vincent Lepetit\
 "Templates for 3D Object Pose Estimation Revisited: Generalization to New Objects and Robustness to Occlusions." CVPR (2022)\
 [code](https://github.com/nv-nguyen/template-pose) | [pdf](https://arxiv.org/pdf/2203.17234)
@@ -26,24 +29,66 @@ A curated list of challenges and papers pertaining to object pose estimation
 
 * **FS6D**: Yisheng He, Yao Wang, Haoqiang Fan, Jian Sun, Qifeng Chen\
 "FS6D: Few-Shot 6D Pose Estimation of Novel Objects." CVPR (2022)\
-[pdf](https://arxiv.org/pdf/2203.14628.pdf)
+[code](https://github.com/ethnhe/FS6D-PyTorch) | [pdf](https://arxiv.org/pdf/2203.14628.pdf)
 
 * **OVE6D**: Dingding Cai, Janne Heikkilä, Esa Rahtu\
 "OVE6D: Object Viewpoint Encoding for Depth-based 6D Object Pose Estimation ." CVPR (2022)\
-[pdf](https://arxiv.org/pdf/2203.01072.pdf)
-
-* **RNNPose**: Yan Xu, Kwan-Yee Lin, Guofeng Zhang, Xiaogang Wang, Hongsheng Li\
-"RNNPose: Recurrent 6-DoF Object Pose Refinement with Robust Correspondence Field Estimation and Pose Optimization ." CVPR (2022)\
-[pdf](https://arxiv.org/pdf/2203.12870.pdf)
+[code](https://github.com/dingdingcai/OVE6D-pose) | [pdf](https://arxiv.org/pdf/2203.01072.pdf)
 
 * **GPV-Pose**: Yan Di , Ruida Zhang, Zhiqiang Lou , Fabian Manhardt, Xiangyang Ji, Nassir Navab, Federico Tombari\
 "GPV-Pose: Category-level Object Pose Estimation via Geometry-guided Point-wise Voting." CVPR (2022)\
-[pdf](https://arxiv.org/pdf/2203.07918.pdf)
+[code](https://github.com/lolrudy/gpv_pose) | [pdf](https://arxiv.org/pdf/2203.07918.pdf)
+
+* **SAR-Net**: Haitao Lin, Zichang Liu, Chilam Cheang, Yanwei Fu, Guodong Guo, Xiangyang Xue\
+"SAR-Net: Shape Alignment and Recovery Network for Category-level 6D Object Pose and Size Estimation." CVPR (2022)\
+[code](https://github.com/hetolin/SAR-Net) | [pdf](https://arxiv.org/pdf/2106.14193.pdf)
+
+* **ICG**: Manuel Stoiber, Martin Sundermeyer, Rudolph Triebel\
+"ICG: Iterative Corresponding Geometry." CVPR (2022)\
+[code](https://github.com/DLR-RM/3DObjectTracking/tree/master/ICG) | [pdf](https://arxiv.org/pdf/2203.05334.pdf)
+
+* **FocalPose**: Georgy Ponimatkin, Yann Labbé, Bryan Russell, Mathieu Aubry, Josef Sivic\
+"FocalPose: Focal Length and Object Pose Estimation via Render and Compare." CVPR (2022)\
+[code](https://github.com/ponimatkin/focalpose) | [pdf](https://arxiv.org/pdf/2204.05145.pdf)
+
+* **Coupled Iterative Refinement**: Lahav Lipson, Zachary Teed, Ankit Goyal and Jia Deng\
+"Coupled Iterative Refinement for 6D Multi-Object Pose Estimation." CVPR (2022)\
+[code](https://github.com/princeton-vl/coupled-iterative-refinement) | [pdf](https://arxiv.org/pdf/2204.12516.pdf)
+
+* **RNNPose**: Yan Xu, Kwan-Yee Lin, Guofeng Zhang, Xiaogang Wang, Hongsheng Li\
+"RNNPose: Recurrent 6-DoF Object Pose Refinement with Robust Correspondence Field Estimation and Pose Optimization ." CVPR (2022)\
+[code](https://github.com/DecaYale/RNNPose) | [pdf](https://arxiv.org/pdf/2203.12870.pdf)
+
+* **Uni6D**: Xiaoke Jiang, Donghai Li, Hao Chen, Ye Zheng, Rui Zhao, Liwei Wu\
+"Uni6D: A Unified CNN Framework without Projection Breakdown for 6D Pose Estimation." CVPR (2022)\
+[pdf](https://arxiv.org/pdf/2203.14531.pdf)
+
+* **CE-SA**: Ningkai Mo, Wanshui Gan, Naoto Yokoya, Shifeng Chen\
+"A Computation Efficient and Symmetry-Aware 6D Pose Regression Framework." CVPR (2022)\
+[code](https://github.com/GANWANSHUI/ES6D) | [pdf](https://arxiv.org/pdf/2204.01080.pdf)
+
+* **DGECN**: Tuo Cao, Fei Luo, Yanping Fu, Wenxiao Zhang, Shengjie Zheng, Chunxia Xiao\
+"DGECN: A Depth-Guided Edge Convolutional Network for End-to-End 6D Pose Estimation ." CVPR (2022)\
+[code](https://github.com/maplect/DGECN_CVPR2022) | [pdf](https://arxiv.org/pdf/2204.09983.pdf)
+
+* **UDA-COPE**: Taeyeop Lee, Byeong-Uk Lee, Inkyu Shin, Jaesung Choe, Ukcheol Shin, In So Kweon, Kuk-Jin Yoon\
+"UDA-COPE: Unsupervised Domain Adaptation for Category-level Object Pose Estimation." CVPR (2022)\
+[pdf](https://arxiv.org/pdf/2111.12580.pdf)
 
 * **ZebraPose**: Yongzhi Su, Mahdi Saleh, Torben Fetzer, Jason Rambach, Nassir Navab, Benjamin Busam, Didier Stricker, Federico Tombari\
 "ZebraPose: Coarse to Fine Surface Encoding for 6DoF Object Pose Estimation
 ." CVPR (2022)\
-[pdf](https://arxiv.org/pdf/2203.09418.pdf)
+[code](https://github.com/suyz526/zebrapose) | [pdf](https://arxiv.org/pdf/2203.09418.pdf)
+
+* **SurfEmb**: Rasmus Laurvig Haugaard, Anders Glent Buch\
+"SurfEmb: Dense and Continuous Correspondence Distributions for Object Pose Estimation with Learnt Surface Embeddings" CVPR (2022)\
+[code](https://github.com/rasmushaugaard/surfemb) | [pdf](https://arxiv.org/pdf/2111.13489.pdf)
+
+* **Polarimetric Pose Prediction**: Pengyuan Wang, HyunJun Jung, Yitong Li, Siyuan Shen, Rahul Parthasarathy Srikanth, Lorenzo Garattoni, Sven Meier, Nassir Navab, Benjamin Busam\
+"Polarimetric Pose Prediction." CVPR (2022)\
+[pdf](https://arxiv.org/pdf/2112.03810.pdf)
+---
+
 ---
 
 ### 2021
