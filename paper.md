@@ -14,10 +14,12 @@ A curated list of challenges and papers pertaining to object pose estimation
 
 ## Papers :ghost:
 
-### 2022
-
 ### 2022 
 (generic-> category level -> tracking/refinement -> specific)
+
+* **CenterSnap**: Muhammad Zubair Irshad, Thomas Kollar, Michael Laskey, Kevin Stone, Zsolt Kira\
+"Single-Shot Multi-Object 3D Shape Reconstruction and Categorical 6D Pose and Size Estimation." ICRA (2022)\
+[Pytorch Code](https://github.com/zubair-irshad/CenterSnap) | [PDF](https://arxiv.org/pdf/2203.01929.pdf) |  [Website](https://zubair-irshad.github.io/projects/CenterSnap.html)
 
 * **Template-pose**: Van Nguyen Nguyen, Yinlin Hu, Yang Xiao, Mathieu Salzmann, Vincent Lepetit\
 "Templates for 3D Object Pose Estimation Revisited: Generalization to New Objects and Robustness to Occlusions." CVPR (2022)\
