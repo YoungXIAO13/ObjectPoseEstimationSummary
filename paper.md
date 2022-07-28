@@ -17,6 +17,10 @@ A curated list of challenges and papers pertaining to object pose estimation
 ### 2022 
 (generic-> category level -> tracking/refinement -> specific)
 
+* **ShAPO** :tophat:: Muhammad Zubair Irshad, Sergey Zakharov, Rares Ambrus, Thomas Kollar, Zsolt Kira, Adrien Gaidon\
+"Implicit Representations for Multi Object Shape Appearance and Pose Optimization." ECCV (2022)\
+[[Paper](https://arxiv.org/pdf/2207.13691.pdf)] [[Webpage](https://zubair-irshad.github.io/projects/ShAPO.html)] [[Video](https://youtu.be/LMg7NDcLDcA)] 
+
 * **CenterSnap**: Muhammad Zubair Irshad, Thomas Kollar, Michael Laskey, Kevin Stone, Zsolt Kira\
 "Single-Shot Multi-Object 3D Shape Reconstruction and Categorical 6D Pose and Size Estimation." ICRA (2022)\
 [Pytorch Code](https://github.com/zubair-irshad/CenterSnap) | [PDF](https://arxiv.org/pdf/2203.01929.pdf) |  [Website](https://zubair-irshad.github.io/projects/CenterSnap.html)
