@@ -3,6 +3,7 @@
 A curated list of challenges and papers pertaining to object pose estimation
 
 ## Challenges :space_invader:
+* [ECCV 2022: Recovering Object Pose](http://cmp.felk.cvut.cz/sixd/workshop_2022/)
 * [ECCV 2020: Recovering Object Pose](http://cmp.felk.cvut.cz/sixd/workshop_2020/)
 * [ICCV 2019: Recovering Object Pose](http://cmp.felk.cvut.cz/sixd/workshop_2019/)
 * [ECCV 2018: Recovering Object Pose](http://cmp.felk.cvut.cz/sixd/workshop_2018/)
@@ -15,15 +16,24 @@ A curated list of challenges and papers pertaining to object pose estimation
 ## Papers :ghost:
 
 ### 2022 
-(generic-> category level -> tracking/refinement -> specific)
+There are so many papers in objects pose estimation in CVPR22 and ECCV22, so we order them in this order: \
+generic without CAD -> generic with CAD -> category level -> tracking/refinement -> specific
 
-* **ShAPO** :tophat:: Muhammad Zubair Irshad, Sergey Zakharov, Rares Ambrus, Thomas Kollar, Zsolt Kira, Adrien Gaidon\
-"Implicit Representations for Multi Object Shape Appearance and Pose Optimization." ECCV (2022)\
-[[Paper](https://arxiv.org/pdf/2207.13691.pdf)] [[Webpage](https://zubair-irshad.github.io/projects/ShAPO.html)] [[Video](https://youtu.be/LMg7NDcLDcA)] 
+* **Gen6D**: Yuan Liu, Yilin Wen, Sida Peng , Cheng Lin, Xiaoxiao Long, Taku Komura, Wenping Wang \
+"Gen6D: Generalizable Model-Free 6-DoF Object Pose Estimation from RGB Images." ECCV (2022)\
+[code](https://github.com/liuyuan-pal/Gen6D) | [pdf](https://arxiv.org/pdf/2204.10776.pdf)
 
-* **CenterSnap**: Muhammad Zubair Irshad, Thomas Kollar, Michael Laskey, Kevin Stone, Zsolt Kira\
-"Single-Shot Multi-Object 3D Shape Reconstruction and Categorical 6D Pose and Size Estimation." ICRA (2022)\
-[Pytorch Code](https://github.com/zubair-irshad/CenterSnap) | [PDF](https://arxiv.org/pdf/2203.01929.pdf) |  [Website](https://zubair-irshad.github.io/projects/CenterSnap.html)
+* **OnePose**: Jiaming Sun, Zihao Wang, Siyu Zhang, Xingyi He, Hongcheng Zhao, Guofeng Zhang, Xiaowei Zhou \
+"OnePose: One-Shot Object Pose Estimation without CAD Models." CVPR (2022)\
+[code](https://github.com/zju3dv/OnePose) | [pdf](https://arxiv.org/pdf/2205.12257.pdf)
+
+* **FS6D**: Yisheng He, Yao Wang, Haoqiang Fan, Jian Sun, Qifeng Chen\
+"FS6D: Few-Shot 6D Pose Estimation of Novel Objects." CVPR (2022)\
+[code](https://github.com/ethnhe/FS6D-PyTorch) | [pdf](https://arxiv.org/pdf/2203.14628.pdf)
+
+* **Unseen object pose**: Zhao Chen, Yinlin Hu, Mathieu Salzmann\
+"Fusing Local Similarities for Retrieval-based 3D Orientation Estimation of Unseen Objects." ECCV (2022)\
+[code](https://github.com/sailor-z/Unseen_Object_Pose) | [pdf](https://arxiv.org/pdf/2203.08472.pdf)
 
 * **Template-pose**: Van Nguyen Nguyen, Yinlin Hu, Yang Xiao, Mathieu Salzmann, Vincent Lepetit\
 "Templates for 3D Object Pose Estimation Revisited: Generalization to New Objects and Robustness to Occlusions." CVPR (2022)\
@@ -33,13 +43,17 @@ A curated list of challenges and papers pertaining to object pose estimation
 "OSOP: A Multi-Stage One Shot Object Pose Estimation Framework." CVPR (2022)\
 [pdf](https://arxiv.org/pdf/2203.15533v2.pdf)
 
-* **FS6D**: Yisheng He, Yao Wang, Haoqiang Fan, Jian Sun, Qifeng Chen\
-"FS6D: Few-Shot 6D Pose Estimation of Novel Objects." CVPR (2022)\
-[code](https://github.com/ethnhe/FS6D-PyTorch) | [pdf](https://arxiv.org/pdf/2203.14628.pdf)
-
 * **OVE6D**: Dingding Cai, Janne Heikkilä, Esa Rahtu\
 "OVE6D: Object Viewpoint Encoding for Depth-based 6D Object Pose Estimation ." CVPR (2022)\
 [code](https://github.com/dingdingcai/OVE6D-pose) | [pdf](https://arxiv.org/pdf/2203.01072.pdf)
+
+* **DISP6D**: Yilin Wen, Xiangyu Li, Hao Pan, Lei Yang, Zheng Wang, Taku Komura, Wenping Wang\
+"DISP6D: Disentangled Implicit Shape and Pose Learning for Scalable 6D Pose Estimation." ECCV (2022)\
+[code](https://github.com/fylwen/DISP-6D) | [pdf](https://arxiv.org/abs/2107.12549)
+
+* **SHaPO**: Muhammad Zubair Irshad, Sergey Zakharov, Rares Ambrus, Thomas Kollar, Zsolt Kira, Adrien Gaidon\
+"SHaPO: Implicit Representations for Multi Object Shape Appearance and Pose Optimization." ECCV (2022)\
+[code](https://github.com/zubair-irshad/shapo) | [pdf](https://arxiv.org/pdf/2207.13691.pdf)
 
 * **GPV-Pose**: Yan Di , Ruida Zhang, Zhiqiang Lou , Fabian Manhardt, Xiangyang Ji, Nassir Navab, Federico Tombari\
 "GPV-Pose: Category-level Object Pose Estimation via Geometry-guided Point-wise Voting." CVPR (2022)\
@@ -49,9 +63,21 @@ A curated list of challenges and papers pertaining to object pose estimation
 "SAR-Net: Shape Alignment and Recovery Network for Category-level 6D Object Pose and Size Estimation." CVPR (2022)\
 [code](https://github.com/hetolin/SAR-Net) | [pdf](https://arxiv.org/pdf/2106.14193.pdf)
 
+* **NeuralPose**: Lin Huang, Tomas Hodan, Lingni Ma, Linguang Zhang, Luan Tran, Christopher Twigg, Po-Chen Wu, Junsong Yuan, Cem Keskin, Robert Wang\
+"Neural Correspondence Field for Object Pose Estimation." ECCV (2022)\
+[code](https://github.com/LinHuang17/NCF-code) | [pdf](https://arxiv.org/abs/2208.00113)
+
+* **Neural-Sim**: Yunhao Ge, Harkirat Behl, Jiashu Xu, Suriya Gunasekar, Neel Joshi, Yale Song, Xin Wang, Laurent Itti, Vibhav Vineet\
+"Neural-Sim: Learning to Generate Training Data with NeRF." ECCV (2022)\
+[code](https://github.com/gyhandy/Neural-Sim-NeRF) | [pdf](https://arxiv.org/abs/2207.11368)
+
+* **Nerf-Supervision**: Lin Yen-Chen, Pete Florence, Jonathan T. Barron, Tsung-Yi Lin, Alberto Rodriguez, Phillip Isola\
+"NeRF-Supervision: Learning Dense Object Descriptors from Neural Radiance Fields." ECCV (2022)\
+[code](https://github.com/yenchenlin/nerf-supervision-public) | [pdf](https://arxiv.org/pdf/2203.01913.pdf)
+
 * **ICG**: Manuel Stoiber, Martin Sundermeyer, Rudolph Triebel\
 "ICG: Iterative Corresponding Geometry." CVPR (2022)\
-[code](https://github.com/DLR-RM/3DObjectTracking/tree/master/ICG) | [pdf](https://arxiv.org/pdf/2203.05334.pdf)
+[code](https://github.com/princeton-vl/coupled-iterative-refinement) | [pdf](https://arxiv.org/pdf/2203.12870.pdf)
 
 * **FocalPose**: Georgy Ponimatkin, Yann Labbé, Bryan Russell, Mathieu Aubry, Josef Sivic\
 "FocalPose: Focal Length and Object Pose Estimation via Render and Compare." CVPR (2022)\
@@ -59,7 +85,7 @@ A curated list of challenges and papers pertaining to object pose estimation
 
 * **Coupled Iterative Refinement**: Lahav Lipson, Zachary Teed, Ankit Goyal and Jia Deng\
 "Coupled Iterative Refinement for 6D Multi-Object Pose Estimation." CVPR (2022)\
-[code](https://github.com/princeton-vl/coupled-iterative-refinement) | [pdf](https://arxiv.org/pdf/2204.12516.pdf)
+[code](https://github.com/princeton-vl/coupled-iterative-refinement) | [pdf](https://arxiv.org/pdf/2203.12870.pdf)
 
 * **RNNPose**: Yan Xu, Kwan-Yee Lin, Guofeng Zhang, Xiaogang Wang, Hongsheng Li\
 "RNNPose: Recurrent 6-DoF Object Pose Refinement with Robust Correspondence Field Estimation and Pose Optimization ." CVPR (2022)\
@@ -69,7 +95,7 @@ A curated list of challenges and papers pertaining to object pose estimation
 "Uni6D: A Unified CNN Framework without Projection Breakdown for 6D Pose Estimation." CVPR (2022)\
 [pdf](https://arxiv.org/pdf/2203.14531.pdf)
 
-* **CE-SA**: Ningkai Mo, Wanshui Gan, Naoto Yokoya, Shifeng Chen\
+* **ES6D**: Lahav Lipson, Zachary Teed, Ankit Goyal and Jia Deng\
 "A Computation Efficient and Symmetry-Aware 6D Pose Regression Framework." CVPR (2022)\
 [code](https://github.com/GANWANSHUI/ES6D) | [pdf](https://arxiv.org/pdf/2204.01080.pdf)
 
@@ -86,6 +112,10 @@ A curated list of challenges and papers pertaining to object pose estimation
 ." CVPR (2022)\
 [code](https://github.com/suyz526/zebrapose) | [pdf](https://arxiv.org/pdf/2203.09418.pdf)
 
+* **ES6D**: Lahav Lipson, Zachary Teed, Ankit Goyal and Jia Deng\
+"A Computation Efficient and Symmetry-Aware 6D Pose Regression Framework." CVPR (2022)\
+[code](https://github.com/GANWANSHUI/ES6D) | [pdf](https://arxiv.org/pdf/2204.01080.pdf)
+
 * **SurfEmb**: Rasmus Laurvig Haugaard, Anders Glent Buch\
 "SurfEmb: Dense and Continuous Correspondence Distributions for Object Pose Estimation with Learnt Surface Embeddings" CVPR (2022)\
 [code](https://github.com/rasmushaugaard/surfemb) | [pdf](https://arxiv.org/pdf/2111.13489.pdf)
@@ -93,9 +123,20 @@ A curated list of challenges and papers pertaining to object pose estimation
 * **Polarimetric Pose Prediction**: Pengyuan Wang, HyunJun Jung, Yitong Li, Siyuan Shen, Rahul Parthasarathy Srikanth, Lorenzo Garattoni, Sven Meier, Nassir Navab, Benjamin Busam\
 "Polarimetric Pose Prediction." CVPR (2022)\
 [pdf](https://arxiv.org/pdf/2112.03810.pdf)
----
 
----
+#
+* **PIZZA**: Van Nguyen Nguyen*, Yuming Du*, Yang Xiao, Michaël Ramamonjisoa, Vincent Lepetit\
+"PIZZA: A Powerful Image-only Zero-Shot Zero-CAD Approach to 6 DoF Tracking." 3DV (2022)\
+[code](https://github.com/nv-nguyen/pizza) | [pdf](https://arxiv.org/pdf/2209.07589.pdf)
+
+* **CenterSnap**: Muhammad Zubair Irshad, Thomas Kollar, Michael Laskey, Kevin Stone, Zsolt Kira\
+"CenterSnap: Single-Shot Multi-Object 3D Shape Reconstruction and Categorical 6D Pose and Size Estimation." ICRA (2022)\
+[code](https://github.com/zubair-irshad/CenterSnap) | [pdf](https://arxiv.org/pdf/2203.01929)
+
+* **UnseenBenchmark**: Minghao Gou, Haolin Pan, Hao-Shu Fang, Ziyuan Liu, Cewu Lu, Ping Tan\
+"Unseen Object 6D Pose Estimation: A Benchmark and Baselines." arXiv (2022)\
+[code](https://graspnet.net/unseen6d) | [pdf](https://arxiv.org/pdf/2206.11808.pdf)
+
 
 ### 2021
 
@@ -130,7 +171,6 @@ A curated list of challenges and papers pertaining to object pose estimation
 * **ODAM**: Kejie Li, Daniel DeTone, Steven Chen, Minh Vo, Ian Reid, Hamid Rezatofighi, Chris Sweeney, Julian Straub, Richard Newcombe.\
 "ODAM: Object Detection, Association, and Mapping using Posed RGB Video." ICCV (2021)\
 [pdf](https://arxiv.org/abs/2108.10165)
-
 
 #
 
@@ -167,6 +207,19 @@ A curated list of challenges and papers pertaining to object pose estimation
 * **BundleTrack**: Bowen Wen, Kostas Bekris.\
 "BundleTrack: 6D Pose Tracking for Novel Objects without Instance or Category-Level 3D Models." IROS (2021)\
 [code](https://github.com/wenbowen123/BundleTrack) | [pdf](https://arxiv.org/abs/2108.00516)
+
+* **CorNet**: Giorgia Pitteri, Slobodan Ilic, Vincent Lepetit\
+"CorNet: Generic 3D Corners for 6D Pose Estimation of New Objects without Retraining " ICCVw (2021)\
+[pdf](https://arxiv.org/pdf/1908.11457.pdf)
+
+* **ZePHyR**: Brian Okorn, Qiao Gu, Martial Hebert, David Held\
+"Zero-shot Pose Hypothesis Rating." ICRA (2021)\
+[code](https://github.com/r-pad/zephyr) | [pdf](https://arxiv.org/pdf/2104.13526.pdf)
+
+* **iNeRF**: Lin Yen-Chen, Pete Florence, Jonathan T. Barron, Alberto Rodriguez, Phillip Isola, Tsung-Yi Lin\
+"iNeRF Inverting Neural Radiance Fields for Pose Estimation." IROS (2021)\
+[code](https://github.com/yenchenlin/iNeRF-public) | [pdf](https://arxiv.org/pdf/2012.05877.pdf)
+
 
 
 ### 2020
@@ -317,6 +370,10 @@ A curated list of challenges and papers pertaining to object pose estimation
 "DirectShape: Direct Photometric Alignment of Shape Priors for Visual Vehicle Pose and Shape Estimation." ICRA (2020)\
 [pdf](https://arxiv.org/abs/1904.10097)
 
+* **Local Surface Embedding**: Giorgia Pitteri, Aurelie Bugeau , Slobodan Ilic, Vincent Lepetit\
+"3D Object Detection and Pose Estimation of Unseen Objects in Color Images with Local Surface Embeddings." ACCV (2020)\
+[pdf](https://openaccess.thecvf.com/content/ACCV2020/papers/Pitteri_3D_Object_Detection_and_Pose_Estimation_of_Unseen_Objects_in_ACCV_2020_paper.pdf)
+
 
 ### 2019
 
@@ -391,8 +448,6 @@ A curated list of challenges and papers pertaining to object pose estimation
 * **MetaView**: Hung-Yu Tseng, Shalini De Mello, Jonathan Tremblay, Sifei Liu, Stan Birchfield, Ming-Hsuan Yang, Jan Kautz.\
 "Few-Shot Viewpoint Estimation." BMVC (2019)\
 [pdf](https://arxiv.org/abs/1905.04957)
-
-#
 
 * **PoseRBPF**: Xinke Deng, Arsalan Mousavian, Yu Xiang, Fei Xia, Timothy Bretl and Dieter Fox.\
 "PoseRBPF: A Rao-Blackwellized Particle Filter for 6D Object Pose Tracking." RSS (2019)\
