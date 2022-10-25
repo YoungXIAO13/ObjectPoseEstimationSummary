@@ -71,10 +71,6 @@ generic without CAD -> generic with CAD -> category level -> tracking/refinement
 "Neural-Sim: Learning to Generate Training Data with NeRF." ECCV (2022)\
 [code](https://github.com/gyhandy/Neural-Sim-NeRF) | [pdf](https://arxiv.org/abs/2207.11368)
 
-* **Nerf-Supervision**: Lin Yen-Chen, Pete Florence, Jonathan T. Barron, Tsung-Yi Lin, Alberto Rodriguez, Phillip Isola\
-"NeRF-Supervision: Learning Dense Object Descriptors from Neural Radiance Fields." ECCV (2022)\
-[code](https://github.com/yenchenlin/nerf-supervision-public) | [pdf](https://arxiv.org/pdf/2203.01913.pdf)
-
 * **ICG**: Manuel Stoiber, Martin Sundermeyer, Rudolph Triebel\
 "ICG: Iterative Corresponding Geometry." CVPR (2022)\
 [code](https://github.com/princeton-vl/coupled-iterative-refinement) | [pdf](https://arxiv.org/pdf/2203.12870.pdf)
@@ -125,6 +121,10 @@ generic without CAD -> generic with CAD -> category level -> tracking/refinement
 [pdf](https://arxiv.org/pdf/2112.03810.pdf)
 
 #
+* **Nerf-Supervision**: Lin Yen-Chen, Pete Florence, Jonathan T. Barron, Tsung-Yi Lin, Alberto Rodriguez, Phillip Isola\
+"NeRF-Supervision: Learning Dense Object Descriptors from Neural Radiance Fields." ICRA (2022)\
+[code](https://github.com/yenchenlin/nerf-supervision-public) | [pdf](https://arxiv.org/pdf/2203.01913.pdf)
+
 * **PIZZA**: Van Nguyen Nguyen*, Yuming Du*, Yang Xiao, Michaël Ramamonjisoa, Vincent Lepetit\
 "PIZZA: A Powerful Image-only Zero-Shot Zero-CAD Approach to 6 DoF Tracking." 3DV (2022)\
 [code](https://github.com/nv-nguyen/pizza) | [pdf](https://arxiv.org/pdf/2209.07589.pdf)
