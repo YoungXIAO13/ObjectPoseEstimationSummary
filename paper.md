@@ -108,10 +108,6 @@ generic without CAD -> generic with CAD -> category level -> tracking/refinement
 ." CVPR (2022)\
 [code](https://github.com/suyz526/zebrapose) | [pdf](https://arxiv.org/pdf/2203.09418.pdf)
 
-* **ES6D**: Lahav Lipson, Zachary Teed, Ankit Goyal and Jia Deng\
-"A Computation Efficient and Symmetry-Aware 6D Pose Regression Framework." CVPR (2022)\
-[code](https://github.com/GANWANSHUI/ES6D) | [pdf](https://arxiv.org/pdf/2204.01080.pdf)
-
 * **SurfEmb**: Rasmus Laurvig Haugaard, Anders Glent Buch\
 "SurfEmb: Dense and Continuous Correspondence Distributions for Object Pose Estimation with Learnt Surface Embeddings" CVPR (2022)\
 [code](https://github.com/rasmushaugaard/surfemb) | [pdf](https://arxiv.org/pdf/2111.13489.pdf)
@@ -121,6 +117,11 @@ generic without CAD -> generic with CAD -> category level -> tracking/refinement
 [pdf](https://arxiv.org/pdf/2112.03810.pdf)
 
 #
+
+* **MegaPose**: Yann Labbé, Lucas Manuelli, Arsalan Mousavian, Stephen Tyree, Stan Birchfield, Jonathan Tremblay, Justin Carpentier, Mathieu Aubry, Dieter Fox, Josef Sivic\
+"MegaPose: 6D Pose Estimation of Novel Objects via Render & Compare." CoRL (2022)\
+[pdf](https://openreview.net/forum?id=1zbWQxFIU-)
+
 * **Nerf-Supervision**: Lin Yen-Chen, Pete Florence, Jonathan T. Barron, Tsung-Yi Lin, Alberto Rodriguez, Phillip Isola\
 "NeRF-Supervision: Learning Dense Object Descriptors from Neural Radiance Fields." ICRA (2022)\
 [code](https://github.com/yenchenlin/nerf-supervision-public) | [pdf](https://arxiv.org/pdf/2203.01913.pdf)
