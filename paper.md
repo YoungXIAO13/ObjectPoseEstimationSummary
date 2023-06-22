@@ -15,7 +15,13 @@ A curated list of challenges and papers pertaining to object pose estimation
 
 ## Papers :ghost:
 
-### 2022 
+### 2023
+
+* **BundleSDF**: Bowen Wen, Jonathan Tremblay, Valts Blukis, Stephen Tyree, Thomas Müller, Alex Evans, Dieter Fox, Jan Kautz, Stan Birchfield.\
+"BundleSDF: Neural 6-DoF Tracking and 3D Reconstruction of Unknown Objects." CVPR (2023)\
+[code](https://github.com/NVlabs/BundleSDF) | [pdf](https://arxiv.org/abs/2303.14158)
+
+### 2022
 There are so many papers in objects pose estimation in CVPR22 and ECCV22, so we order them in this order: \
 generic without CAD -> generic with CAD -> category level -> tracking/refinement -> specific
 
