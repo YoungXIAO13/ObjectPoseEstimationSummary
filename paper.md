@@ -67,7 +67,7 @@ unknown objects -> self-supervised -> test-time adaptation -> known objects
 "Knowledge Distillation for 6D Pose Estimation by Aligning Distributions of Local Predictions." CVPR (2023)\
 [pdf](https://arxiv.org/abs/2205.14971)
 
-* **Object Pose Estimation with Statistical Guarantees: Conformal Keypoint Detection and Geometric Uncertainty Propagation**: Heng Yang, Marco Pavone.\
+* **Geometric Uncertainty Propagation**: Heng Yang, Marco Pavone.\
 "Object Pose Estimation with Statistical Guarantees: Conformal Keypoint Detection and Geometric Uncertainty Propagation." CVPR (2023)\
 [pdf](https://arxiv.org/abs/2303.12246)
 
