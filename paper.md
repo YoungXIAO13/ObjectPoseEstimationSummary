@@ -3,6 +3,7 @@
 A curated list of challenges and papers pertaining to object pose estimation
 
 ## Challenges :space_invader:
+* [ICCV 2023: Recovering Object Pose](http://cmp.felk.cvut.cz/sixd/workshop_2023/)
 * [ECCV 2022: Recovering Object Pose](http://cmp.felk.cvut.cz/sixd/workshop_2022/)
 * [ECCV 2020: Recovering Object Pose](http://cmp.felk.cvut.cz/sixd/workshop_2020/)
 * [ICCV 2019: Recovering Object Pose](http://cmp.felk.cvut.cz/sixd/workshop_2019/)
@@ -16,10 +17,59 @@ A curated list of challenges and papers pertaining to object pose estimation
 ## Papers :ghost:
 
 ### 2023
+**arXiv papers:** Generalizable object pose estimation from a single image
+
+* **NOPE**: Van Nguyen Nguyen, Thibault Groueix, Yinlin Hu, Mathieu Salzmann, Vincent Lepetit.\
+"NOPE: Novel Object Pose Estimation from a Single Image." arXiv 2023\
+[code](https://github.com/nv-nguyen/nope) | [pdf](https://arxiv.org/abs/2303.13612)
+
+* **POPE**: Zhiwen Fan, Panwang Pan, Peihao Wang, Yifan Jiang, Dejia Xu, Hanwen Jiang, Zhangyang Wang.\
+"POPE: 6-DoF Promptable Pose Estimation of Any Object, in Any Scene, with One Reference." arXiv 2023\
+[pdf](https://arxiv.org/abs/2305.15727)
+
+* **Cas6D**: Panwang Pan, Zhiwen Fan, Brandon Y. Feng, Peihao Wang, Chenxin Li, Zhangyang Wang.\
+"Learning to Estimate 6DoF Pose from Limited Data: A Few-Shot, Generalizable Approach using RGB Images." arXiv 2023\
+[code](https://github.com/paulpanwang/Cas6D) | [pdf](https://arxiv.org/abs/2306.07598)
+
+**CVPR 2023 papers:** We order them in this order: \
+unknown objects -> self-supervised -> test-time adaptation -> known objects
+
 
 * **BundleSDF**: Bowen Wen, Jonathan Tremblay, Valts Blukis, Stephen Tyree, Thomas Müller, Alex Evans, Dieter Fox, Jan Kautz, Stan Birchfield.\
 "BundleSDF: Neural 6-DoF Tracking and 3D Reconstruction of Unknown Objects." CVPR (2023)\
 [code](https://github.com/NVlabs/BundleSDF) | [pdf](https://arxiv.org/abs/2303.14158)
+
+* **SMOC-Net**: Tao Tan, Qiulei Dong.\
+"SMOC-Net: Leveraging Camera Pose for Self-Supervised Monocular Object Pose Estimation." CVPR 2023\
+[pdf](https://openaccess.thecvf.com/content/CVPR2023/papers/Tan_SMOC-Net_Leveraging_Camera_Pose_for_Self-Supervised_Monocular_Object_Pose_Estimation_CVPR_2023_paper.pdf)
+
+* **TTA-COPE**: Taeyeop Lee, Jonathan Tremblay, Valts Blukis, Bowen Wen, Byeong-Uk Lee, Inkyu Shin, Stan Birchfield, In So Kweon, Kuk-Jin Yoon.\
+"TTA-COPE: Test-Time Adaptation for Category-Level Object Pose Estimation." CVPR (2023)\
+[pdf](https://arxiv.org/abs/2303.16730)
+
+* **RADET**: Yang Hai, Rui Song, Jiaojiao Li, Mathieu Salzmann, Yinlin Hu.\
+"Rigidity-Aware Detection for 6D Object Pose Estimation." CVPR (2023)\
+[code](https://github.com/YangHai-1218/RADet) | [pdf](https://arxiv.org/abs/2303.12396)
+
+* **SCFLOW**: Yang Hai, Rui Song, Jiaojiao Li, Mathieu Salzmann, Yinlin Hu.\
+"Rigidity-Aware Detection for 6D Object Pose Estimation." CVPR (2023)\
+[code](https://github.com/yanghai-1218/scflow) | [pdf](https://arxiv.org/abs/2303.12396)
+
+* **TexPose**: Hanzhi Chen, Fabian Manhardt, Nassir Navab, Benjamin Busam.\
+"TexPose: Neural Texture Learning for Self-Supervised 6D Object Pose Estimation." CVPR (2023)\
+[code](https://github.com/HanzhiC/TexPose) | [pdf](https://arxiv.org/abs/2212.12902)
+
+* **HS-Pose**: Linfang Zheng, Chen Wang, Yinghan Sun, Esha Dasgupta, Hua Chen, Ales Leonardis, Wei Zhang, Hyung Jin Chang.\
+"HS-Pose: Hybrid Scope Feature Extraction for Category-level Object Pose Estimation." CVPR (2023)\
+[code](https://github.com/Lynne-Zheng-Linfang/HS-Pose) | [pdf](https://arxiv.org/abs/2303.15743)
+
+* **Knowledge Distillation**: Shuxuan Guo, Yinlin Hu, Jose M. Alvarez, Mathieu Salzmann.\
+"Knowledge Distillation for 6D Pose Estimation by Aligning Distributions of Local Predictions." CVPR (2023)\
+[pdf](https://arxiv.org/abs/2205.14971)
+
+* **Object Pose Estimation with Statistical Guarantees: Conformal Keypoint Detection and Geometric Uncertainty Propagation**: Heng Yang, Marco Pavone.\
+"Object Pose Estimation with Statistical Guarantees: Conformal Keypoint Detection and Geometric Uncertainty Propagation." CVPR (2023)\
+[pdf](https://arxiv.org/abs/2303.12246)
 
 ### 2022
 There are so many papers in objects pose estimation in CVPR22 and ECCV22, so we order them in this order: \
